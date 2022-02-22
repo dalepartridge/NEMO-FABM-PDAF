@@ -1,0 +1,10 @@
+!-----------------------------------------------------------------------
+&nameos        !   ocean physical parameters
+!-----------------------------------------------------------------------
+   nn_eos      =   0       !  type of equation of state and Brunt-Vaisala frequency
+                           !     = 0, UNESCO (formulation of Jackett and McDougall (1994) and of McDougall (1987) )
+                           !     = 1, linear: rho(T)   = rau0 * ( 1.028 - ralpha * T )
+                           !     = 2, linear: rho(T,S) = rau0 * ( rbeta * S - ralpha * T )
+   rn_alpha    =   2.0e-4  !  thermal expension coefficient (nn_eos= 1 or 2)
+   rn_beta     =   7.7e-4  !  saline  expension coefficient (nn_eos= 2)
+/

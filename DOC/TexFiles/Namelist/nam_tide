@@ -1,0 +1,16 @@
+!-----------------------------------------------------------------------
+&nam_tide      !   tide parameters (#ifdef key_tide)
+!-----------------------------------------------------------------------
+   ln_tide_pot   = .true.   !  use tidal potential forcing
+   clname(1)     =   'M2'   !  name of constituent
+   clname(2)     =   'S2'
+   clname(3)     =   'N2'
+   clname(4)     =   'K1'
+   clname(5)     =   'O1'
+   clname(6)     =   'Q1'
+   clname(7)     =   'M4'
+   clname(8)     =   'K2'
+   clname(9)     =   'P1'
+   clname(10)    =   'Mf'
+   clname(11)    =   'Mm'
+/

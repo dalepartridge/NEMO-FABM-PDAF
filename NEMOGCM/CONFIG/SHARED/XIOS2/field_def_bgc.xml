@@ -1,0 +1,809 @@
+<!--
+<?xml version="1.0"?>
+       -->
+ 
+    <!-- $id$ -->
+    
+    <!-- 
+============================================================================================================
+=                                  definition of all existing variables                                    =
+=                                            DO NOT CHANGE                                                 =
+============================================================================================================
+    -->
+   <field_definition level="1" prec="8" operation="average" enabled=".TRUE." default_value="1.e20" > <!-- time step automaticaly defined -->
+
+    <!-- 
+============================================================================================================
+                                     Biogeochemistry model variables
+============================================================================================================
+    -->
+
+      <!-- ptrc on T grid -->
+
+     <field_group id="ptrc_T" grid_ref="grid_T_3D">
+       <field id="DIC"          long_name="Dissolved inorganic Concentration"        unit="mmol/m3" />
+       <field id="DIC_E3T"      long_name="DIC * E3T"                                unit="mmol/m2" > DIC * e3t </field >
+       <field id="Alkalini"     long_name="Total Alkalinity Concentration"           unit="mmol/m3" />
+       <field id="Alkalini_E3T" long_name="Alkalini * E3T"                           unit="mmol/m2"  > Alkalini * e3t </field >
+       <field id="O2"           long_name="Oxygen Concentration"                     unit="mmol/m3" />
+       <field id="O2_E3T"       long_name="O2 * E3T"                                 unit="mmol/m2"  > O2 * e3t </field >
+       <field id="CaCO3"        long_name="Calcite Concentration"                    unit="mmol/m3" />
+       <field id="CaCO3_E3T"    long_name="CaCO3 * E3T"                              unit="mmol/m2"  > CaCO3 * e3t </field >
+       <field id="PO4"          long_name="Phosphate Concentration"                  unit="mmol/m3" />
+       <field id="PO4_E3T"      long_name="PO4 * E3T"                                unit="mmol/m2"  > PO4 * e3t </field >
+       <field id="POC"          long_name="Small organic carbon Concentration"       unit="mmol/m3" />
+       <field id="POC_E3T"      long_name="POC * E3T"                                unit="mmol/m2"  > POC * e3t </field >
+       <field id="Si"           long_name="Silicate Concentration"                   unit="mmol/m3" />
+       <field id="Si_E3T"       long_name="Si * E3T"                                 unit="mmol/m2"  > Si * e3t </field >
+       <field id="PHY"          long_name="(Nano)Phytoplankton Concentration"        unit="mmol/m3" />
+       <field id="PHY_E3T"      long_name="PHY * E3T"                                unit="mmol/m2"  > PHY * e3t </field >
+       <field id="ZOO"          long_name="(Micro)Zooplankton Concentration"         unit="mmol/m3" />
+       <field id="ZOO_E3T"      long_name="ZOO2 * E3T"                               unit="mmol/m2"  > ZOO * e3t </field >
+       <field id="DOC"          long_name="Dissolved organic Concentration"          unit="mmol/m3" />
+       <field id="DOC_E3T"      long_name="DOC * E3T"                                unit="mmol/m2"  > DOC * e3t </field >
+       <field id="PHY2"         long_name="Diatoms Concentration"                    unit="mmol/m3" />
+       <field id="PHY2_E3T"     long_name="PHY2 * E3T"                               unit="mmol/m2"  > PHY2 * e3t </field >
+       <field id="ZOO2"         long_name="Mesozooplankton Concentration"            unit="mmol/m3" />
+       <field id="ZOO2_E3T"     long_name="ZOO2 * E3T"                               unit="mmol/m2"  > ZOO2 * e3t </field >
+       <field id="DSi"          long_name="Diatoms Silicate Concentration"           unit="mmol/m3" />
+       <field id="DSi_E3T"      long_name="Dsi * E3T"                                unit="mmol/m2"  > DSi * e3t </field >
+       <field id="Fer"          long_name="Dissolved Iron Concentration"             unit="mmol/m3" />
+       <field id="Fer_E3T"      long_name="Fer * E3T"                                unit="mmol/m2"  > Fer * e3t </field >
+       <field id="BFe"          long_name="Big iron particles Concentration"         unit="mmol/m3" />
+       <field id="BFe_E3T"      long_name="BFe * E3T"                                unit="mmol/m2"  > BFe * e3t </field >
+       <field id="GOC"          long_name="Big organic carbon Concentration"         unit="mmol/m3" />
+       <field id="GOC_E3T"      long_name="GOC * E3T"                                unit="mmol/m2"  > GOC * e3t </field >
+       <field id="SFe"          long_name="Small iron particles Concentration"       unit="mmol/m3" />
+       <field id="SFe_E3T"      long_name="SFe * E3T"                                unit="mmol/m2"  > SFe * e3t </field >
+       <field id="DFe"          long_name="Diatoms iron  Concentration"              unit="mmol/m3" />
+       <field id="DFe_E3T"      long_name="DFe * E3T"                                unit="mmol/m2"  > DFe * e3t </field >
+       <field id="GSi"          long_name="Sinking biogenic Silicate Concentration"  unit="mmol/m3" />
+       <field id="GSi_E3T"      long_name="GSi * E3T"                                unit="mmol/m2"  > GSi * e3t </field >
+       <field id="NFe"          long_name="Nano iron Concentration"                  unit="mmol/m3" />
+       <field id="NFe_E3T"      long_name="NFe * E3T"                                unit="mmol/m2"  > NFe * e3t </field >
+       <field id="NCHL"         long_name="Nano chlorophyl Concentration"            unit="mg/m3"   />
+       <field id="NCHL_E3T"     long_name="NCHL * E3T"                               unit="mmol/m2"  > NCHL * e3t </field >
+       <field id="DCHL"         long_name="Diatoms chlorophyl Concentration"         unit="mg/m3"   />
+       <field id="DCHL_E3T"     long_name="DCHL * E3T"                               unit="mmol/m2"  > DCHL * e3t </field >
+       <field id="NO3"          long_name="Nitrate Concentration"                    unit="mmol/m3" />
+       <field id="NO3_E3T"      long_name="NO3 * E3T"                                unit="mmol/m2"  > NO3 * e3t </field >
+       <field id="NH4"          long_name="Ammonium Concentration"                   unit="mmol/m3" />
+       <field id="NH4_E3T"      long_name="NH4 * E3T"                                unit="mmol/m2"  > NH4 * e3t </field >
+
+      <!-- MEDUSA : variables available with key_medusa -->
+       <field id="CHN"      long_name="Chl-a concentration in non-diatom phytoplankton"   unit="mg Chl/m3" />
+       <field id="CHD"      long_name="Chl-a concentration in     diatom phytoplankton"   unit="mg Chl/m3" />
+       <field id="PHN"      long_name="non-diatom phytoplankton"                          unit="mmol-N/m3" />
+       <field id="PHD"      long_name="diatom     phytoplankton"                          unit="mmol-N/m3" />
+       <field id="ZMI"      long_name="micro zooplankton"                                 unit="mmol-N/m3" />
+       <field id="ZME"      long_name="meso  zooplankton"                                 unit="mmol-N/m3" />
+       <field id="DIN"      long_name="dissolved inorganic nitrogen"                      unit="mmol-N/m3" />
+       <field id="SIL"      long_name="dissolved silicic acid"                            unit="mmolSi/m3" />
+       <field id="FER"      long_name="dissolved iron"                                    unit="mmolFe/m3" />
+       <field id="DET"      long_name="detrital nitrogen"                                 unit="mmol-N/m3" />
+       <field id="PDS"      long_name="biogenic silicon in diatom phytoplankton"          unit="mmolSi/m3" />
+       <field id="DTC"      long_name="detrital carbon"                                   unit="mmol-C/m3" />
+       <field id="DiC"      long_name="dissolved inorganic carbon"                        unit="mmol-C/m3" />
+       <field id="ALK"      long_name="alkalinity"                                        unit="meq/m3"    />
+       <field id="OXY"      long_name="dissolved oxygen"                                  unit="mmolO2/m3" />
+
+      <!-- Ideal traceurs : variables available with key_idtra -->
+       <field id="IDTRA"    long_name="Ideal traceur concentration "                      unit="mmol/m3"    />
+
+       <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
+       <field id="Num"         long_name="Number of organic particles"              unit="1" />
+       <field id="Num_E3T"     long_name="Num * E3T"                                unit="m"  > Num * e3t </field >
+
+       <!-- PISCES light : variables available with key_pisces_reduced -->
+       <field id="DET"         long_name="Detritus"                                 unit="mmol-N/m3" />
+       <field id="DET_E3T"     long_name="DET * E3T"                                unit="mmol-N/m2"  > DET * e3t </field >
+       <field id="DOM"         long_name="Dissolved Organic Matter"                 unit="mmol-N/m3" />
+       <field id="DOM_E3T"     long_name="DOM * E3T"                                unit="mmol-N/m2"  > DOM * e3t </field >
+
+       <!-- CFC11 : variables available with key_cfc -->
+       <field id="CFC11"       long_name="CFC-11 Concentration"                     unit="umol/m3" />
+       <field id="CFC11_E3T"   long_name="CFC11 * E3T"                              unit="umol/m2"  > CFC11 * e3t </field >
+       <!-- Bomb C14 : variables available with key_c14b -->
+       <field id="C14B"        long_name="Bomb C14 Concentration"                   unit="1"         />
+       <field id="C14B_E3T"    long_name="C14B * E3T"                               unit="m"  > C14B * e3t </field >
+       <!-- AGE : variables available with key_age -->
+       <field id="Age"        long_name="Sea Water Age Since Surface contact" standard_name="sea_water_age_since_surface_contact"  unit="yr"         />
+       <field id="Age_e3t"    long_name="Age * e3t"                                 unit="yr * m"  > Age * e3t </field >
+     </field_group>
+
+     <!-- PISCES additional diagnostics on T grid  -->
+
+     <field_group id="diad_T" grid_ref="grid_T_2D">
+       <field id="PH"          long_name="PH"                                      unit="1"          grid_ref="grid_T_3D" />
+       <field id="CO3"         long_name="Bicarbonates"                            unit="mol/m3"     grid_ref="grid_T_3D" />
+       <field id="CO3sat"      long_name="CO3 saturation"                          unit="mol/m3"     grid_ref="grid_T_3D" />
+       <field id="PAR"         long_name="Photosynthetically Available Radiation"  unit="W/m2"       grid_ref="grid_T_3D" />
+       <field id="PARDM"       long_name="Daily mean PAR"                          unit="W/m2"       grid_ref="grid_T_3D" />
+       <field id="PPPHY"       long_name="Primary production of nanophyto"         unit="mol/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PPPHY2"      long_name="Primary production of diatoms"           unit="mol/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PPNEWN"      long_name="New Primary production of nanophyto"     unit="mol/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PPNEWD"      long_name="New Primary production of diatoms"       unit="mol/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PBSi"        long_name="Primary production of Si diatoms"        unit="mol/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PFeN"        long_name="Primary production of nano iron"         unit="mol/m3/s"   grid_ref="grid_T_3D" />
+       <field id="PFeD"        long_name="Primary production of diatoms iron"      unit="mol/m3/s"   grid_ref="grid_T_3D" />
+       <field id="xfracal"     long_name="Calcifying fraction"                     unit="1"          grid_ref="grid_T_3D" />
+       <field id="PCAL"        long_name="Calcite production"                      unit="mol/m3/s"   grid_ref="grid_T_3D" />
+       <field id="DCAL"        long_name="Calcite dissolution"                     unit="mol/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRAZ1"       long_name="Grazing by microzooplankton"             unit="mol/m3/s"   grid_ref="grid_T_3D" />
+       <field id="GRAZ2"       long_name="Grazing by mesozooplankton"              unit="mol/m3/s"   grid_ref="grid_T_3D" />
+       <field id="REMIN"       long_name="Oxic remineralization of OM"             unit="mol/m3/s"   grid_ref="grid_T_3D" />
+       <field id="DENIT"       long_name="Anoxic remineralization of OM"           unit="mol/m3/s"   grid_ref="grid_T_3D" />
+       <field id="Nfix"        long_name="Nitrogen fixation"                       unit="mol/m3/s"   grid_ref="grid_T_3D" />
+       <field id="Mumax"       long_name="Maximum growth rate"                     unit="s-1"        grid_ref="grid_T_3D" />
+       <field id="MuN"         long_name="Realized growth rate for nanophyto"      unit="s-1"        grid_ref="grid_T_3D" />
+       <field id="MuD"         long_name="Realized growth rate for diatomes"       unit="s-1"        grid_ref="grid_T_3D" />
+       <field id="LNnut"       long_name="Nutrient limitation term in Nanophyto"   unit=""           grid_ref="grid_T_3D" />
+       <field id="LDnut"       long_name="Nutrient limitation term in Diatoms"     unit=""           grid_ref="grid_T_3D" />
+       <field id="LNFe"        long_name="Iron limitation term in Nanophyto"       unit=""           grid_ref="grid_T_3D" />
+       <field id="LDFe"        long_name="Iron limitation term in Diatoms"         unit=""           grid_ref="grid_T_3D" />
+       <field id="LNlight"     long_name="Light limitation term in Nanophyto"      unit=""           grid_ref="grid_T_3D" />
+       <field id="LDlight"     long_name="Light limitation term in Diatoms"        unit=""           grid_ref="grid_T_3D" />
+       <field id="Fe2"         long_name="Iron II concentration"                   unit="nmol/m3"    grid_ref="grid_T_3D" />
+       <field id="Fe3"         long_name="Iron III concentration"                  unit="nmol/m3"    grid_ref="grid_T_3D" />
+       <field id="FeL1"        long_name="Complexed Iron concentration with L1"    unit="nmol/m3"    grid_ref="grid_T_3D" />
+       <field id="FeL2"        long_name="Complexed Iron concentration with L2"    unit="nmol/m3"    grid_ref="grid_T_3D" />
+       <field id="FeP"         long_name="Precipitated Iron III"                   unit="nmol/m3"    grid_ref="grid_T_3D" />
+       <field id="TL1"         long_name="Total L1 concentration"                  unit="nmol/m3"    grid_ref="grid_T_3D" />
+       <field id="TL2"         long_name="Total L2 concentration"                  unit="nmol/m3"    grid_ref="grid_T_3D" />
+       <field id="pdust"       long_name="dust concentration"                      unit="g/m3"                            />
+       <field id="Totlig"      long_name="Total ligand concentation"               unit="nmol/m3"    grid_ref="grid_T_3D" />
+       <field id="Biron"       long_name="Bioavailable iron"                       unit="nmol/m3"    grid_ref="grid_T_3D" />
+       <field id="Sdenit"      long_name="Nitrate reduction in the sediments"      unit="mol/m2/s"                        />
+       <field id="Ironice"     long_name="Iron input/uptake due to sea ice"        unit="mol/m2/s"                        />
+       <field id="HYDR"        long_name="Iron input from hydrothemal vents"       unit="mol/m2/s"   grid_ref="grid_T_3D" />
+       <field id="EPC100"      long_name="Export of carbon particles at 100 m"     unit="mol/m2/s"                        />
+       <field id="EPFE100"     long_name="Export of biogenic iron at 100 m"        unit="mol/m2/s"                        />
+       <field id="EPSI100"     long_name="Export of Silicate at 100 m"             unit="mol/m2/s"                        />
+       <field id="EPCAL100"    long_name="Export of Calcite at 100 m"              unit="mol/m2/s"                        />
+       <field id="EXPC"        long_name="Export of carbon"                        unit="mol/m2/s"   grid_ref="grid_T_3D" />
+       <field id="EXPFE"       long_name="Export of biogenic iron"                 unit="mol/m2/s"   grid_ref="grid_T_3D" />
+       <field id="EXPSI"       long_name="Export of Silicate"                      unit="mol/m2/s"   grid_ref="grid_T_3D" />
+       <field id="EXPCAL"      long_name="Export of Calcite"                       unit="mol/m2/s"   grid_ref="grid_T_3D" />
+       <field id="Cflx"        long_name="DIC flux"                                unit="mol/m2/s"                        />
+       <field id="Oflx"        long_name="Oxygen flux"                             unit="mol/m2/s"                        />
+       <field id="Kg"          long_name="Gas transfer"                            unit="mol/m2/s/uatm"                   />
+       <field id="Dpco2"       long_name="Delta CO2"                               unit="uatm"                            />
+       <field id="Dpo2"        long_name="Delta O2"                                unit="uatm"                            />
+       <field id="Heup"        long_name="Euphotic layer depth"                    unit="m"                               />
+       <field id="Irondep"     long_name="Iron deposition from dust"               unit="mol/m2/s"                        />
+       <field id="Ironsed"     long_name="Iron deposition from sediment"           unit="mol/m2/s"   grid_ref="grid_T_3D" />
+
+
+       <!-- PISCES with Kriest parametisation : variables available with key_kriest -->
+       <field id="EPN100"      long_name="Particulate number flux at 100 m"        unit="mol/m2/s"                        />
+       <field id="EXPN"        long_name="Particulate number flux"                 unit="mol/m2/s"   grid_ref="grid_T_3D" />
+       <field id="XNUM"        long_name="Number of particles in aggregats"        unit="1"          grid_ref="grid_T_3D" />
+       <field id="WSC"         long_name="sinking speed of mass flux"              unit="m2/s"       grid_ref="grid_T_3D" />
+       <field id="WSN"         long_name="sinking speed of number flux"            unit="m2/s"       grid_ref="grid_T_3D" />
+
+       <!-- dbio_T on T grid : variables available with key_diaar5 -->
+       <field id="TPP"         long_name="Total Primary production of phyto"                   unit="mol/m3/s"  grid_ref="grid_T_3D" />
+       <field id="TPNEW"       long_name="New Primary production of phyto"                     unit="mol/m3/s"  grid_ref="grid_T_3D" />
+       <field id="TPBFE"       long_name="Total biogenic iron production"                      unit="mol/m3/s"  grid_ref="grid_T_3D" />
+       <field id="INTDIC"      long_name="DIC content"                                         unit="kg/m2"                          />
+       <field id="O2MIN"       long_name="Oxygen minimum concentration"                        unit="mol/m3"                          />
+       <field id="ZO2MIN"      long_name="Depth of oxygen minimum concentration"               unit="m"                              />
+       <field id="INTNFIX"     long_name="Nitrogen fixation rate : vert. integrated"           unit="mol/m2/s"                       />
+       <field id="INTPPPHY"    long_name="Vertically integrated primary production by nanophy" unit="mol/m2/s"                       />
+       <field id="INTPPPHY2"   long_name="Vertically integrated primary production by diatom"  unit="mol/m2/s"                       />
+       <field id="INTPP"       long_name="Vertically integrated primary production by phyto"   unit="mol/m2/s"                       />
+       <field id="INTPNEW"     long_name="Vertically integrated new primary production"        unit="mol/m2/s"                       />
+       <field id="INTPBFE"     long_name="Vertically integrated of biogenic iron production"   unit="mol/m2/s"                       />
+       <field id="INTPBSI"     long_name="Vertically integrated of biogenic Si production"     unit="mol/m2/s"                       />
+       <field id="INTPCAL"     long_name="Vertically integrated of calcite production"         unit="mol/m2/s"                       />
+
+       <!-- PISCES light : variables available with key_pisces_reduced -->
+       <field id="FNO3PHY"     long_name="FNO3PHY"                                 unit=""          grid_ref="grid_T_3D" /> 
+       <field id="FNH4PHY"     long_name="FNH4PHY"                                 unit=""          grid_ref="grid_T_3D" /> 
+       <field id="FNH4NO3"     long_name="FNH4NO3"                                 unit=""          grid_ref="grid_T_3D" /> 
+       <field id="TNO3PHY"     long_name="TNO3PHY"                                 unit=""  /> 
+       <field id="TNH4PHY"     long_name="TNH4PHY"                                 unit=""  /> 
+       <field id="TPHYDOM"     long_name="TPHYDOM"                                 unit=""  /> 
+       <field id="TPHYNH4"     long_name="TPHYNH4"                                 unit=""  /> 
+       <field id="TPHYZOO"     long_name="TPHYZOO"                                 unit=""  /> 
+       <field id="TPHYDET"     long_name="TPHYDET"                                 unit=""  /> 
+       <field id="TDETZOO"     long_name="TDETZOO"                                 unit=""  /> 
+       <field id="TZOODET"     long_name="TZOODET"                                 unit=""  /> 
+       <field id="TZOOBOD"     long_name="TZOOBOD"                                 unit=""  /> 
+       <field id="TZOONH4"     long_name="TZOONH4"                                 unit=""  /> 
+       <field id="TZOODOM"     long_name="TZOODOM"                                 unit=""  /> 
+       <field id="TNH4NO3"     long_name="TNH4NO3"                                 unit=""  /> 
+       <field id="TDOMNH4"     long_name="TDOMNH4"                                 unit=""  /> 
+       <field id="TDETNH4"     long_name="TDETNH4"                                 unit=""  /> 
+       <field id="TPHYTOT"     long_name="TPHYTOT"                                 unit=""  /> 
+       <field id="TZOOTOT"     long_name="TZOOTOT"                                 unit=""  /> 
+       <field id="SEDPOC"      long_name="SEDPOC"                                  unit=""  /> 
+       <field id="TDETSED"     long_name="TDETSED"                                 unit=""  /> 
+
+       <!-- CFC11 : variables available with key_cfc -->
+       <field id="qtrCFC11"    long_name="Air-sea flux of CFC-11"                  unit="mol/m2/s"   />
+       <field id="qintCFC11"   long_name="Cumulative air-sea flux of CFC-11"       unit="mol/m2"     />
+
+       <!-- Bomb C14 : variables available with key_c14b -->
+       <field id="qtrC14b"     long_name="Air-sea flux of Bomb C14"                unit="mol/m2/s"   />
+       <field id="qintC14b"    long_name="Cumulative air-sea flux of Bomb C14"     unit="mol/m2"     />
+       <field id="fdecay"      long_name="Radiactive decay of Bomb C14"            unit="mol/m3"  grid_ref="grid_T_3D"  />
+
+       <!-- IDTRA : variables available with key_idtra -->
+       <field id="qtrIDTRA"    long_name="Air-sea flux of Ideal Tracer"             unit="mol/m2/s"   />
+       <field id="qintIDTRA"   long_name="Cumulative air-sea flux of Ideal Tracer"  unit="mol/m2"     />
+       <field id="invIDTRA"    long_name="Vertical inventory"                       unit="mol/m2"     />
+
+       <!-- MEDUSA additional diagnostics on T grid  -->
+       <field id= "INVTN"      long_name="Column N inventory"                        unit="mmolN/m2"    />
+       <field id= "INVTSI"     long_name="Column Si inventory"                       unit="mmolSi/m2"   />
+       <field id= "INVTFE"     long_name="Column Fe inventory"                       unit="mmolFe/m2"   />
+       <field id= "PRN"        long_name="Non-diatom primary production"             unit="mmolN/m2/d"  />
+       <field id= "MPN"        long_name="Non-diatom non-grazing losses"             unit="mmolN/m2/d"  />
+       <field id= "PRD"        long_name="Diatom primary production"                 unit="mmolN/m2/d"  />
+       <field id= "MPD"        long_name="Diatom non-grazing losses"                 unit="mmolN/m2/d"  />
+       <field id= "DSED"       long_name="Gravitational sinking of Detritus"         unit="mmolN/m2/d"  />
+       <field id= "OPAL"       long_name="Diatom biogenic opal production"           unit="mmolSi/m2/d" />
+       <field id= "OPALDISS"   long_name="Diatom biogenic opal dissolution"          unit="mmolSi/m2/d" />
+       <field id= "GMIPn"      long_name="Microzoo grazing on non-diatoms"           unit="mmolN/m2/d"  />
+       <field id= "GMID"       long_name="Microzoo grazing on detritus"              unit="mmolN/m2/d"  />
+       <field id= "MZMI"       long_name="Microzoo non-grazing losses"               unit="mmolN/m2/d"  />
+       <field id= "GMEPN"      long_name="Mesozoo grazing on non-diatoms"            unit="mmolN/m2/d"  />
+       <field id= "GMEPD"      long_name="Mesozoo grazing on non-diatoms"            unit="mmolN/m2/d"  />
+       <field id= "GMEZMI"     long_name="Mesozoo grazing on microzoo"               unit="mmolN/m2/d"  />
+       <field id= "GMED"       long_name="Mesozoo grazing on detritus"               unit="mmolN/m2/d"  />
+       <field id= "MZME"       long_name="Mesozoo non-grazing losses"                unit="mmolN/m2/d"  />
+       <field id= "DEXP"       long_name="Detritus export"                           unit="mmolN/m2/d"  />
+       <field id= "DETN"       long_name="Slow detritus creation"                    unit="mmolN/m2/d"  />
+       <field id= "MDET"       long_name="Detritus non-grazing losses"               unit="MmolN/m2/d"  />
+       <field id= "AEOLIAN"    long_name="Aeolian deposition of iron"                unit="mmolFe/m2/d" />
+       <field id= "BENTHIC"    long_name="Benthic supply of iron"                    unit="mmolFe/m2/d" />
+       <field id= "SCAVENGE"   long_name="Scavenged iron"                            unit="mmolFe/m2/d" />
+       <field id= "PN_JLIM"    long_name="Non-diatom light limitation"               unit="-"           />
+       <field id= "PN_NLIM"    long_name="Non-diatom N limitation"                   unit="-"           />
+       <field id= "PN_FELIM"   long_name="Non-diatom Fe limitation"                  unit="-"           />
+       <field id= "PD_JLIM"    long_name="Diatom light limitation"                   unit="-"           />
+       <field id= "PD_NLIM"    long_name="Diatom N limitation"                       unit="-"           />
+       <field id= "PD_FELIM"   long_name="Diatom Fe limitation"                      unit="-"           />
+       <field id= "PD_SILIM"   long_name="Diatom Si limitation"                      unit="-"           />
+       <field id= "PDSILIM2"   long_name="Diatom Si uptake limitation"               unit="-"           />
+       <field id= "SDT__100"   long_name="Slow detrital flux at  100 m"              unit="mmolN/m2/d"  />
+       <field id= "SDT__200"   long_name="Slow detrital flux at  200 m"              unit="mmolN/m2/d"  />
+       <field id= "SDT__500"   long_name="Slow detrital flux at  500 m"              unit="mmolN/m2/d"  />
+       <field id= "SDT_1000"   long_name="Slow detrital flux at 1000 m"              unit="mmolN/m2/d"  />
+       <field id= "TOTREG_N"   long_name="Full column regenerated N"                 unit="mmolN/m2/d"  />
+       <field id= "TOTRG_SI"   long_name="Full column regenerated Si"                unit="mmolSi/m2/d" />
+       <field id= "REG__100"   long_name="Regenerated N to  100 m"                   unit="mmolN/m2/d"  />
+       <field id= "REG__200"   long_name="Regenerated N to  200 m"                   unit="mmolN/m2/d"  />
+       <field id= "REG__500"   long_name="Regenerated N to  500 m"                   unit="mmolN/m2/d"  />
+       <field id= "REG_1000"   long_name="Regenerated N to 1000 m"                   unit="mmolN/m2/d"  />
+       <field id= "FASTN"      long_name="Fast-sinking flux N"                       unit="mmolN/m2/d"  />
+       <field id= "FASTSI"     long_name="Fast-sinking flux Si"                      unit="mmolSi/m2/d" />
+       <field id= "FASTFE"     long_name="Fast-sinking flux Fe"                      unit="mmolFe/m2/d" />
+       <field id= "FASTC"      long_name="Fast-sinking flux C"                       unit="mmolC/m2/d"  />
+       <field id= "FASTCA"     long_name="Fast-sinking flux CaCO3"                   unit="mmolC/m2/d"  />
+       <field id= "FDT__100"   long_name="Fast detrital N flux at  100 m"            unit="mmolN/m2/d"  />
+       <field id= "FDT__200"   long_name="Fast detrital N flux at  200 m"            unit="mmolN/m2/d"  />
+       <field id= "FDT__500"   long_name="Fast detrital N flux at  500 m"            unit="mmolN/m2/d"  />
+       <field id= "FDT_1000"   long_name="Fast detrital N flux at 1000 m"            unit="mmolN/m2/d"  />
+       <field id= "RG__100F"   long_name="Regenerated fast N to  100 m"              unit="mmolN/m2/d"  />
+       <field id= "RG__200F"   long_name="Regenerated fast N to  200 m"              unit="mmolN/m2/d"  />
+       <field id= "RG__500F"   long_name="Regenerated fast N to  500 m"              unit="mmolN/m2/d"  />
+       <field id= "RG_1000F"   long_name="Regenerated fast N to 1000 m"              unit="mmolN/m2/d"  />
+       <field id= "FDS__100"   long_name="Fast detrital Si flux at  100 m"           unit="mmolSi/m2/d" />
+       <field id= "FDS__200"   long_name="Fast detrital Si flux at  200 m"           unit="mmolSi/m2/d" />
+       <field id= "FDS__500"   long_name="Fast detrital Si flux at  500 m"           unit="mmolSi/m2/d" />
+       <field id= "FDS_1000"   long_name="Fast detrital Si flux at 1000 m"           unit="mmolSi/m2/d" />
+       <field id= "RGS_100F"   long_name="Regenerated fast Si to  100 m"             unit="mmolSi/m2/d" />
+       <field id= "RGS_200F"   long_name="Regenerated fast Si to  200 m"             unit="mmolSi/m2/d" />
+       <field id= "RGS_500F"   long_name="Regenerated fast Si to  500 m"             unit="mmolSi/m2/d" />
+       <field id= "RGS1000F"   long_name="Regenerated fast Si to 1000 m"             unit="mmolSi/m2/d" />
+       <field id= "REMINN"     long_name="Fast-sinking remin flux N"                 unit="mmolN/m2/d"  />
+       <field id= "REMINSI"    long_name="Fast-sinking remin flux Si"                unit="mmolSi/m2/d" />
+       <field id= "REMINFE"    long_name="Fast-sinking remin flux Fe"                unit="mmolFe/m2/d" />
+       <field id= "REMINC"     long_name="Fast-sinking remin flux C"                 unit="mmolC/m2/d"  />
+       <field id= "REMINCA"    long_name="Fast-sinking remin flux CaCO3"             unit="mmolC/m2/d"  />
+       <field id= "SEAFLRN"    long_name="Seafloor flux of N"                        unit="mmolN/m2/d"  />
+       <field id= "SEAFLRSI"   long_name="Seafloor flux of Si"                       unit="mmolSi/m2/d" />
+       <field id= "SEAFLRFE"   long_name="Seafloor flux of Fe"                       unit="mmolFe/m2/d" />
+       <field id= "SEAFLRC"    long_name="Seafloor flux of C"                        unit="mmolC/m2/d"  />
+       <field id= "SEAFLRCA"   long_name="Seafloor flux of CaCO3"                    unit="mmolC/m2/d"  />
+       <field id= "MED_QSR"    long_name="Sea surface radiation"                     unit="W/m2"        />
+       <field id= "MED_XPAR"   long_name="Top level radiation"                       unit="W/m2"        />
+       <field id= "INTFLX_N"   long_name="Integrated N  cycle fluxes"                unit="mmolN/m2/d"  />
+       <field id= "INTFLX_SI"  long_name="Integrated Si cycle fluxes"                unit="mmolSi/m2/d" />
+       <field id= "INTFLX_FE"  long_name="Integrated Fe cycle fluxes"                unit="mmolFe/m2/d" />
+       <field id= "INT_PN"     long_name="Vertically integrated Pn"                  unit="mmolN/m2"    />
+       <field id= "INT_PD"     long_name="Vertically integrated Pd"                  unit="mmolN/m2"    />
+       <field id= "ML_PRN"     long_name="Non-diatom mixed layer PP"                 unit="mmolN/m2/d"  />
+       <field id= "ML_PRD"     long_name="Diatom mixed layer PP"                     unit="mmolN/m2/d"  />
+       <field id= "OCAL_CCD"   long_name="Calcite CCD depth"                         unit="m"           />
+       <field id= "OCAL_LVL"   long_name="Calcite CCD level"                         unit="-"           />
+       <field id= "FE_0000"    long_name="Free iron at    0m"                        unit="-"           />
+       <field id= "FE_0100"    long_name="Free iron at  100m"                        unit="-"           />
+       <field id= "FE_0200"    long_name="Free iron at  200m"                        unit="-"           />
+       <field id= "FE_0500"    long_name="Free iron at  500m"                        unit="-"           />
+       <field id= "FE_1000"    long_name="Free iron at 1000m"                        unit="-"           />
+       <field id= "MED_XZE"    long_name="Euphotic depth"                            unit="m"           />
+       <field id= "WIND"       long_name="Surface scalar wind"                       unit="m/s"         />
+       <field id= "ATM_PCO2"   long_name="Atmospheric pCO2"                          unit="uatm"        />
+       <field id= "OCN_PH"     long_name="Surface ocean pH"                          unit="-"           />
+       <field id= "OCN_PCO2"   long_name="Surface ocean pCO2"                        unit="uatm"        />
+       <field id= "OCNH2CO3"   long_name="Surface ocean H2CO3 conc"                  unit="mmolC/m3"    />
+       <field id= "OCN_HCO3"   long_name="Surface ocean HCO3 conc"                   unit="mmolC/m3"    />
+       <field id= "OCN_CO3"    long_name="Surface ocean CO3 conc"                    unit="mmolC/m3"    />
+       <field id= "CO2FLUX"    long_name="Air-sea CO2 flux"                          unit="mmolC/m2/d"  />
+       <field id= "FGCO2"      long_name="Surface Downward CO2 Flux"                 unit="kg-CO2/m2/s" />
+       <field id= "OM_CAL"     long_name="Omega calcite"                             unit="-"           />
+       <field id= "OM_ARG"     long_name="Omega aragonite"                           unit="-"           />
+       <field id= "TCO2"       long_name="Total CO2"                                 unit="umol/kg"     />
+       <field id= "TALK"       long_name="Total alkalinity"                          unit="ueq/kg"      />
+       <field id= "KW660"      long_name="Piston velocity"                           unit="m/s"         />
+       <field id= "ATM_PP0"    long_name="Atmospheric pressure"                      unit="atm"         />
+       <field id= "O2FLUX"     long_name="Air-sea O2 flux"                           unit="mmolO2/m2/d" />
+       <field id= "O2SAT"      long_name="Surface ocean O2 saturation"               unit="mmolO2/m3"   />
+       <field id= "CAL_CCD"    long_name="Calcite CCD depth"                         unit="m"           />
+       <field id= "ARG_CCD"    long_name="Aragonite CCD depth"                       unit="m"           />
+       <field id= "SFR_OCAL"   long_name="Seafloor omega calcite"                    unit="-"           />
+       <field id= "SFR_OARG"   long_name="Seafloor omega aragonite"                  unit="-"           />
+       <field id= "N_PROD"     long_name="Nitrogen production"                       unit="mmolN/m2/d"  />
+       <field id= "N_CONS"     long_name="Nitrogen consumption"                      unit="mmolN/m2/d"  />
+       <field id= "C_PROD"     long_name="Carbon production"                         unit="mmolC/m2/d"  />
+       <field id= "C_CONS"     long_name="Carbon consumption"                        unit="mmolC/m2/d"  />
+       <field id= "O2_PROD"    long_name="Oxygen production"                         unit="mmolO2/m2/d" />
+       <field id= "O2_CONS"    long_name="Oxygen consumption"                        unit="mmolO2/m2/d" />
+       <field id= "O2_ANOX"    long_name="Unrealised oxygen consumption"             unit="mmolO2/m2/d" />
+       <field id= "RR_0100"    long_name="Rain ratio at  100m"                       unit="molC/molC"   />
+       <field id= "RR_0500"    long_name="Rain ratio at  500m"                       unit="molC/molC"   />
+       <field id= "RR_1000"    long_name="Rain ratio at 1000m"                       unit="molC/molC"   />
+       <field id= "IBEN_N"     long_name="Benthic input nitrogen"                    unit="mmolN/m2/d"  />
+       <field id= "IBEN_FE"    long_name="Benthic input iron"                        unit="mmolFe/m2/d" />
+       <field id= "IBEN_C"     long_name="Benthic input carbon"                      unit="mmolC/m2/d"  />
+       <field id= "IBEN_SI"    long_name="Benthic input silicon"                     unit="mmolSi/m2/d" />
+       <field id= "IBEN_CA"    long_name="Benthic input CaCO3"                       unit="mmolC/m2/d"  />
+       <field id= "OBEN_N"     long_name="Benthic output nitrogen"                   unit="mmolN/m2/d"  />
+       <field id= "OBEN_FE"    long_name="Benthic output iron"                       unit="mmolFe/m2/d" />
+       <field id= "OBEN_C"     long_name="Benthic output carbon"                     unit="mmolC/m2/d"  />
+       <field id= "OBEN_SI"    long_name="Benthic output silicon"                    unit="mmolSi/m2/d" />
+       <field id= "OBEN_CA"    long_name="Benthic output CaCO3"                      unit="mmolC/m2/d"  />
+       <field id= "BEN_N"      long_name="Benthic nitrogen"                          unit="mmolN/m2"    />
+       <field id= "BEN_FE"     long_name="Benthic iron"                              unit="mmolFe/m2"   />
+       <field id= "BEN_C"      long_name="Benthic carbon"                            unit="mmolC/m2"    />
+       <field id= "BEN_SI"     long_name="Benthic silicon"                           unit="mmolSi/m2"   />
+       <field id= "BEN_CA"     long_name="Benthic CaCO3"                             unit="mmolC/m2"    />
+       <field id= "RUNOFF"     long_name="River runoff"                              unit="m/d"         />
+       <field id= "RIV_N"      long_name="Riverine input nitrogen"                   unit="mmolN/m2/d"  />
+       <field id= "RIV_SI"     long_name="Riverine input silicon"                    unit="mmolSi/m2/d" />
+       <field id= "RIV_C"      long_name="Riverine input carbon"                     unit="mmolSi/m2/d" />
+       <field id= "RIV_ALK"    long_name="Riverine input alkalinity"                 unit="meq/m2/d"    />
+       <field id= "DETC"       long_name="Slow detritus C creation"                  unit="mmolC/m2/d"  />
+       <field id= "SDC__100"   long_name="Slow detrital C flux at  100 m"            unit="mmolC/m2/d"  />
+       <field id= "SDC__200"   long_name="Slow detrital C flux at  200 m"            unit="mmolC/m2/d"  />
+       <field id= "SDC__500"   long_name="Slow detrital C flux at  500 m"            unit="mmolC/m2/d"  />
+       <field id= "SDC_1000"   long_name="Slow detrital C flux at 1000 m"            unit="mmolC/m2/d"  />
+       <field id= "INVTC"      long_name="Column C inventory"                        unit="mmolC/m2"    />
+       <field id= "INVTALK"    long_name="Column alkalinity inventory"               unit="meq/m2"      />
+       <field id= "INVTO2"     long_name="Column O2 inventory"                       unit="mmolO2/m2"   />
+       <field id= "LYSO_CA"    long_name="Incorrect benthic output CaCO3"            unit="mmolC/m2/d"  />
+       <field id= "COM_RESP"   long_name="Community respiration"                     unit="mmolC/m2/d"  />
+       <field id= "PN_LLOSS"   long_name="Non-diatom linear losses"                  unit="mmolN/m2/d"  />
+       <field id= "PD_LLOSS"   long_name="Diatom linear losses"                      unit="mmolN/m2/d"  />
+       <field id= "ZI_LLOSS"   long_name="Microzooplankton linear losses"            unit="mmolN/m2/d"  />
+       <field id= "ZE_LLOSS"   long_name="Mesozooplankton linear losses"             unit="mmolN/m2/d"  />
+       <field id= "ZI_MES_N"   long_name="Microzoo messy feeding loss to N"          unit="mmolN/m2/d"  />
+       <field id= "ZI_MES_D"   long_name="Microzoo messy feeding loss to D"          unit="mmolN/m2/d"  />
+       <field id= "ZI_MES_C"   long_name="Microzoo messy feeding loss to C"          unit="mmolC/m2/d"  />
+       <field id= "ZI_MESDC"   long_name="Microzoo messy feeding loss to Dc"         unit="mmolC/m2/d"  />
+       <field id= "ZI_EXCR"    long_name="Microzoo excretion"                        unit="mmolN/m2/d"  />
+       <field id= "ZI_RESP"    long_name="Microzoo respiration"                      unit="mmolC/m2/d"  />
+       <field id= "ZI_GROW"    long_name="Microzoo growth"                           unit="mmolN/m2/d"  />
+       <field id= "ZE_MES_N"   long_name="Mesozoo messy feeding loss to N"           unit="mmolN/m2/d"  />
+       <field id= "ZE_MES_D"   long_name="Mesozoo messy feeding loss to D"           unit="mmolN/m2/d"  />
+       <field id= "ZE_MES_C"   long_name="Mesozoo messy feeding loss to C"           unit="mmolC/m2/d"  />
+       <field id= "ZE_MESDC"   long_name="Mesozoo messy feeding loss to Dc"          unit="mmolC/m2/d"  />
+       <field id= "ZE_EXCR"    long_name="Mesozoo excretion"                         unit="mmolN/m2/d"  />
+       <field id= "ZE_RESP"    long_name="Mesozoo respiration"                       unit="mmolC/m2/d"  />
+       <field id= "ZE_GROW"    long_name="Mesozoo growth"                            unit="mmolN/m2/d"  />
+       <field id= "MDETC"      long_name="Detritus non-grazing losses, carbon"       unit="mmolC/m2/d"  />
+       <field id= "GMIDC"      long_name="Microzoo grazing on detritus, carbon"      unit="mmolC/m2/d"  />
+       <field id= "GMEDC"      long_name="Mesozoo  grazing on detritus, carbon"      unit="mmolC/m2/d"  />
+       <field id= "INT_ZMI"    long_name="Vertically integrated Zmi"                 unit="mmolN/m2"    />
+       <field id= "INT_ZME"    long_name="Vertically integrated Zme"                 unit="mmolN/m2"    />
+       <field id= "INT_DET"    long_name="Vertically integrated Det"                 unit="mmolN/m2"    />
+       <field id= "INT_DTC"    long_name="Vertically integrated Dtc"                 unit="mmolC/m2"    />
+       <field id= "DMS_SURF"   long_name="DMS Surface Concentration"                 unit="nmol/L"      />
+       <field id= "DMS_ANDR"   long_name="DMS Surface Concentration, Anderson"       unit="nmol/L"      />
+       <field id= "DMS_SIMO"   long_name="DMS Surface Concentration, SimoDach"       unit="nmol/L"      />
+       <field id= "DMS_ARAN"   long_name="DMS Surface Concentration, AranamiT"       unit="nmol/L"      />
+       <field id= "DMS_HALL"   long_name="DMS Surface Concentration, Halloran"       unit="nmol/L"      />
+       <field id= "ATM_XCO2"   long_name="Atmospheric xCO2"                          unit="ppm"         />
+       <field id= "OCN_FCO2"   long_name="Surface ocean fCO2"                        unit="uatm"        />
+       <field id= "ATM_FCO2"   long_name="Atmospheric fCO2"                          unit="uatm"        />
+       <field id= "OCN_RHOSW"  long_name="MOCSY rhoSW"                               unit="kg/m3"       />
+       <field id= "OCN_SCHCO2" long_name="MOCSY Schmidt CO2"                         unit="-"           />
+       <field id= "OCN_KWCO2"  long_name="MOCSY kw CO2"                              unit="m/s"         />
+       <field id= "OCN_K0"     long_name="MOCSY k0"                                  unit="(mol/kg)/atm" />
+       <field id= "CO2STARAIR" long_name="MOCSY CO2star air"                         unit="mmol/m3"     />
+       <field id= "OCN_DPCO2"  long_name="MOCSY delta pCO2"                          unit="uatm"        />
+       
+
+       <!-- AXY (08/11/16): add new 2D CMIP6 diagnostics -->
+       <field id= "epC100"     long_name="Downward Flux of Particle Organic Carbon"  unit="mmolC/m2/d"  />
+       <field id= "epCALC100"  long_name="Downward Flux of Calcite"                  unit="mmolC/m2/d"  />
+       <field id= "epN100"     long_name="Downward Flux of Particulate Nitrogen"     unit="mmolN/m2/d"  />
+       <field id= "epSI100"    long_name="Downward Flux of Particulate Silica"       unit="mmolSi/m2/d" />
+       <field id= "INTDISSIC"  long_name="Dissolved Inorganic Carbon Content"        unit="mmolC/m2"    />
+       <field id= "INTDISSIN"  long_name="Dissolved Inorganic Nitrogen Content"      unit="mmolN/m2"    />
+       <field id= "INTDISSISI" long_name="Dissolved Inorganic Silicon Content"       unit="mmolSi/m2"   />
+       <field id= "INTTALK"    long_name="Dissolved Alkalinity Content"              unit="meq/m2"      />
+       <field id= "O2min"      long_name="Oxygen Minimum Concentration"              unit="mmolO2/m3"   />
+       <field id= "ZO2min"     long_name="Depth of Oxygen Minimum Concentration"     unit="m"           />
+       <field id= "FBDDTALK"   long_name="Int. change of Alkalinity due to Biology"  unit="meq/m2/d"    />
+       <field id= "FBDDTDIC"   long_name="Int. change of DI Carbon due to Biology"   unit="mmolC/m2/d"  />
+       <field id= "FBDDTDIFE"  long_name="Int. change of DI Iron due to Biology"     unit="mmolFe/m2/d" />
+       <field id= "FBDDTDIN"   long_name="Int. change of DI Nitrogen due to Biology" unit="mmolN/m2/d"  />
+       <field id= "FBDDTDISI"  long_name="Int. change of DI Silicon due to Biology"  unit="mmolSi/m2/d" />
+       
+
+       <!-- MEDUSA 3D diagnostics -->
+       <field id= "TPP3"       long_name="Total primary production 3D"               unit="mmolN/m3/d"    grid_ref="grid_T_3D"  />
+       <field id= "DETFLUX3"   long_name="Total detrital flux 3D"                    unit="mmolN/m3/d"    grid_ref="grid_T_3D"  />
+       <field id= "REMIN3N"    long_name="Total remin flux N 3D"                     unit="mmolN/m3/d"    grid_ref="grid_T_3D"  />
+       <field id= "PH3"        long_name="Ocean pH 3D"                               unit="-"             grid_ref="grid_T_3D"  />
+       <field id= "OM_CAL3"    long_name="Omega calcite 3D"                          unit="-"             grid_ref="grid_T_3D"  />
+
+       <!-- AXY (08/11/16): add new 3D CMIP6 diagnostics -->
+       <field id= "TPPD3"      long_name="Diatom primary production 3D"              unit="mmolN/m3/d"    grid_ref="grid_T_3D"  />
+       <field id= "BDDTALK3"   long_name="Change of Alkalinity due to Biology"       unit="meq/m3/d"      grid_ref="grid_T_3D"  />
+       <field id= "BDDTDIC3"   long_name="Change of DI Carbon due to Biology"        unit="mmolC/m3/d"    grid_ref="grid_T_3D"  />
+       <field id= "BDDTDIFE3"  long_name="Change of DI Iron due to Biology"          unit="mmolFe/m3/d"   grid_ref="grid_T_3D"  />
+       <field id= "BDDTDIN3"   long_name="Change of DI Nitrogen due to Biology"      unit="mmolN/m3/d"    grid_ref="grid_T_3D"  />
+       <field id= "BDDTDISI3"  long_name="Change of DI Silicon due to Biology"       unit="mmolSi/m3/d"   grid_ref="grid_T_3D"  />
+       <field id= "FD_NIT3"    long_name="Fast sinking detrital nitrogen"            unit="mmolN/m2/d"    grid_ref="grid_T_3D"  />
+       <field id= "FD_SIL3"    long_name="Fast sinking detrital silicon"             unit="mmolSi/m2/d"   grid_ref="grid_T_3D"  />
+       <field id= "FD_CAR3"    long_name="Fast sinking detrital carbon"              unit="mmolC/m2/d"    grid_ref="grid_T_3D"  />
+       <field id= "FD_CAL3"    long_name="Fast sinking detrital calcium carbonate"   unit="mmolC/m2/d"    grid_ref="grid_T_3D"  />
+       <field id= "CO33"       long_name="Carbonate ion concentration"               unit="mmolC/m3"      grid_ref="grid_T_3D"  />
+       <field id= "CO3SATARAG3" long_name="Carbonate aragonite saturation conc"      unit="mmolC/m3"      grid_ref="grid_T_3D"  />
+       <field id= "CO3SATCALC3" long_name="Carbonate calcite saturation conc"        unit="mmolC/m3"      grid_ref="grid_T_3D"  />
+       <field id= "DCALC3"     long_name="Calcite dissolution"                       unit="mmolC/m3/d"    grid_ref="grid_T_3D"  />
+       <field id= "EXPC3"      long_name="Downward Flux of Particulate Org Carbon"   unit="mmolC/m3/d"    grid_ref="grid_T_3D"  />
+       <field id= "EXPN3"      long_name="Downward Flux of Particulate Org Nitrogen" unit="mmolN/m3/d"    grid_ref="grid_T_3D"  />
+       <field id= "FEDISS3"    long_name="Particle Source of Dissolved Iron"         unit="mmolFe/m3/d"   grid_ref="grid_T_3D"  />
+       <field id= "FESCAV3"    long_name="Nonbiogenic Iron Scavenging"               unit="mmolFe/m3/d"   grid_ref="grid_T_3D"  />
+       <field id= "MIGRAZP3"   long_name="Microzooplankton grazing on phytoplankton" unit="mmolC/m3/d"    grid_ref="grid_T_3D"  />
+       <field id= "MIGRAZD3"   long_name="Microzooplankton grazing on detritus"      unit="mmolC/m3/d"    grid_ref="grid_T_3D"  />
+       <field id= "MEGRAZP3"   long_name="Mesozooplankton grazing on phytoplankton"  unit="mmolC/m3/d"    grid_ref="grid_T_3D"  />
+       <field id= "MEGRAZD3"   long_name="Mesozooplankton grazing on detritus"       unit="mmolC/m3/d"    grid_ref="grid_T_3D"  />
+       <field id= "MEGRAZZ3"   long_name="Mesozooplankton grazing on microzoop"      unit="mmolC/m3/d"    grid_ref="grid_T_3D"  />
+       <field id= "O2SAT3"     long_name="Dissolved Oxygen Saturation Concentration" unit="mmolO2/m3"     grid_ref="grid_T_3D"  />
+       <field id= "PBSI3"      long_name="Biogenic Silica Production"                unit="mmolSi/m3/d"   grid_ref="grid_T_3D"  />
+       <field id= "PCAL3"      long_name="Biogenic Calcite Production"               unit="mmolC/m3/d"    grid_ref="grid_T_3D"  />
+       <field id= "REMOC3"     long_name="Remineralization of Organic Carbon"        unit="mmolC/m3/d"    grid_ref="grid_T_3D"  />
+       <field id= "PNLIMJ3"    long_name="Irradiance limitation of non-diatoms"      unit="-"             grid_ref="grid_T_3D"  />
+       <field id= "PNLIMN3"    long_name="Nitrogen limitation of non-diatoms"        unit="-"             grid_ref="grid_T_3D"  />
+       <field id= "PNLIMFE3"   long_name="Iron limitation of non-diatoms"            unit="-"             grid_ref="grid_T_3D"  />
+       <field id= "PDLIMJ3"    long_name="Irradiance limitation of diatoms"          unit="-"             grid_ref="grid_T_3D"  />
+       <field id= "PDLIMN3"    long_name="Nitrogen limitation of diatoms"            unit="-"             grid_ref="grid_T_3D"  />
+       <field id= "PDLIMFE3"   long_name="Iron limitation of diatoms"                unit="-"             grid_ref="grid_T_3D"  />
+       <field id= "PDLIMSI3"   long_name="Silicon limitation of diatoms"             unit="-"             grid_ref="grid_T_3D"  />
+
+     </field_group>
+
+     <field_group id="PISCES_scalar"  domain_ref="1point" >
+       <field id="pno3tot"         long_name="global mean nitrate concentration"                  unit="mol/m3"   />
+       <field id="ppo4tot"         long_name="global mean phosphorus concentration"               unit="mol/m3"   />
+       <field id="psiltot"         long_name="global mean silicate concentration"                 unit="mol/m3"   />
+       <field id="palktot"         long_name="global mean alkalinity concentration"               unit="mol/m3"   />
+       <field id="pfertot"         long_name="global mean iron concentration"                     unit="mol/m3"   />
+       <field id="tcflx"           long_name="total Flux of Carbon out of the ocean"              unit="mol/s"   />
+       <field id="tcflxcum"        long_name="cumulative total Flux of Carbon out of the ocean"   unit="mol/s"   />
+       <field id="tcexp"           long_name="total Carbon export at 100m"                        unit="mol/s"   />
+       <field id="tintpp"          long_name="global total integrated primary production"         unit="mol/s"   />
+       <field id="tnfix"           long_name="global total nitrogen fixation"                     unit="mol/s"   />
+       <field id="tdenit"          long_name="Total denitrification"                              unit="mol/s"   />
+     </field_group>
+
+    <!-- 
+============================================================================================================
+                                        Definitions for iodef_demo.xml
+============================================================================================================
+    -->
+
+    <field_group id="groupMEDUSA" >
+      <field field_ref="CHN"   name="CHN"   />
+      <field field_ref="CHD"   name="CHD"   />
+      <field field_ref="PHN"   name="PHN"   />
+      <field field_ref="PHD"   name="PHD"   />
+      <field field_ref="ZMI"   name="ZMI"   />
+      <field field_ref="ZME"   name="ZME"   />
+      <field field_ref="DIN"   name="DIN"   />
+      <field field_ref="SIL"   name="SIL"   />
+      <field field_ref="FER"   name="FER"   />
+      <field field_ref="DET"   name="DET"   />
+      <field field_ref="PDS"   name="PDS"   />
+      <field field_ref="DTC"   name="DTC"   />
+      <field field_ref="DiC"   name="DIC"   />
+      <field field_ref="ALK"   name="ALK"   />
+      <field field_ref="OXY"   name="OXY"   />
+      </field_group>
+
+    <field_group id="groupIDTRA" >
+      <field field_ref="IDTRA" name="IDTRA" />
+    </field_group>
+
+    <field_group id="groupIDTRA_dia" >
+      <field field_ref="qtrIDTRA"    name="qtrIDTRA"  />
+      <field field_ref="qintIDTRA"   name="qintIDTRA" />
+      <field field_ref="invIDTRA"    name="invIDTRA"  />
+    </field_group>
+
+    <field_group id="groupCFC" >
+      <field field_ref="CFC11" name="CFC11" />
+    </field_group>
+
+    <field_group id="groupCFC_dia" >
+      <field field_ref="qtrCFC11"    name="qtrCFC11"   />
+      <field field_ref="qintCFC11"   name="qintCFC11"  />
+    </field_group>
+
+    <field_group id="groupAGE" >
+      <field field_ref="Age" name="Age" />
+    </field_group>
+
+    <field_group id="groupMEDUSA_dia" >
+      <field field_ref= "INVTN"      name="INVTN"      />
+      <field field_ref= "INVTSI"     name="INVTSI"     />
+      <field field_ref= "INVTFE"     name="INVTFE"     />
+      <field field_ref= "PRN"        name="PRN"        />
+      <field field_ref= "MPN"        name="MPN"        />
+      <field field_ref= "PRD"        name="PRD"        />
+      <field field_ref= "MPD"        name="MPD"        />
+      <field field_ref= "OPAL"       name="OPAL"       />
+      <field field_ref= "OPALDISS"   name="OPALDISS"   />
+      <field field_ref= "GMIPn"      name="GMIPn"      />
+      <field field_ref= "GMID"       name="GMID"       />
+      <field field_ref= "MZMI"       name="MZMI"       />
+      <field field_ref= "GMEPN"      name="GMEPN"      />
+      <field field_ref= "GMEPD"      name="GMEPD"      />
+      <field field_ref= "GMEZMI"     name="GMEZMI"     />
+      <field field_ref= "GMED"       name="GMED"       />
+      <field field_ref= "MZME"       name="MZME"       />
+      <field field_ref= "DETN"       name="DETN"       />
+      <field field_ref= "MDET"       name="MDET"       />
+      <field field_ref= "AEOLIAN"    name="AEOLIAN"    />
+      <field field_ref= "BENTHIC"    name="BENTHIC"    />
+      <field field_ref= "SCAVENGE"   name="SCAVENGE"   />
+      <field field_ref= "PN_JLIM"    name="PN_JLIM"    />
+      <field field_ref= "PN_NLIM"    name="PN_NLIM"    />
+      <field field_ref= "PN_FELIM"   name="PN_FELIM"   />
+      <field field_ref= "PD_JLIM"    name="PD_JLIM"    />
+      <field field_ref= "PD_NLIM"    name="PD_NLIM"    />
+      <field field_ref= "PD_FELIM"   name="PD_FELIM"   />
+      <field field_ref= "PD_SILIM"   name="PD_SILIM"   />
+      <field field_ref= "PDSILIM2"   name="PDSILIM2"   />
+      <field field_ref= "SDT__100"   name="SDT__100"   />
+      <field field_ref= "SDT__200"   name="SDT__200"   />
+      <field field_ref= "SDT__500"   name="SDT__500"   />
+      <field field_ref= "SDT_1000"   name="SDT_1000"   />
+      <field field_ref= "TOTREG_N"   name="TOTREG_N"   />
+      <field field_ref= "TOTRG_SI"   name="TOTRG_SI"   />
+      <field field_ref= "REG__100"   name="REG__100"   />
+      <field field_ref= "REG__200"   name="REG__200"   />
+      <field field_ref= "REG__500"   name="REG__500"   />
+      <field field_ref= "REG_1000"   name="REG_1000"   />
+      <field field_ref= "FASTN"      name="FASTN"      />
+      <field field_ref= "FASTSI"     name="FASTSI"     />
+      <field field_ref= "FASTFE"     name="FASTFE"     />
+      <field field_ref= "FASTC"      name="FASTC"      />
+      <field field_ref= "FASTCA"     name="FASTCA"     />
+      <field field_ref= "FDT__100"   name="FDT__100"   />
+      <field field_ref= "FDT__200"   name="FDT__200"   />
+      <field field_ref= "FDT__500"   name="FDT__500"   />
+      <field field_ref= "FDT_1000"   name="FDT_1000"   /> 
+      <field field_ref= "RG__100F"   name="RG__100F"   />
+      <field field_ref= "RG__200F"   name="RG__200F"   />
+      <field field_ref= "RG__500F"   name="RG__500F"   />
+      <field field_ref= "RG_1000F"   name="RG_1000F"   />
+      <field field_ref= "FDS__100"   name="FDS__100"   />
+      <field field_ref= "FDS__200"   name="FDS__200"   />
+      <field field_ref= "FDS__500"   name="FDS__500"   />
+      <field field_ref= "FDS_1000"   name="FDS_1000"   />
+      <field field_ref= "RGS_100F"   name="RGS_100F"   />
+      <field field_ref= "RGS_200F"   name="RGS_200F"   />
+      <field field_ref= "RGS_500F"   name="RGS_500F"   />
+      <field field_ref= "RGS1000F"   name="RGS1000F"   />
+      <field field_ref= "REMINN"     name="REMINN"     />
+      <field field_ref= "REMINSI"    name="REMINSI"    />
+      <field field_ref= "REMINFE"    name="REMINFE"    />
+      <field field_ref= "SEAFLRN"    name="SEAFLRN"    /> 
+      <field field_ref= "SEAFLRSI"   name="SEAFLRSI"   />
+      <field field_ref= "SEAFLRFE"   name="SEAFLRFE"   />
+      <field field_ref= "SEAFLRC"    name="SEAFLRC"    />
+      <field field_ref= "SEAFLRCA"   name="SEAFLRCA"   />
+      <field field_ref= "MED_QSR"    name="MED_QSR"    />
+      <field field_ref= "MED_XPAR"   name="MED_XPAR"   />
+      <field field_ref= "INTFLX_N"   name="INTFLX_N"   />
+      <field field_ref= "INTFLX_SI"  name="INTFLX_SI"  />
+      <field field_ref= "INTFLX_FE"  name="INTFLX_FE"  />
+      <field field_ref= "INT_PN"     name="INT_PN"     />
+      <field field_ref= "INT_PD"     name="INT_PD"     />
+      <field field_ref= "ML_PRN"     name="ML_PRN"     />
+      <field field_ref= "ML_PRD"     name="ML_PRD"     />
+      <field field_ref= "OCAL_CCD"   name="OCAL_CCD"   />
+      <field field_ref= "OCAL_LVL"   name="OCAL_LVL"   />
+      <field field_ref= "FE_0000"    name="FE_0000"    />
+      <field field_ref= "FE_0100"    name="FE_0100"    />
+      <field field_ref= "FE_0200"    name="FE_0200"    /> 
+      <field field_ref= "FE_0500"    name="FE_0500"    />
+      <field field_ref= "FE_1000"    name="FE_1000"    />
+      <field field_ref= "MED_XZE"    name="MED_XZE"    />
+      <field field_ref= "WIND"       name="WIND"       />
+      <field field_ref= "ATM_PCO2"   name="ATM_PCO2"   />
+      <field field_ref= "OCN_PH"     name="OCN_PH"     />
+      <field field_ref= "OCN_PCO2"   name="OCN_PCO2"   />
+      <field field_ref= "OCNH2CO3"   name="OCNH2CO3"   />
+      <field field_ref= "OCN_HCO3"   name="OCN_HCO3"   />
+      <field field_ref= "OCN_CO3"    name="OCN_CO3"    />
+      <field field_ref= "CO2FLUX"    name="CO2FLUX"    />
+      <field field_ref= "FGCO2"      name="FGCO2"      />
+      <field field_ref= "OM_CAL"     name="OM_CAL"     />
+      <field field_ref= "OM_ARG"     name="OM_ARG"     />
+      <field field_ref= "TCO2"       name="TCO2"       />
+      <field field_ref= "TALK"       name="TALK"       />
+      <field field_ref= "KW660"      name="KW660"      />
+      <field field_ref= "ATM_PP0"    name="ATM_PP0"    />
+      <field field_ref= "O2FLUX"     name="O2FLUX"     />
+      <field field_ref= "O2SAT"      name="O2SAT"      />
+      <field field_ref= "CAL_CCD"    name="CAL_CCD"    />
+      <field field_ref= "ARG_CCD"    name="ARG_CCD"    />
+      <field field_ref= "SFR_OCAL"   name="SFR_OCAL"   />
+      <field field_ref= "SFR_OARG"   name="SFR_OARG"   />
+      <field field_ref= "N_PROD"     name="N_PROD"     />
+      <field field_ref= "N_CONS"     name="N_CONS"     />
+      <field field_ref= "C_PROD"     name="C_PROD"     />
+      <field field_ref= "C_CONS"     name="C_CONS"     />
+      <field field_ref= "O2_PROD"    name="O2_PROD"    />
+      <field field_ref= "O2_CONS"    name="O2_CONS"    />
+      <field field_ref= "O2_ANOX"    name="O2_ANOX"    />
+      <field field_ref= "RR_0100"    name="RR_0100"    />
+      <field field_ref= "RR_0500"    name="RR_0500"    />
+      <field field_ref= "RR_1000"    name="RR_1000"    />
+      <field field_ref= "IBEN_N"     name="IBEN_N"     />
+      <field field_ref= "IBEN_FE"    name="IBEN_FE"    />
+      <field field_ref= "IBEN_C"     name="IBEN_C"     />
+      <field field_ref= "IBEN_SI"    name="IBEN_SI"    />
+      <field field_ref= "IBEN_CA"    name="IBEN_CA"    />
+      <field field_ref= "OBEN_N"     name="OBEN_N"     />
+      <field field_ref= "OBEN_FE"    name="OBEN_FE"    />
+      <field field_ref= "OBEN_C"     name="OBEN_C"     />
+      <field field_ref= "OBEN_SI"    name="OBEN_SI"    />
+      <field field_ref= "OBEN_CA"    name="OBEN_CA"    />
+      <field field_ref= "BEN_N"      name="BEN_N"      />
+      <field field_ref= "BEN_FE"     name="BEN_FE"     />
+      <field field_ref= "BEN_C"      name="BEN_C"      />
+      <field field_ref= "BEN_SI"     name="BEN_SI"     />
+      <field field_ref= "BEN_CA"     name="BEN_CA"     />
+      <field field_ref= "DETC"       name="DETC"       />
+      <field field_ref= "SDC__100"   name="SDC__100"   />
+      <field field_ref= "SDC__200"   name="SDC__200"   />
+      <field field_ref= "SDC__500"   name="SDC__500"   />
+      <field field_ref= "SDC_1000"   name="SDC_1000"   />
+      <field field_ref= "INVTC"      name="INVTC"      />
+      <field field_ref= "INVTALK"    name="INVTALK"    />
+      <field field_ref= "INVTO2"     name="INVTO2"     />
+      <field field_ref= "LYSO_CA"    name="LYSO_CA"    />
+      <field field_ref= "COM_RESP"   name="COM_RESP"   />
+      <field field_ref= "PN_LLOSS"   name="PN_LLOSS"   />
+      <field field_ref= "PD_LLOSS"   name="PD_LLOSS"   />
+      <field field_ref= "ZI_LLOSS"   name="ZI_LLOSS"   />
+      <field field_ref= "ZE_LLOSS"   name="ZE_LLOSS"   />
+      <field field_ref= "ZI_MES_N"   name="ZI_MES_N"   />
+      <field field_ref= "ZI_MES_D"   name="ZI_MES_D"   />
+      <field field_ref= "ZI_MES_C"   name="ZI_MES_C"   />
+      <field field_ref= "ZI_MESDC"   name="ZI_MESDC"   />
+      <field field_ref= "ZI_EXCR"    name="ZI_EXCR"    />
+      <field field_ref= "ZI_RESP"    name="ZI_RESP"    />
+      <field field_ref= "ZI_GROW"    name="ZI_GROW"    />
+      <field field_ref= "ZE_MES_N"   name="ZE_MES_N"   />
+      <field field_ref= "ZE_MES_D"   name="ZE_MES_D"   />
+      <field field_ref= "ZE_MES_C"   name="ZE_MES_C"   />
+      <field field_ref= "ZE_MESDC"   name="ZE_MESDC"   />
+      <field field_ref= "ZE_EXCR"    name="ZE_EXCR"    />
+      <field field_ref= "ZE_RESP"    name="ZE_RESP"    />
+      <field field_ref= "ZE_GROW"    name="ZE_GROW"    />
+      <field field_ref= "MDETC"      name="MDETC"      />
+      <field field_ref= "GMIDC"      name="GMIDC"      />
+      <field field_ref= "GMEDC"      name="GMEDC"      />
+      <field field_ref= "INT_ZMI"    name="INT_ZMI"    />
+      <field field_ref= "INT_ZME"    name="INT_ZME"    />
+      <field field_ref= "INT_DET"    name="INT_DET"    />
+      <field field_ref= "INT_DTC"    name="INT_DTC"    />
+      <field field_ref= "ATM_XCO2"   name="ATM_XCO2"   />
+      <field field_ref= "OCN_FCO2"   name="OCN_FCO2"   />
+      <field field_ref= "ATM_FCO2"   name="ATM_FCO2"   />
+      <field field_ref= "OCN_RHOSW"  name="OCN_RHOSW"  />
+      <field field_ref= "OCN_SCHCO2" name="OCN_SCHCO2" />
+      <field field_ref= "OCN_KWCO2"  name="OCN_KWCO2"  />
+      <field field_ref= "OCN_K0"     name="OCN_K0"     />
+      <field field_ref= "CO2STARAIR" name="CO2STARAIR" />
+      <field field_ref= "OCN_DPCO2"  name="OCN_DPCO2"  />
+    </field_group>
+
+    <field_group id="groupMEDUSA_3dd" >
+      <field field_ref= "TPP3"       name="TPP3"       />
+      <field field_ref= "DETFLUX3"   name="DETFLUX3"   />
+      <field field_ref= "REMIN3N"    name="REMIN3N"    />
+      <field field_ref= "PH3"        name="PH3"        />
+      <field field_ref= "OM_CAL3"    name="OM_CAL3"    /> 
+    </field_group>
+
+    <field_group id="groupMEDUSA_dms" >
+      <field field_ref= "DMS_SURF"   name="DMS_SURF"   />
+      <field field_ref= "DMS_ANDR"   name="DMS_ANDR"   />
+      <field field_ref= "DMS_SIMO"   name="DMS_SIMO"   />
+      <field field_ref= "DMS_ARAN"   name="DMS_ARAN"   />
+      <field field_ref= "DMS_HALL"   name="DMS_HALL"   />
+    </field_group>
+
+    <field_group id="groupMEDUSA_riv" >
+      <field field_ref= "RUNOFF"     name="RUNOFF"     />
+      <field field_ref= "RIV_N"      name="RIV_N"      />
+      <field field_ref= "RIV_SI"     name="RIV_SI"     />
+      <field field_ref= "RIV_C"      name="RIV_C"      />
+      <field field_ref= "RIV_ALK"    name="RIV_ALK"    />
+    </field_group>
+
+    <field_group id="groupMEDUSA_cmip6" >
+      <field field_ref= "epC100"     name="epC100"     />
+      <field field_ref= "epCALC100"  name="epCALC100"  />
+      <field field_ref= "epN100"     name="epN100"     />
+      <field field_ref= "epSI100"    name="epSI100"    />
+      <field field_ref= "INTDISSIC"  name="INTDISSIC"  />
+      <field field_ref= "INTDISSIN"  name="INTDISSIN"  />
+      <field field_ref= "INTDISSISI" name="INTDISSISI" />
+      <field field_ref= "INTTALK"    name="INTTALK"    />
+      <field field_ref= "O2min"      name="O2min"      />
+      <field field_ref= "ZO2min"     name="ZO2min"     />
+      <field field_ref= "FBDDTALK"   name="FBDDTALK"   />
+      <field field_ref= "FBDDTDIC"   name="FBDDTDIC"   />
+      <field field_ref= "FBDDTDIFE"  name="FBDDTDIFE"  />
+      <field field_ref= "FBDDTDIN"   name="FBDDTDIN"   />
+      <field field_ref= "FBDDTDISI"  name="FBDDTDISI"  />
+      <field field_ref= "TPPD3"      name="TPPD3"      />
+      <field field_ref= "BDDTALK3"   name="BDDTALK3"   />
+      <field field_ref= "BDDTDIC3"   name="BDDTDIC3"   />
+      <field field_ref= "BDDTDIFE3"  name="BDDTDIFE3"  />
+      <field field_ref= "BDDTDIN3"   name="BDDTDIN3"   />
+      <field field_ref= "BDDTDISI3"  name="BDDTDISI3"  />
+      <field field_ref= "FD_NIT3"    name="FD_NIT3"    />
+      <field field_ref= "FD_SIL3"    name="FD_SIL3"    />
+      <field field_ref= "FD_CAR3"    name="FD_CAR3"    />
+      <field field_ref= "FD_CAL3"    name="FD_CAL3"    />
+      <field field_ref= "CO33"       name="CO33"       />
+      <field field_ref= "CO3SATARAG3" name="CO3SATARAG3" />
+      <field field_ref= "CO3SATCALC3" name="CO3SATCALC3" />
+      <field field_ref= "DCALC3"     name="DCALC3"     />
+      <field field_ref= "EXPC3"      name="EXPC3"      />
+      <field field_ref= "EXPN3"      name="EXPN3"      />
+      <field field_ref= "FEDISS3"    name="FEDISS3"    />
+      <field field_ref= "FESCAV3"    name="FESCAV3"    />
+      <field field_ref= "MIGRAZP3"   name="MIGRAZP3"   />
+      <field field_ref= "MIGRAZD3"   name="MIGRAZD3"   />
+      <field field_ref= "MEGRAZP3"   name="MEGRAZP3"   />
+      <field field_ref= "MEGRAZD3"   name="MEGRAZD3"   />
+      <field field_ref= "MEGRAZZ3"   name="MEGRAZZ3"   />
+      <field field_ref= "O2SAT3"     name="O2SAT3"     />
+      <field field_ref= "PBSI3"      name="PBSI3"      />
+      <field field_ref= "PCAL3"      name="PCAL3"      />
+      <field field_ref= "REMOC3"     name="REMOC3"     />
+      <field field_ref= "PNLIMJ3"    name="PNLIMJ3"    />
+      <field field_ref= "PNLIMN3"    name="PNLIMN3"    />
+      <field field_ref= "PNLIMFE3"   name="PNLIMFE3"   />
+      <field field_ref= "PDLIMJ3"    name="PDLIMJ3"    />
+      <field field_ref= "PDLIMN3"    name="PDLIMN3"    />
+      <field field_ref= "PDLIMFE3"   name="PDLIMFE3"   />
+      <field field_ref= "PDLIMSI3"   name="PDLIMSI3"   />
+    </field_group>
+
+</field_definition>

@@ -1,0 +1,7 @@
+!-----------------------------------------------------------------------
+&nammpp_dyndist !   Massively Parallel Distribution for AGRIF zoom      ("key_agrif" && "key_mpp_dyndist")
+!-----------------------------------------------------------------------
+   jpni        =    1      !  jpni   number of processors following i
+   jpnj        =    1      !  jpnj   number of processors following j
+   jpnij       =    1      !  jpnij  number of local domains
+/

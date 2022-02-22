@@ -1,0 +1,43 @@
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!
+! idealize Tracer namelist :  NEMO idealize traceur model option and parameter input
+! -------------
+! 
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+!       namidtra   parameter for 1/2 decay time
+!,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+!
+!! idealize tracer 1/2 decay time
+!!       tmp_decay   :  1/2 decay time
+!!
+!! idealize tracer names (to be added if needed)
+!!
+&namidtra
+!
+!! idealize tracer 1/2 decay time
+      tmp_decay = 10        !! years
+!! idealize tracer names
+!!###############################################
+!!   names are defined in the top namelist (namtrc) 
+!!   
+!!###############################################
+/
+!=================================================
+! nammeddia    Passive tracers additional diagnostics
+!=================================================
+!
+!      ctrc2d  : 2d output field name
+!      ctrc2u  : 2d output field unit
+!      ctrc2l  : 2d output field long name
+!
+!      nwriteadd: frequency of additional arrays outputs(namelist)
+!&nammeddia
+!!##########################################################
+!! No aditional diagnostics associated to idealize tracers.
+!! If one want to add additional diag, 
+!! can be done here, following the example just below 
+!!##########################################################
+!            meddia2d(1)  = 'INVTN'             ,              'Column N inventory'                            ,              'mmolN/m2'
+!            meddia2d(2)  = 'INVTSI'            ,              'Column Si inventory'                           ,              'mmolSi/m2'
+!/

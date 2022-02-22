@@ -1,0 +1,49 @@
+!              !  file name   ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !              !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
+&variable
+   name='gelbstoff_absorption_satellite'
+   sn=         'ORCA2-ADY-broadband',192,            'gelbstoff_absorption_satellite', .true.,  .true.,   'yearly',     '',         '',        ''
+/
+&variable
+   name='N3_flux/flux'
+   sn=         'ORCA2-TM3-NDeposition.1993',-12,            'N3_flux', .true.,  .true.,   'yearly',     '',         '',        ''
+/
+&variable
+   name='N4_flux/flux'
+   sn=         'ORCA2-TM3-NDeposition.1993',-12,            'N4_flux', .true.,  .true.,   'yearly',     '',         '',        ''
+/
+&riverdata
+   name='N3_n'
+   sn=         'river.orca',120,            'riverdin', .false.,  .true.,   'yearly',     '',         '',        ''
+   rfac=2.263901e-6 !g/y -> mmol/s 1000./86400./365./14.0067
+/
+&riverdata
+   name='N1_p'
+   sn=         'river.orca',120,            'riverdip', .false.,  .true.,   'yearly',     '',         '',        ''
+   rfac=1.023762e-6 !g/y -> mmol/s 1000./86400./365./30.9738
+/
+&riverdata
+   name='N5_s'
+   sn=         'river.orca',120,            'riverdsi', .false.,  .true.,   'yearly',     '',         '',        ''
+   rfac=1.129045e-6 !g/y -> mmol/s 1000./86400./365./28.0855
+/
+&riverdata
+   name='O3_c'
+   sn=         'river.orca',120,            'riverdic', .false.,  .true.,   'yearly',     '',         '',        ''
+   rfac=2.640128e-6 !g/y -> mmol/s 1000./86400./365./12.0107
+/
+&riverdata
+   name='R1_c'
+   sn=         'river.orca',120,            'riverdoc', .false.,  .true.,   'yearly',     '',         '',        ''
+   rfac=2.640128e-6 !g/y -> mmol/s 1000./86400./365./12.0107
+/
+&riverdata
+   name='R1_n'
+   sn=         'river.orca',120,            'riverdon', .false.,  .true.,   'yearly',     '',         '',        ''
+   rfac=2.263901e-6 !g/y -> mmol/s 1000./86400./365./14.0067
+/
+&riverdata
+   name='R1_p'
+   sn=         'river.orca',120,            'riverdop', .false.,  .true.,   'yearly',     '',         '',        ''
+   rfac=1.023762e-6 !g/y -> mmol/s 1000./86400./365./30.9738
+/

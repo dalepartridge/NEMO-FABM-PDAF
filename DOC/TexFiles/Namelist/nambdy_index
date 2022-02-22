@@ -1,0 +1,17 @@
+!-----------------------------------------------------------------------
+&nambdy_index    !  open boundaries - definition           ("key_bdy")
+!-----------------------------------------------------------------------
+    nbdysege = 0
+    nbdysegw = 1
+    jpiwob = 2
+    jpjwdt = 2
+    jpjwft = 191
+    nbdysegn = 1
+    jpjnob = 191
+    jpindt = 2
+    jpinft = 146
+    nbdysegs = 1
+    jpjsob = 2
+    jpisdt = 2
+    jpisft = 43
+/

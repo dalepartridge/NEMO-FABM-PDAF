@@ -1,0 +1,1809 @@
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_timer.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_memcount.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_mod_filtermpi.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_mod_filter.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_interfaces_module.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_init_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_init_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_alloc_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_print_info.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_print_version.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_options_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_state.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_state_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_incremental.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_incremental_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_set_forget.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_set_forget_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_add_increment.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_generate_rndmat.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_local_weights.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_local_weight.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_ens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_memberid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_obsmemberid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_shift.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_set_smootherens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_smootherens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_set_ens_pointer.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_prepost.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_prepost_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_prepost.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_prepost_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_inflate_ens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_sampleens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_mvnormalize.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_eofcovar.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_diag_histogram.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_diag_ensstats.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_diag_effsample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_dim_obs_f.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_obs_f.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_obs_f2.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_obs_f_flex.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_obs_f2_flex.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_allreduce.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_deallocate.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_assim_flag.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_get_localfilter.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_inflate_weights.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_put_state_global.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_put_state_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_assimilate_global.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_assimilate_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_seik_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_seik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_seik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_seik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_seik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_resample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_analysis_newT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_resample_newT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_analysis_trans.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_matrixT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_uinv.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_seik_omega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_seik_TtimesA.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_lseik_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lseik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lseik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lseik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lseik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_resample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_analysis_trans.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_seek_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_seek.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_seek_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_seek.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_seek_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_rediag.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_enkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_enkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_enkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_obs_ensemble.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_gather_resid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_analysis_rlm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_analysis_rsm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_enkf_omega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_enkf_Tleft.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_etkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_etkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_etkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_etkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_etkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_analysis_T.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_Tright.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_etkf_Tleft.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_letkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_letkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_letkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_letkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_letkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_analysis_T.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_estkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_estkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_estkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_estkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_estkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_AOmega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_OmegaA.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_lestkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lestkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lestkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lestkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lestkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_lenkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lenkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_put_state_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lenkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_assimilate_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_analysis_rsm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_netf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_netf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_netf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_smootherT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_lnetf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lnetf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lnetf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_smootherT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_pf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_pf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_pf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_pf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_pf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_resampling.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_add_noise.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_genobs_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_genobs_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_genobs_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_generate_obs_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_put_state_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_generate_obs_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gen_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_obs_f.F90
+
+          IF (lhood>0.0) lhood = - LOG(lhood)
+ftn-7212 crayftn: WARNING PDAFOMI_LIKELIHOOD, File = PDAFomi_obs_f.F90, Line = 843 
+  Variable "lhood" is used before it is defined.
+
+Cray Fortran : Version 10.0.4 (20200915194113_fb520efc059185c9fadb4513171ab09002b05033)
+Cray Fortran : Thu Apr 01, 2021  17:08:05
+Cray Fortran : Compile time:  1.7067 seconds
+Cray Fortran : 1839 source lines
+Cray Fortran : 0 errors, 1 warnings, 0 other messages, 0 ansi
+Cray Fortran : "explain ftn-message number" gives more information about each message.
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_obs_l.F90
+
+          IF (lhood_l>0.0) lhood_l = - LOG(lhood_l)
+ftn-7212 crayftn: WARNING PDAFOMI_LIKELIHOOD_L, File = PDAFomi_obs_l.F90, Line = 922 
+  Variable "lhood_l" is used before it is defined.
+
+Cray Fortran : Version 10.0.4 (20200915194113_fb520efc059185c9fadb4513171ab09002b05033)
+Cray Fortran : Thu Apr 01, 2021  17:08:09
+Cray Fortran : Compile time:  1.4842 seconds
+Cray Fortran : 1520 source lines
+Cray Fortran : 0 errors, 1 warnings, 0 other messages, 0 ansi
+Cray Fortran : "explain ftn-message number" gives more information about each message.
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_obs_op.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_callback.F90
+
+     CALL PDAFomi_init_obscovar(obs_f_all(i)%ptr, dim_obs_p, covar, isdiag)
+ftn-7212 crayftn: WARNING PDAFOMI_INIT_OBSCOVAR_CB, File = PDAFomi_callback.F90, Line = 567 
+  Variable "covar" is used before it is defined.
+
+++++++ Generate Filter library ++++++
+ar -r  ../lib/libpdaf-d.a \
+PDAF_timer.o PDAF_memcount.o PDAF-D_mod_filtermpi.o PDAF-D_mod_filter.o PDAF_interfaces_module.o PDAF-D_init.o PDAF-D_init_si.o PDAF-D_init_filters.o PDAF-D_alloc_filters.o PDAF-D_print_info.o PDAF-D_print_version.o PDAF_options_filters.o PDAF-D_get_state.o PDAF-D_get_state_si.o PDAF-D_incremental.o PDAF-D_incremental_si.o PDAF-D_set_forget.o PDAF-D_set_forget_local.o PDAF-D_add_increment.o PDAF_generate_rndmat.o PDAF_local_weights.o PDAF_local_weight.o PDAF-D_gather_ens.o PDAF-D_get_memberid.o PDAF-D_get_obsmemberid.o PDAF-D_smoother_shift.o PDAF-D_smoother.o PDAF-D_smoother_local.o PDAF-D_set_smootherens.o PDAF-D_get_smootherens.o PDAF_set_ens_pointer.o PDAF-D_put_state_prepost.o PDAF-D_put_state_prepost_si.o PDAF-D_prepost.o PDAF-D_prepost_si.o PDAF_inflate_ens.o PDAF_sampleens.o PDAF_mvnormalize.o PDAF_eofcovar.o PDAF_diag_histogram.o PDAF_diag_ensstats.o PDAF_diag_effsample.o PDAF-D_gather_dim_obs_f.o PDAF-D_gather_obs_f.o PDAF-D_gather_obs_f2.o PDAF-D_gather_obs_f_flex.o PDAF-D_gather_obs_f2_flex.o PDAF-D_allreduce.o PDAF-D_deallocate.o PDAF-D_get_assim_flag.o PDAF_get_localfilter.o PDAF_inflate_weights.o PDAFomi_put_state_global.o PDAFomi_put_state_local.o PDAFomi_assimilate_global.o PDAFomi_assimilate_local.o PDAF-D_seik_init.o PDAF-D_seik_alloc.o PDAF_seik_options.o PDAF-D_seik_memtime.o PDAF-D_put_state_seik.o PDAF-D_put_state_seik_si.o PDAF-D_assimilate_seik.o PDAF-D_assimilate_seik_si.o PDAF-D_seik_update.o PDAF-D_seik_analysis.o PDAF-D_seik_resample.o PDAF-D_seik_analysis_newT.o PDAF-D_seik_resample_newT.o PDAF-D_seik_analysis_trans.o PDAF-D_seik_matrixT.o PDAF-D_seik_uinv.o PDAF_seik_omega.o PDAF_seik_TtimesA.o PDAF-D_lseik_init.o PDAF-D_lseik_alloc.o PDAF_lseik_options.o PDAF-D_lseik_memtime.o PDAF-D_put_state_lseik.o PDAF-D_put_state_lseik_si.o PDAF-D_assimilate_lseik.o PDAF-D_assimilate_lseik_si.o PDAF-D_lseik_update.o PDAF-D_lseik_analysis.o PDAF-D_lseik_resample.o PDAF-D_lseik_analysis_trans.o PDAF-D_seek_init.o PDAF-D_seek_alloc.o PDAF_seek_options.o PDAF-D_seek_memtime.o PDAF-D_put_state_seek.o PDAF-D_put_state_seek_si.o PDAF-D_assimilate_seek.o PDAF-D_assimilate_seek_si.o PDAF-D_seek_update.o PDAF-D_seek_analysis.o PDAF-D_seek_rediag.o PDAF-D_enkf_init.o PDAF-D_enkf_alloc.o PDAF_enkf_options.o PDAF-D_enkf_memtime.o PDAF-D_put_state_enkf.o PDAF-D_put_state_enkf_si.o PDAF-D_assimilate_enkf.o PDAF-D_assimilate_enkf_si.o PDAF-D_enkf_update.o PDAF-D_enkf_obs_ensemble.o PDAF-D_enkf_gather_resid.o PDAF-D_enkf_analysis_rlm.o PDAF-D_enkf_analysis_rsm.o PDAF_enkf_omega.o PDAF_enkf_Tleft.o PDAF-D_smoother_enkf.o PDAF-D_etkf_init.o PDAF-D_etkf_alloc.o PDAF_etkf_options.o PDAF-D_etkf_memtime.o PDAF-D_put_state_etkf.o PDAF-D_put_state_etkf_si.o PDAF-D_assimilate_etkf.o PDAF-D_assimilate_etkf_si.o PDAF-D_etkf_update.o PDAF-D_etkf_analysis.o PDAF-D_etkf_analysis_T.o PDAF-D_etkf_analysis_fixed.o PDAF-D_etkf_Tright.o PDAF_etkf_Tleft.o PDAF-D_letkf_init.o PDAF-D_letkf_alloc.o PDAF_letkf_options.o PDAF-D_letkf_memtime.o PDAF-D_put_state_letkf.o PDAF-D_put_state_letkf_si.o PDAF-D_assimilate_letkf.o PDAF-D_assimilate_letkf_si.o PDAF-D_letkf_update.o PDAF-D_letkf_analysis.o PDAF-D_letkf_analysis_T.o PDAF-D_letkf_analysis_fixed.o PDAF-D_estkf_init.o PDAF-D_estkf_alloc.o PDAF_estkf_options.o PDAF-D_estkf_memtime.o PDAF-D_put_state_estkf.o PDAF-D_put_state_estkf_si.o PDAF-D_assimilate_estkf.o PDAF-D_assimilate_estkf_si.o PDAF-D_estkf_update.o PDAF-D_estkf_analysis.o PDAF-D_estkf_analysis_fixed.o PDAF-D_estkf_AOmega.o PDAF-D_estkf_OmegaA.o PDAF-D_lestkf_init.o PDAF-D_lestkf_alloc.o PDAF_lestkf_options.o PDAF-D_lestkf_memtime.o PDAF-D_put_state_lestkf.o PDAF-D_put_state_lestkf_si.o PDAF-D_assimilate_lestkf.o PDAF-D_assimilate_lestkf_si.o PDAF-D_lestkf_update.o PDAF-D_lestkf_analysis.o PDAF-D_lestkf_analysis_fixed.o PDAF-D_lenkf_init.o PDAF-D_lenkf_alloc.o PDAF_lenkf_options.o PDAF-D_lenkf_memtime.o PDAF-D_put_state_lenkf.o PDAF-D_put_state_lenkf_si.o PDAFomi_put_state_lenkf.o PDAF-D_assimilate_lenkf.o PDAF-D_assimilate_lenkf_si.o PDAFomi_assimilate_lenkf.o PDAF-D_lenkf_update.o PDAF-D_enkf_obs_ensemble.o PDAF-D_enkf_gather_resid.o PDAF-D_lenkf_analysis_rsm.o PDAF_enkf_omega.o PDAF_enkf_Tleft.o PDAF-D_netf_init.o PDAF-D_netf_alloc.o PDAF_netf_options.o PDAF-D_netf_memtime.o PDAF-D_put_state_netf.o PDAF-D_put_state_netf_si.o PDAF-D_assimilate_netf.o PDAF-D_assimilate_netf_si.o PDAF-D_netf_update.o PDAF-D_netf_smootherT.o PDAF-D_netf_analysis.o PDAF-D_smoother_netf.o PDAF-D_lnetf_init.o PDAF-D_lnetf_alloc.o PDAF_lnetf_options.o PDAF-D_lnetf_memtime.o PDAF-D_put_state_lnetf.o PDAF-D_put_state_lnetf_si.o PDAF-D_assimilate_lnetf.o PDAF-D_assimilate_lnetf_si.o PDAF-D_lnetf_update.o PDAF-D_lnetf_analysis.o PDAF-D_lnetf_smootherT.o PDAF-D_smoother_lnetf.o PDAF-D_pf_init.o PDAF-D_pf_alloc.o PDAF_pf_options.o PDAF-D_pf_memtime.o PDAF-D_put_state_pf.o PDAF-D_put_state_pf_si.o PDAF-D_assimilate_pf.o PDAF-D_assimilate_pf_si.o PDAF-D_pf_update.o PDAF-D_pf_analysis.o PDAF-D_pf_resampling.o PDAF-D_pf_add_noise.o PDAF-D_genobs_init.o PDAF-D_genobs_alloc.o PDAF_genobs_options.o PDAF-D_put_state_generate_obs.o PDAF-D_put_state_generate_obs_si.o PDAFomi_put_state_generate_obs.o PDAF-D_generate_obs.o PDAF-D_generate_obs_si.o PDAFomi_generate_obs.o PDAF-D_gen_obs.o PDAFomi_obs_f.o PDAFomi_obs_l.o PDAFomi_obs_op.o PDAFomi.o PDAFomi_callback.o
+ar: creating ../lib/libpdaf-d.a
+ranlib  ../lib/libpdaf-d.a
+cp: cannot stat 'pdaf_interfaces_module.mod': No such file or directory
+cp: cannot stat 'pdafomi*.mod': No such file or directory
+make: *** [Makefile:298: ../lib/libpdaf-d.a] Error 1
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_timer.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_memcount.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_mod_filtermpi.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_mod_filter.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_interfaces_module.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_init_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_init_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_alloc_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_print_info.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_print_version.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_options_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_state.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_state_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_incremental.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_incremental_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_set_forget.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_set_forget_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_add_increment.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_generate_rndmat.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_local_weights.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_local_weight.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_ens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_memberid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_obsmemberid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_shift.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_set_smootherens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_smootherens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_set_ens_pointer.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_prepost.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_prepost_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_prepost.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_prepost_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_inflate_ens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_sampleens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_mvnormalize.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_eofcovar.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_diag_histogram.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_diag_ensstats.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_diag_effsample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_dim_obs_f.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_obs_f.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_obs_f2.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_obs_f_flex.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_obs_f2_flex.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_allreduce.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_deallocate.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_assim_flag.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_get_localfilter.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_inflate_weights.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_put_state_global.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_put_state_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_assimilate_global.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_assimilate_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_seik_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_seik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_seik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_seik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_seik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_resample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_analysis_newT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_resample_newT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_analysis_trans.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_matrixT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_uinv.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_seik_omega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_seik_TtimesA.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_lseik_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lseik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lseik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lseik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lseik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_resample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_analysis_trans.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_seek_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_seek.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_seek_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_seek.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_seek_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_rediag.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_enkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_enkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_enkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_obs_ensemble.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_gather_resid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_analysis_rlm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_analysis_rsm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_enkf_omega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_enkf_Tleft.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_etkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_etkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_etkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_etkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_etkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_analysis_T.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_Tright.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_etkf_Tleft.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_letkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_letkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_letkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_letkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_letkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_analysis_T.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_estkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_estkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_estkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_estkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_estkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_AOmega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_OmegaA.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_lestkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lestkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lestkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lestkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lestkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_lenkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lenkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_put_state_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lenkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_assimilate_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_analysis_rsm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_netf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_netf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_netf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_smootherT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_lnetf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lnetf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lnetf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_smootherT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_pf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_pf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_pf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_pf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_pf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_resampling.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_add_noise.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_genobs_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_genobs_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_genobs_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_generate_obs_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_put_state_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_generate_obs_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gen_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_obs_f.F90
+
+          IF (lhood>0.0) lhood = - LOG(lhood)
+ftn-7212 crayftn: WARNING PDAFOMI_LIKELIHOOD, File = PDAFomi_obs_f.F90, Line = 843 
+  Variable "lhood" is used before it is defined.
+
+Cray Fortran : Version 10.0.4 (20200915194113_fb520efc059185c9fadb4513171ab09002b05033)
+Cray Fortran : Thu Apr 01, 2021  17:11:20
+Cray Fortran : Compile time:  1.6604 seconds
+Cray Fortran : 1839 source lines
+Cray Fortran : 0 errors, 1 warnings, 0 other messages, 0 ansi
+Cray Fortran : "explain ftn-message number" gives more information about each message.
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_obs_l.F90
+
+          IF (lhood_l>0.0) lhood_l = - LOG(lhood_l)
+ftn-7212 crayftn: WARNING PDAFOMI_LIKELIHOOD_L, File = PDAFomi_obs_l.F90, Line = 922 
+  Variable "lhood_l" is used before it is defined.
+
+Cray Fortran : Version 10.0.4 (20200915194113_fb520efc059185c9fadb4513171ab09002b05033)
+Cray Fortran : Thu Apr 01, 2021  17:11:22
+Cray Fortran : Compile time:  1.4199 seconds
+Cray Fortran : 1520 source lines
+Cray Fortran : 0 errors, 1 warnings, 0 other messages, 0 ansi
+Cray Fortran : "explain ftn-message number" gives more information about each message.
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_obs_op.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_callback.F90
+
+     CALL PDAFomi_init_obscovar(obs_f_all(i)%ptr, dim_obs_p, covar, isdiag)
+ftn-7212 crayftn: WARNING PDAFOMI_INIT_OBSCOVAR_CB, File = PDAFomi_callback.F90, Line = 567 
+  Variable "covar" is used before it is defined.
+
+++++++ Generate Filter library ++++++
+ar -r  ../lib/libpdaf-d.a \
+PDAF_timer.o PDAF_memcount.o PDAF-D_mod_filtermpi.o PDAF-D_mod_filter.o PDAF_interfaces_module.o PDAF-D_init.o PDAF-D_init_si.o PDAF-D_init_filters.o PDAF-D_alloc_filters.o PDAF-D_print_info.o PDAF-D_print_version.o PDAF_options_filters.o PDAF-D_get_state.o PDAF-D_get_state_si.o PDAF-D_incremental.o PDAF-D_incremental_si.o PDAF-D_set_forget.o PDAF-D_set_forget_local.o PDAF-D_add_increment.o PDAF_generate_rndmat.o PDAF_local_weights.o PDAF_local_weight.o PDAF-D_gather_ens.o PDAF-D_get_memberid.o PDAF-D_get_obsmemberid.o PDAF-D_smoother_shift.o PDAF-D_smoother.o PDAF-D_smoother_local.o PDAF-D_set_smootherens.o PDAF-D_get_smootherens.o PDAF_set_ens_pointer.o PDAF-D_put_state_prepost.o PDAF-D_put_state_prepost_si.o PDAF-D_prepost.o PDAF-D_prepost_si.o PDAF_inflate_ens.o PDAF_sampleens.o PDAF_mvnormalize.o PDAF_eofcovar.o PDAF_diag_histogram.o PDAF_diag_ensstats.o PDAF_diag_effsample.o PDAF-D_gather_dim_obs_f.o PDAF-D_gather_obs_f.o PDAF-D_gather_obs_f2.o PDAF-D_gather_obs_f_flex.o PDAF-D_gather_obs_f2_flex.o PDAF-D_allreduce.o PDAF-D_deallocate.o PDAF-D_get_assim_flag.o PDAF_get_localfilter.o PDAF_inflate_weights.o PDAFomi_put_state_global.o PDAFomi_put_state_local.o PDAFomi_assimilate_global.o PDAFomi_assimilate_local.o PDAF-D_seik_init.o PDAF-D_seik_alloc.o PDAF_seik_options.o PDAF-D_seik_memtime.o PDAF-D_put_state_seik.o PDAF-D_put_state_seik_si.o PDAF-D_assimilate_seik.o PDAF-D_assimilate_seik_si.o PDAF-D_seik_update.o PDAF-D_seik_analysis.o PDAF-D_seik_resample.o PDAF-D_seik_analysis_newT.o PDAF-D_seik_resample_newT.o PDAF-D_seik_analysis_trans.o PDAF-D_seik_matrixT.o PDAF-D_seik_uinv.o PDAF_seik_omega.o PDAF_seik_TtimesA.o PDAF-D_lseik_init.o PDAF-D_lseik_alloc.o PDAF_lseik_options.o PDAF-D_lseik_memtime.o PDAF-D_put_state_lseik.o PDAF-D_put_state_lseik_si.o PDAF-D_assimilate_lseik.o PDAF-D_assimilate_lseik_si.o PDAF-D_lseik_update.o PDAF-D_lseik_analysis.o PDAF-D_lseik_resample.o PDAF-D_lseik_analysis_trans.o PDAF-D_seek_init.o PDAF-D_seek_alloc.o PDAF_seek_options.o PDAF-D_seek_memtime.o PDAF-D_put_state_seek.o PDAF-D_put_state_seek_si.o PDAF-D_assimilate_seek.o PDAF-D_assimilate_seek_si.o PDAF-D_seek_update.o PDAF-D_seek_analysis.o PDAF-D_seek_rediag.o PDAF-D_enkf_init.o PDAF-D_enkf_alloc.o PDAF_enkf_options.o PDAF-D_enkf_memtime.o PDAF-D_put_state_enkf.o PDAF-D_put_state_enkf_si.o PDAF-D_assimilate_enkf.o PDAF-D_assimilate_enkf_si.o PDAF-D_enkf_update.o PDAF-D_enkf_obs_ensemble.o PDAF-D_enkf_gather_resid.o PDAF-D_enkf_analysis_rlm.o PDAF-D_enkf_analysis_rsm.o PDAF_enkf_omega.o PDAF_enkf_Tleft.o PDAF-D_smoother_enkf.o PDAF-D_etkf_init.o PDAF-D_etkf_alloc.o PDAF_etkf_options.o PDAF-D_etkf_memtime.o PDAF-D_put_state_etkf.o PDAF-D_put_state_etkf_si.o PDAF-D_assimilate_etkf.o PDAF-D_assimilate_etkf_si.o PDAF-D_etkf_update.o PDAF-D_etkf_analysis.o PDAF-D_etkf_analysis_T.o PDAF-D_etkf_analysis_fixed.o PDAF-D_etkf_Tright.o PDAF_etkf_Tleft.o PDAF-D_letkf_init.o PDAF-D_letkf_alloc.o PDAF_letkf_options.o PDAF-D_letkf_memtime.o PDAF-D_put_state_letkf.o PDAF-D_put_state_letkf_si.o PDAF-D_assimilate_letkf.o PDAF-D_assimilate_letkf_si.o PDAF-D_letkf_update.o PDAF-D_letkf_analysis.o PDAF-D_letkf_analysis_T.o PDAF-D_letkf_analysis_fixed.o PDAF-D_estkf_init.o PDAF-D_estkf_alloc.o PDAF_estkf_options.o PDAF-D_estkf_memtime.o PDAF-D_put_state_estkf.o PDAF-D_put_state_estkf_si.o PDAF-D_assimilate_estkf.o PDAF-D_assimilate_estkf_si.o PDAF-D_estkf_update.o PDAF-D_estkf_analysis.o PDAF-D_estkf_analysis_fixed.o PDAF-D_estkf_AOmega.o PDAF-D_estkf_OmegaA.o PDAF-D_lestkf_init.o PDAF-D_lestkf_alloc.o PDAF_lestkf_options.o PDAF-D_lestkf_memtime.o PDAF-D_put_state_lestkf.o PDAF-D_put_state_lestkf_si.o PDAF-D_assimilate_lestkf.o PDAF-D_assimilate_lestkf_si.o PDAF-D_lestkf_update.o PDAF-D_lestkf_analysis.o PDAF-D_lestkf_analysis_fixed.o PDAF-D_lenkf_init.o PDAF-D_lenkf_alloc.o PDAF_lenkf_options.o PDAF-D_lenkf_memtime.o PDAF-D_put_state_lenkf.o PDAF-D_put_state_lenkf_si.o PDAFomi_put_state_lenkf.o PDAF-D_assimilate_lenkf.o PDAF-D_assimilate_lenkf_si.o PDAFomi_assimilate_lenkf.o PDAF-D_lenkf_update.o PDAF-D_enkf_obs_ensemble.o PDAF-D_enkf_gather_resid.o PDAF-D_lenkf_analysis_rsm.o PDAF_enkf_omega.o PDAF_enkf_Tleft.o PDAF-D_netf_init.o PDAF-D_netf_alloc.o PDAF_netf_options.o PDAF-D_netf_memtime.o PDAF-D_put_state_netf.o PDAF-D_put_state_netf_si.o PDAF-D_assimilate_netf.o PDAF-D_assimilate_netf_si.o PDAF-D_netf_update.o PDAF-D_netf_smootherT.o PDAF-D_netf_analysis.o PDAF-D_smoother_netf.o PDAF-D_lnetf_init.o PDAF-D_lnetf_alloc.o PDAF_lnetf_options.o PDAF-D_lnetf_memtime.o PDAF-D_put_state_lnetf.o PDAF-D_put_state_lnetf_si.o PDAF-D_assimilate_lnetf.o PDAF-D_assimilate_lnetf_si.o PDAF-D_lnetf_update.o PDAF-D_lnetf_analysis.o PDAF-D_lnetf_smootherT.o PDAF-D_smoother_lnetf.o PDAF-D_pf_init.o PDAF-D_pf_alloc.o PDAF_pf_options.o PDAF-D_pf_memtime.o PDAF-D_put_state_pf.o PDAF-D_put_state_pf_si.o PDAF-D_assimilate_pf.o PDAF-D_assimilate_pf_si.o PDAF-D_pf_update.o PDAF-D_pf_analysis.o PDAF-D_pf_resampling.o PDAF-D_pf_add_noise.o PDAF-D_genobs_init.o PDAF-D_genobs_alloc.o PDAF_genobs_options.o PDAF-D_put_state_generate_obs.o PDAF-D_put_state_generate_obs_si.o PDAFomi_put_state_generate_obs.o PDAF-D_generate_obs.o PDAF-D_generate_obs_si.o PDAFomi_generate_obs.o PDAF-D_gen_obs.o PDAFomi_obs_f.o PDAFomi_obs_l.o PDAFomi_obs_op.o PDAFomi.o PDAFomi_callback.o
+ar: creating ../lib/libpdaf-d.a
+ranlib  ../lib/libpdaf-d.a
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_timer.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_memcount.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_mod_filtermpi.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_mod_filter.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_interfaces_module.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_init_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_init_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_alloc_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_print_info.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_print_version.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_options_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_state.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_state_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_incremental.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_incremental_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_set_forget.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_set_forget_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_add_increment.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_generate_rndmat.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_local_weights.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_local_weight.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_ens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_memberid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_obsmemberid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother_shift.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_set_smootherens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_smootherens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_set_ens_pointer.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_prepost.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_prepost_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_prepost.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_prepost_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_inflate_ens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_sampleens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_mvnormalize.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_eofcovar.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_diag_histogram.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_diag_ensstats.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_diag_effsample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_dim_obs_f.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_obs_f.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_obs_f2.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_obs_f_flex.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_obs_f2_flex.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_allreduce.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_deallocate.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_assim_flag.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_get_localfilter.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_inflate_weights.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_put_state_global.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_put_state_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_assimilate_global.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_assimilate_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_seik_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_seik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_seik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_seik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_seik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_resample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_analysis_newT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_resample_newT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_analysis_trans.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_matrixT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_uinv.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_seik_omega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_seik_TtimesA.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_lseik_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lseik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lseik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lseik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lseik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_resample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_analysis_trans.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_seek_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_seek.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_seek_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_seek.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_seek_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_rediag.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_enkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_enkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_enkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_obs_ensemble.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_gather_resid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_analysis_rlm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_analysis_rsm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_enkf_omega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_enkf_Tleft.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_etkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_etkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_etkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_etkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_etkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_analysis_T.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_Tright.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_etkf_Tleft.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_letkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_letkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_letkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_letkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_letkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_analysis_T.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_estkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_estkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_estkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_estkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_estkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_AOmega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_OmegaA.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_lestkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lestkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lestkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lestkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lestkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lenkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lenkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_lenkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lenkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lenkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_put_state_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lenkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_assimilate_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lenkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lenkf_analysis_rsm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_netf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_netf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_netf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_smootherT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_lnetf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lnetf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lnetf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_smootherT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_pf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_pf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_pf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_pf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_pf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_resampling.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_add_noise.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_genobs_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_genobs_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_genobs_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_generate_obs_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_put_state_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_generate_obs_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gen_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_obs_f.F90
+
+          IF (lhood>0.0) lhood = - LOG(lhood)
+ftn-7212 crayftn: WARNING PDAFOMI_LIKELIHOOD, File = PDAFomi_obs_f.F90, Line = 843 
+  Variable "lhood" is used before it is defined.
+
+Cray Fortran : Version 10.0.4 (20200915194113_fb520efc059185c9fadb4513171ab09002b05033)
+Cray Fortran : Fri Apr 02, 2021  16:48:23
+Cray Fortran : Compile time:  1.6635 seconds
+Cray Fortran : 1839 source lines
+Cray Fortran : 0 errors, 1 warnings, 0 other messages, 0 ansi
+Cray Fortran : "explain ftn-message number" gives more information about each message.
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_obs_l.F90
+
+          IF (lhood_l>0.0) lhood_l = - LOG(lhood_l)
+ftn-7212 crayftn: WARNING PDAFOMI_LIKELIHOOD_L, File = PDAFomi_obs_l.F90, Line = 922 
+  Variable "lhood_l" is used before it is defined.
+
+Cray Fortran : Version 10.0.4 (20200915194113_fb520efc059185c9fadb4513171ab09002b05033)
+Cray Fortran : Fri Apr 02, 2021  16:48:25
+Cray Fortran : Compile time:  1.4255 seconds
+Cray Fortran : 1520 source lines
+Cray Fortran : 0 errors, 1 warnings, 0 other messages, 0 ansi
+Cray Fortran : "explain ftn-message number" gives more information about each message.
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_obs_op.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_callback.F90
+
+     CALL PDAFomi_init_obscovar(obs_f_all(i)%ptr, dim_obs_p, covar, isdiag)
+ftn-7212 crayftn: WARNING PDAFOMI_INIT_OBSCOVAR_CB, File = PDAFomi_callback.F90, Line = 567 
+  Variable "covar" is used before it is defined.
+
+++++++ Generate Filter library ++++++
+ar -r  ../lib/libpdaf-d.a \
+PDAF_timer.o PDAF_memcount.o PDAF-D_mod_filtermpi.o PDAF-D_mod_filter.o PDAF_interfaces_module.o PDAF-D_init.o PDAF-D_init_si.o PDAF-D_init_filters.o PDAF-D_alloc_filters.o PDAF-D_print_info.o PDAF-D_print_version.o PDAF_options_filters.o PDAF-D_get_state.o PDAF-D_get_state_si.o PDAF-D_incremental.o PDAF-D_incremental_si.o PDAF-D_set_forget.o PDAF-D_set_forget_local.o PDAF-D_add_increment.o PDAF_generate_rndmat.o PDAF_local_weights.o PDAF_local_weight.o PDAF-D_gather_ens.o PDAF-D_get_memberid.o PDAF-D_get_obsmemberid.o PDAF-D_smoother_shift.o PDAF-D_smoother.o PDAF-D_smoother_local.o PDAF-D_set_smootherens.o PDAF-D_get_smootherens.o PDAF_set_ens_pointer.o PDAF-D_put_state_prepost.o PDAF-D_put_state_prepost_si.o PDAF-D_prepost.o PDAF-D_prepost_si.o PDAF_inflate_ens.o PDAF_sampleens.o PDAF_mvnormalize.o PDAF_eofcovar.o PDAF_diag_histogram.o PDAF_diag_ensstats.o PDAF_diag_effsample.o PDAF-D_gather_dim_obs_f.o PDAF-D_gather_obs_f.o PDAF-D_gather_obs_f2.o PDAF-D_gather_obs_f_flex.o PDAF-D_gather_obs_f2_flex.o PDAF-D_allreduce.o PDAF-D_deallocate.o PDAF-D_get_assim_flag.o PDAF_get_localfilter.o PDAF_inflate_weights.o PDAFomi_put_state_global.o PDAFomi_put_state_local.o PDAFomi_assimilate_global.o PDAFomi_assimilate_local.o PDAF-D_seik_init.o PDAF-D_seik_alloc.o PDAF_seik_options.o PDAF-D_seik_memtime.o PDAF-D_put_state_seik.o PDAF-D_put_state_seik_si.o PDAF-D_assimilate_seik.o PDAF-D_assimilate_seik_si.o PDAF-D_seik_update.o PDAF-D_seik_analysis.o PDAF-D_seik_resample.o PDAF-D_seik_analysis_newT.o PDAF-D_seik_resample_newT.o PDAF-D_seik_analysis_trans.o PDAF-D_seik_matrixT.o PDAF-D_seik_uinv.o PDAF_seik_omega.o PDAF_seik_TtimesA.o PDAF-D_lseik_init.o PDAF-D_lseik_alloc.o PDAF_lseik_options.o PDAF-D_lseik_memtime.o PDAF-D_put_state_lseik.o PDAF-D_put_state_lseik_si.o PDAF-D_assimilate_lseik.o PDAF-D_assimilate_lseik_si.o PDAF-D_lseik_update.o PDAF-D_lseik_analysis.o PDAF-D_lseik_resample.o PDAF-D_lseik_analysis_trans.o PDAF-D_seek_init.o PDAF-D_seek_alloc.o PDAF_seek_options.o PDAF-D_seek_memtime.o PDAF-D_put_state_seek.o PDAF-D_put_state_seek_si.o PDAF-D_assimilate_seek.o PDAF-D_assimilate_seek_si.o PDAF-D_seek_update.o PDAF-D_seek_analysis.o PDAF-D_seek_rediag.o PDAF-D_enkf_init.o PDAF-D_enkf_alloc.o PDAF_enkf_options.o PDAF-D_enkf_memtime.o PDAF-D_put_state_enkf.o PDAF-D_put_state_enkf_si.o PDAF-D_assimilate_enkf.o PDAF-D_assimilate_enkf_si.o PDAF-D_enkf_update.o PDAF-D_enkf_obs_ensemble.o PDAF-D_enkf_gather_resid.o PDAF-D_enkf_analysis_rlm.o PDAF-D_enkf_analysis_rsm.o PDAF_enkf_omega.o PDAF_enkf_Tleft.o PDAF-D_smoother_enkf.o PDAF-D_etkf_init.o PDAF-D_etkf_alloc.o PDAF_etkf_options.o PDAF-D_etkf_memtime.o PDAF-D_put_state_etkf.o PDAF-D_put_state_etkf_si.o PDAF-D_assimilate_etkf.o PDAF-D_assimilate_etkf_si.o PDAF-D_etkf_update.o PDAF-D_etkf_analysis.o PDAF-D_etkf_analysis_T.o PDAF-D_etkf_analysis_fixed.o PDAF-D_etkf_Tright.o PDAF_etkf_Tleft.o PDAF-D_letkf_init.o PDAF-D_letkf_alloc.o PDAF_letkf_options.o PDAF-D_letkf_memtime.o PDAF-D_put_state_letkf.o PDAF-D_put_state_letkf_si.o PDAF-D_assimilate_letkf.o PDAF-D_assimilate_letkf_si.o PDAF-D_letkf_update.o PDAF-D_letkf_analysis.o PDAF-D_letkf_analysis_T.o PDAF-D_letkf_analysis_fixed.o PDAF-D_estkf_init.o PDAF-D_estkf_alloc.o PDAF_estkf_options.o PDAF-D_estkf_memtime.o PDAF-D_put_state_estkf.o PDAF-D_put_state_estkf_si.o PDAF-D_assimilate_estkf.o PDAF-D_assimilate_estkf_si.o PDAF-D_estkf_update.o PDAF-D_estkf_analysis.o PDAF-D_estkf_analysis_fixed.o PDAF-D_estkf_AOmega.o PDAF-D_estkf_OmegaA.o PDAF-D_lestkf_init.o PDAF-D_lestkf_alloc.o PDAF_lestkf_options.o PDAF-D_lestkf_memtime.o PDAF-D_put_state_lestkf.o PDAF-D_put_state_lestkf_si.o PDAF-D_assimilate_lestkf.o PDAF-D_assimilate_lestkf_si.o PDAF-D_lestkf_update.o PDAF-D_lestkf_analysis.o PDAF-D_lestkf_analysis_fixed.o PDAF-D_lenkf_init.o PDAF-D_lenkf_alloc.o PDAF_lenkf_options.o PDAF-D_lenkf_memtime.o PDAF-D_put_state_lenkf.o PDAF-D_put_state_lenkf_si.o PDAFomi_put_state_lenkf.o PDAF-D_assimilate_lenkf.o PDAF-D_assimilate_lenkf_si.o PDAFomi_assimilate_lenkf.o PDAF-D_lenkf_update.o PDAF-D_enkf_obs_ensemble.o PDAF-D_enkf_gather_resid.o PDAF-D_lenkf_analysis_rsm.o PDAF_enkf_omega.o PDAF_enkf_Tleft.o PDAF-D_netf_init.o PDAF-D_netf_alloc.o PDAF_netf_options.o PDAF-D_netf_memtime.o PDAF-D_put_state_netf.o PDAF-D_put_state_netf_si.o PDAF-D_assimilate_netf.o PDAF-D_assimilate_netf_si.o PDAF-D_netf_update.o PDAF-D_netf_smootherT.o PDAF-D_netf_analysis.o PDAF-D_smoother_netf.o PDAF-D_lnetf_init.o PDAF-D_lnetf_alloc.o PDAF_lnetf_options.o PDAF-D_lnetf_memtime.o PDAF-D_put_state_lnetf.o PDAF-D_put_state_lnetf_si.o PDAF-D_assimilate_lnetf.o PDAF-D_assimilate_lnetf_si.o PDAF-D_lnetf_update.o PDAF-D_lnetf_analysis.o PDAF-D_lnetf_smootherT.o PDAF-D_smoother_lnetf.o PDAF-D_pf_init.o PDAF-D_pf_alloc.o PDAF_pf_options.o PDAF-D_pf_memtime.o PDAF-D_put_state_pf.o PDAF-D_put_state_pf_si.o PDAF-D_assimilate_pf.o PDAF-D_assimilate_pf_si.o PDAF-D_pf_update.o PDAF-D_pf_analysis.o PDAF-D_pf_resampling.o PDAF-D_pf_add_noise.o PDAF-D_genobs_init.o PDAF-D_genobs_alloc.o PDAF_genobs_options.o PDAF-D_put_state_generate_obs.o PDAF-D_put_state_generate_obs_si.o PDAFomi_put_state_generate_obs.o PDAF-D_generate_obs.o PDAF-D_generate_obs_si.o PDAFomi_generate_obs.o PDAF-D_gen_obs.o PDAFomi_obs_f.o PDAFomi_obs_l.o PDAFomi_obs_op.o PDAFomi.o PDAFomi_callback.o
+ar: creating ../lib/libpdaf-d.a
+ranlib  ../lib/libpdaf-d.a
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_timer.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_memcount.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_mod_filtermpi.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_mod_filter.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_interfaces_module.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_init_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_init_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_alloc_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_print_info.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_print_version.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_options_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_state.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_state_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_incremental.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_incremental_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_set_forget.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_set_forget_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_add_increment.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_generate_rndmat.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_local_weights.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_local_weight.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_ens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_memberid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_obsmemberid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother_shift.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_set_smootherens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_smootherens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_set_ens_pointer.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_prepost.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_prepost_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_prepost.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_prepost_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_inflate_ens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_sampleens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_mvnormalize.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_eofcovar.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_diag_histogram.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_diag_ensstats.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_diag_effsample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_dim_obs_f.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_obs_f.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_obs_f2.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_obs_f_flex.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_obs_f2_flex.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_allreduce.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_deallocate.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_assim_flag.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_get_localfilter.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_inflate_weights.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_put_state_global.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_put_state_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_assimilate_global.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_assimilate_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_seik_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_seik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_seik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_seik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_seik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_resample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_analysis_newT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_resample_newT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_analysis_trans.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_matrixT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_uinv.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_seik_omega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_seik_TtimesA.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_lseik_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lseik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lseik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lseik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lseik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_resample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_analysis_trans.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_seek_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_seek.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_seek_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_seek.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_seek_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_rediag.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_enkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_enkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_enkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_obs_ensemble.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_gather_resid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_analysis_rlm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_analysis_rsm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_enkf_omega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_enkf_Tleft.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_etkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_etkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_etkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_etkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_etkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_analysis_T.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_Tright.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_etkf_Tleft.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_letkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_letkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_letkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_letkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_letkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_analysis_T.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_estkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_estkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_estkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_estkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_estkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_AOmega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_OmegaA.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_lestkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lestkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lestkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lestkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lestkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lenkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lenkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_lenkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lenkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lenkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_put_state_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lenkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_assimilate_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lenkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lenkf_analysis_rsm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_netf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_netf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_netf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_smootherT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_lnetf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lnetf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lnetf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_smootherT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_pf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_pf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_pf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_pf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_pf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_resampling.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_add_noise.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_genobs_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_genobs_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_genobs_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_generate_obs_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_put_state_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_generate_obs_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gen_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_obs_f.F90
+
+          IF (lhood>0.0) lhood = - LOG(lhood)
+ftn-7212 crayftn: WARNING PDAFOMI_LIKELIHOOD, File = PDAFomi_obs_f.F90, Line = 843 
+  Variable "lhood" is used before it is defined.
+
+Cray Fortran : Version 10.0.4 (20200915194113_fb520efc059185c9fadb4513171ab09002b05033)
+Cray Fortran : Mon Apr 05, 2021  11:41:50
+Cray Fortran : Compile time:  1.6808 seconds
+Cray Fortran : 1839 source lines
+Cray Fortran : 0 errors, 1 warnings, 0 other messages, 0 ansi
+Cray Fortran : "explain ftn-message number" gives more information about each message.
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_obs_l.F90
+
+          IF (lhood_l>0.0) lhood_l = - LOG(lhood_l)
+ftn-7212 crayftn: WARNING PDAFOMI_LIKELIHOOD_L, File = PDAFomi_obs_l.F90, Line = 922 
+  Variable "lhood_l" is used before it is defined.
+
+Cray Fortran : Version 10.0.4 (20200915194113_fb520efc059185c9fadb4513171ab09002b05033)
+Cray Fortran : Mon Apr 05, 2021  11:41:52
+Cray Fortran : Compile time:  1.4347 seconds
+Cray Fortran : 1520 source lines
+Cray Fortran : 0 errors, 1 warnings, 0 other messages, 0 ansi
+Cray Fortran : "explain ftn-message number" gives more information about each message.
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_obs_op.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_callback.F90
+
+     CALL PDAFomi_init_obscovar(obs_f_all(i)%ptr, dim_obs_p, covar, isdiag)
+ftn-7212 crayftn: WARNING PDAFOMI_INIT_OBSCOVAR_CB, File = PDAFomi_callback.F90, Line = 567 
+  Variable "covar" is used before it is defined.
+
+++++++ Generate Filter library ++++++
+ar -r  ../lib/libpdaf-d.a \
+PDAF_timer.o PDAF_memcount.o PDAF-D_mod_filtermpi.o PDAF-D_mod_filter.o PDAF_interfaces_module.o PDAF-D_init.o PDAF-D_init_si.o PDAF-D_init_filters.o PDAF-D_alloc_filters.o PDAF-D_print_info.o PDAF-D_print_version.o PDAF_options_filters.o PDAF-D_get_state.o PDAF-D_get_state_si.o PDAF-D_incremental.o PDAF-D_incremental_si.o PDAF-D_set_forget.o PDAF-D_set_forget_local.o PDAF-D_add_increment.o PDAF_generate_rndmat.o PDAF_local_weights.o PDAF_local_weight.o PDAF-D_gather_ens.o PDAF-D_get_memberid.o PDAF-D_get_obsmemberid.o PDAF-D_smoother_shift.o PDAF-D_smoother.o PDAF-D_smoother_local.o PDAF-D_set_smootherens.o PDAF-D_get_smootherens.o PDAF_set_ens_pointer.o PDAF-D_put_state_prepost.o PDAF-D_put_state_prepost_si.o PDAF-D_prepost.o PDAF-D_prepost_si.o PDAF_inflate_ens.o PDAF_sampleens.o PDAF_mvnormalize.o PDAF_eofcovar.o PDAF_diag_histogram.o PDAF_diag_ensstats.o PDAF_diag_effsample.o PDAF-D_gather_dim_obs_f.o PDAF-D_gather_obs_f.o PDAF-D_gather_obs_f2.o PDAF-D_gather_obs_f_flex.o PDAF-D_gather_obs_f2_flex.o PDAF-D_allreduce.o PDAF-D_deallocate.o PDAF-D_get_assim_flag.o PDAF_get_localfilter.o PDAF_inflate_weights.o PDAFomi_put_state_global.o PDAFomi_put_state_local.o PDAFomi_assimilate_global.o PDAFomi_assimilate_local.o PDAF-D_seik_init.o PDAF-D_seik_alloc.o PDAF_seik_options.o PDAF-D_seik_memtime.o PDAF-D_put_state_seik.o PDAF-D_put_state_seik_si.o PDAF-D_assimilate_seik.o PDAF-D_assimilate_seik_si.o PDAF-D_seik_update.o PDAF-D_seik_analysis.o PDAF-D_seik_resample.o PDAF-D_seik_analysis_newT.o PDAF-D_seik_resample_newT.o PDAF-D_seik_analysis_trans.o PDAF-D_seik_matrixT.o PDAF-D_seik_uinv.o PDAF_seik_omega.o PDAF_seik_TtimesA.o PDAF-D_lseik_init.o PDAF-D_lseik_alloc.o PDAF_lseik_options.o PDAF-D_lseik_memtime.o PDAF-D_put_state_lseik.o PDAF-D_put_state_lseik_si.o PDAF-D_assimilate_lseik.o PDAF-D_assimilate_lseik_si.o PDAF-D_lseik_update.o PDAF-D_lseik_analysis.o PDAF-D_lseik_resample.o PDAF-D_lseik_analysis_trans.o PDAF-D_seek_init.o PDAF-D_seek_alloc.o PDAF_seek_options.o PDAF-D_seek_memtime.o PDAF-D_put_state_seek.o PDAF-D_put_state_seek_si.o PDAF-D_assimilate_seek.o PDAF-D_assimilate_seek_si.o PDAF-D_seek_update.o PDAF-D_seek_analysis.o PDAF-D_seek_rediag.o PDAF-D_enkf_init.o PDAF-D_enkf_alloc.o PDAF_enkf_options.o PDAF-D_enkf_memtime.o PDAF-D_put_state_enkf.o PDAF-D_put_state_enkf_si.o PDAF-D_assimilate_enkf.o PDAF-D_assimilate_enkf_si.o PDAF-D_enkf_update.o PDAF-D_enkf_obs_ensemble.o PDAF-D_enkf_gather_resid.o PDAF-D_enkf_analysis_rlm.o PDAF-D_enkf_analysis_rsm.o PDAF_enkf_omega.o PDAF_enkf_Tleft.o PDAF-D_smoother_enkf.o PDAF-D_etkf_init.o PDAF-D_etkf_alloc.o PDAF_etkf_options.o PDAF-D_etkf_memtime.o PDAF-D_put_state_etkf.o PDAF-D_put_state_etkf_si.o PDAF-D_assimilate_etkf.o PDAF-D_assimilate_etkf_si.o PDAF-D_etkf_update.o PDAF-D_etkf_analysis.o PDAF-D_etkf_analysis_T.o PDAF-D_etkf_analysis_fixed.o PDAF-D_etkf_Tright.o PDAF_etkf_Tleft.o PDAF-D_letkf_init.o PDAF-D_letkf_alloc.o PDAF_letkf_options.o PDAF-D_letkf_memtime.o PDAF-D_put_state_letkf.o PDAF-D_put_state_letkf_si.o PDAF-D_assimilate_letkf.o PDAF-D_assimilate_letkf_si.o PDAF-D_letkf_update.o PDAF-D_letkf_analysis.o PDAF-D_letkf_analysis_T.o PDAF-D_letkf_analysis_fixed.o PDAF-D_estkf_init.o PDAF-D_estkf_alloc.o PDAF_estkf_options.o PDAF-D_estkf_memtime.o PDAF-D_put_state_estkf.o PDAF-D_put_state_estkf_si.o PDAF-D_assimilate_estkf.o PDAF-D_assimilate_estkf_si.o PDAF-D_estkf_update.o PDAF-D_estkf_analysis.o PDAF-D_estkf_analysis_fixed.o PDAF-D_estkf_AOmega.o PDAF-D_estkf_OmegaA.o PDAF-D_lestkf_init.o PDAF-D_lestkf_alloc.o PDAF_lestkf_options.o PDAF-D_lestkf_memtime.o PDAF-D_put_state_lestkf.o PDAF-D_put_state_lestkf_si.o PDAF-D_assimilate_lestkf.o PDAF-D_assimilate_lestkf_si.o PDAF-D_lestkf_update.o PDAF-D_lestkf_analysis.o PDAF-D_lestkf_analysis_fixed.o PDAF-D_lenkf_init.o PDAF-D_lenkf_alloc.o PDAF_lenkf_options.o PDAF-D_lenkf_memtime.o PDAF-D_put_state_lenkf.o PDAF-D_put_state_lenkf_si.o PDAFomi_put_state_lenkf.o PDAF-D_assimilate_lenkf.o PDAF-D_assimilate_lenkf_si.o PDAFomi_assimilate_lenkf.o PDAF-D_lenkf_update.o PDAF-D_enkf_obs_ensemble.o PDAF-D_enkf_gather_resid.o PDAF-D_lenkf_analysis_rsm.o PDAF_enkf_omega.o PDAF_enkf_Tleft.o PDAF-D_netf_init.o PDAF-D_netf_alloc.o PDAF_netf_options.o PDAF-D_netf_memtime.o PDAF-D_put_state_netf.o PDAF-D_put_state_netf_si.o PDAF-D_assimilate_netf.o PDAF-D_assimilate_netf_si.o PDAF-D_netf_update.o PDAF-D_netf_smootherT.o PDAF-D_netf_analysis.o PDAF-D_smoother_netf.o PDAF-D_lnetf_init.o PDAF-D_lnetf_alloc.o PDAF_lnetf_options.o PDAF-D_lnetf_memtime.o PDAF-D_put_state_lnetf.o PDAF-D_put_state_lnetf_si.o PDAF-D_assimilate_lnetf.o PDAF-D_assimilate_lnetf_si.o PDAF-D_lnetf_update.o PDAF-D_lnetf_analysis.o PDAF-D_lnetf_smootherT.o PDAF-D_smoother_lnetf.o PDAF-D_pf_init.o PDAF-D_pf_alloc.o PDAF_pf_options.o PDAF-D_pf_memtime.o PDAF-D_put_state_pf.o PDAF-D_put_state_pf_si.o PDAF-D_assimilate_pf.o PDAF-D_assimilate_pf_si.o PDAF-D_pf_update.o PDAF-D_pf_analysis.o PDAF-D_pf_resampling.o PDAF-D_pf_add_noise.o PDAF-D_genobs_init.o PDAF-D_genobs_alloc.o PDAF_genobs_options.o PDAF-D_put_state_generate_obs.o PDAF-D_put_state_generate_obs_si.o PDAFomi_put_state_generate_obs.o PDAF-D_generate_obs.o PDAF-D_generate_obs_si.o PDAFomi_generate_obs.o PDAF-D_gen_obs.o PDAFomi_obs_f.o PDAFomi_obs_l.o PDAFomi_obs_op.o PDAFomi.o PDAFomi_callback.o
+ar: creating ../lib/libpdaf-d.a
+ranlib  ../lib/libpdaf-d.a
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_timer.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_memcount.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_mod_filtermpi.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_mod_filter.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_interfaces_module.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_init_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_init_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_alloc_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_print_info.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_print_version.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_options_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_state.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_state_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_incremental.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_incremental_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_set_forget.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_set_forget_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_add_increment.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_generate_rndmat.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_local_weights.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_local_weight.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_ens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_memberid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_obsmemberid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother_shift.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_set_smootherens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_smootherens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_set_ens_pointer.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_prepost.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_prepost_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_prepost.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_prepost_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_inflate_ens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_sampleens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_mvnormalize.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_eofcovar.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_diag_histogram.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_diag_ensstats.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_diag_effsample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_dim_obs_f.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_obs_f.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_obs_f2.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_obs_f_flex.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gather_obs_f2_flex.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_allreduce.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_deallocate.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_get_assim_flag.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_get_localfilter.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_inflate_weights.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_put_state_global.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_put_state_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_assimilate_global.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_assimilate_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_seik_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_seik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_seik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_seik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_seik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_resample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_analysis_newT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_resample_newT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_analysis_trans.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_matrixT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seik_uinv.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_seik_omega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_seik_TtimesA.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_lseik_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lseik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lseik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lseik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lseik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_resample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lseik_analysis_trans.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_seek_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_seek.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_seek_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_seek.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_seek_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_seek_rediag.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_enkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_enkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_enkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_obs_ensemble.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_gather_resid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_analysis_rlm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_enkf_analysis_rsm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_enkf_omega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_enkf_Tleft.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_etkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_etkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_etkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_etkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_etkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_analysis_T.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_etkf_Tright.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_etkf_Tleft.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_letkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_letkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_letkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_letkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_letkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_analysis_T.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_letkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_estkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_estkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_estkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_estkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_estkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_AOmega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_estkf_OmegaA.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_lestkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lestkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lestkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lestkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lestkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lestkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lenkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lenkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_lenkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lenkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lenkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_put_state_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lenkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_assimilate_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lenkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lenkf_analysis_rsm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_netf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_netf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_netf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_smootherT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_netf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_lnetf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_lnetf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_lnetf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_lnetf_smootherT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_smoother_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_pf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_pf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_pf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_pf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_assimilate_pf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_resampling.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_pf_add_noise.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_genobs_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_genobs_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF_genobs_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_put_state_generate_obs_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_put_state_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_generate_obs_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAF-D_gen_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_obs_f.F90
+
+          IF (lhood>0.0) lhood = - LOG(lhood)
+ftn-7212 crayftn: WARNING PDAFOMI_LIKELIHOOD, File = PDAFomi_obs_f.F90, Line = 843 
+  Variable "lhood" is used before it is defined.
+
+Cray Fortran : Version 10.0.4 (20200915194113_fb520efc059185c9fadb4513171ab09002b05033)
+Cray Fortran : Mon Apr 05, 2021  15:01:02
+Cray Fortran : Compile time:  1.6539 seconds
+Cray Fortran : 1839 source lines
+Cray Fortran : 0 errors, 1 warnings, 0 other messages, 0 ansi
+Cray Fortran : "explain ftn-message number" gives more information about each message.
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_obs_l.F90
+
+          IF (lhood_l>0.0) lhood_l = - LOG(lhood_l)
+ftn-7212 crayftn: WARNING PDAFOMI_LIKELIHOOD_L, File = PDAFomi_obs_l.F90, Line = 922 
+  Variable "lhood_l" is used before it is defined.
+
+Cray Fortran : Version 10.0.4 (20200915194113_fb520efc059185c9fadb4513171ab09002b05033)
+Cray Fortran : Mon Apr 05, 2021  15:01:04
+Cray Fortran : Compile time:  1.4059 seconds
+Cray Fortran : 1520 source lines
+Cray Fortran : 0 errors, 1 warnings, 0 other messages, 0 ansi
+Cray Fortran : "explain ftn-message number" gives more information about each message.
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_obs_op.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -DPDAF_NO_UPDATE -c PDAFomi_callback.F90
+
+     CALL PDAFomi_init_obscovar(obs_f_all(i)%ptr, dim_obs_p, covar, isdiag)
+ftn-7212 crayftn: WARNING PDAFOMI_INIT_OBSCOVAR_CB, File = PDAFomi_callback.F90, Line = 567 
+  Variable "covar" is used before it is defined.
+
+++++++ Generate Filter library ++++++
+ar -r  ../lib/libpdaf-d.a \
+PDAF_timer.o PDAF_memcount.o PDAF-D_mod_filtermpi.o PDAF-D_mod_filter.o PDAF_interfaces_module.o PDAF-D_init.o PDAF-D_init_si.o PDAF-D_init_filters.o PDAF-D_alloc_filters.o PDAF-D_print_info.o PDAF-D_print_version.o PDAF_options_filters.o PDAF-D_get_state.o PDAF-D_get_state_si.o PDAF-D_incremental.o PDAF-D_incremental_si.o PDAF-D_set_forget.o PDAF-D_set_forget_local.o PDAF-D_add_increment.o PDAF_generate_rndmat.o PDAF_local_weights.o PDAF_local_weight.o PDAF-D_gather_ens.o PDAF-D_get_memberid.o PDAF-D_get_obsmemberid.o PDAF-D_smoother_shift.o PDAF-D_smoother.o PDAF-D_smoother_local.o PDAF-D_set_smootherens.o PDAF-D_get_smootherens.o PDAF_set_ens_pointer.o PDAF-D_put_state_prepost.o PDAF-D_put_state_prepost_si.o PDAF-D_prepost.o PDAF-D_prepost_si.o PDAF_inflate_ens.o PDAF_sampleens.o PDAF_mvnormalize.o PDAF_eofcovar.o PDAF_diag_histogram.o PDAF_diag_ensstats.o PDAF_diag_effsample.o PDAF-D_gather_dim_obs_f.o PDAF-D_gather_obs_f.o PDAF-D_gather_obs_f2.o PDAF-D_gather_obs_f_flex.o PDAF-D_gather_obs_f2_flex.o PDAF-D_allreduce.o PDAF-D_deallocate.o PDAF-D_get_assim_flag.o PDAF_get_localfilter.o PDAF_inflate_weights.o PDAFomi_put_state_global.o PDAFomi_put_state_local.o PDAFomi_assimilate_global.o PDAFomi_assimilate_local.o PDAF-D_seik_init.o PDAF-D_seik_alloc.o PDAF_seik_options.o PDAF-D_seik_memtime.o PDAF-D_put_state_seik.o PDAF-D_put_state_seik_si.o PDAF-D_assimilate_seik.o PDAF-D_assimilate_seik_si.o PDAF-D_seik_update.o PDAF-D_seik_analysis.o PDAF-D_seik_resample.o PDAF-D_seik_analysis_newT.o PDAF-D_seik_resample_newT.o PDAF-D_seik_analysis_trans.o PDAF-D_seik_matrixT.o PDAF-D_seik_uinv.o PDAF_seik_omega.o PDAF_seik_TtimesA.o PDAF-D_lseik_init.o PDAF-D_lseik_alloc.o PDAF_lseik_options.o PDAF-D_lseik_memtime.o PDAF-D_put_state_lseik.o PDAF-D_put_state_lseik_si.o PDAF-D_assimilate_lseik.o PDAF-D_assimilate_lseik_si.o PDAF-D_lseik_update.o PDAF-D_lseik_analysis.o PDAF-D_lseik_resample.o PDAF-D_lseik_analysis_trans.o PDAF-D_seek_init.o PDAF-D_seek_alloc.o PDAF_seek_options.o PDAF-D_seek_memtime.o PDAF-D_put_state_seek.o PDAF-D_put_state_seek_si.o PDAF-D_assimilate_seek.o PDAF-D_assimilate_seek_si.o PDAF-D_seek_update.o PDAF-D_seek_analysis.o PDAF-D_seek_rediag.o PDAF-D_enkf_init.o PDAF-D_enkf_alloc.o PDAF_enkf_options.o PDAF-D_enkf_memtime.o PDAF-D_put_state_enkf.o PDAF-D_put_state_enkf_si.o PDAF-D_assimilate_enkf.o PDAF-D_assimilate_enkf_si.o PDAF-D_enkf_update.o PDAF-D_enkf_obs_ensemble.o PDAF-D_enkf_gather_resid.o PDAF-D_enkf_analysis_rlm.o PDAF-D_enkf_analysis_rsm.o PDAF_enkf_omega.o PDAF_enkf_Tleft.o PDAF-D_smoother_enkf.o PDAF-D_etkf_init.o PDAF-D_etkf_alloc.o PDAF_etkf_options.o PDAF-D_etkf_memtime.o PDAF-D_put_state_etkf.o PDAF-D_put_state_etkf_si.o PDAF-D_assimilate_etkf.o PDAF-D_assimilate_etkf_si.o PDAF-D_etkf_update.o PDAF-D_etkf_analysis.o PDAF-D_etkf_analysis_T.o PDAF-D_etkf_analysis_fixed.o PDAF-D_etkf_Tright.o PDAF_etkf_Tleft.o PDAF-D_letkf_init.o PDAF-D_letkf_alloc.o PDAF_letkf_options.o PDAF-D_letkf_memtime.o PDAF-D_put_state_letkf.o PDAF-D_put_state_letkf_si.o PDAF-D_assimilate_letkf.o PDAF-D_assimilate_letkf_si.o PDAF-D_letkf_update.o PDAF-D_letkf_analysis.o PDAF-D_letkf_analysis_T.o PDAF-D_letkf_analysis_fixed.o PDAF-D_estkf_init.o PDAF-D_estkf_alloc.o PDAF_estkf_options.o PDAF-D_estkf_memtime.o PDAF-D_put_state_estkf.o PDAF-D_put_state_estkf_si.o PDAF-D_assimilate_estkf.o PDAF-D_assimilate_estkf_si.o PDAF-D_estkf_update.o PDAF-D_estkf_analysis.o PDAF-D_estkf_analysis_fixed.o PDAF-D_estkf_AOmega.o PDAF-D_estkf_OmegaA.o PDAF-D_lestkf_init.o PDAF-D_lestkf_alloc.o PDAF_lestkf_options.o PDAF-D_lestkf_memtime.o PDAF-D_put_state_lestkf.o PDAF-D_put_state_lestkf_si.o PDAF-D_assimilate_lestkf.o PDAF-D_assimilate_lestkf_si.o PDAF-D_lestkf_update.o PDAF-D_lestkf_analysis.o PDAF-D_lestkf_analysis_fixed.o PDAF-D_lenkf_init.o PDAF-D_lenkf_alloc.o PDAF_lenkf_options.o PDAF-D_lenkf_memtime.o PDAF-D_put_state_lenkf.o PDAF-D_put_state_lenkf_si.o PDAFomi_put_state_lenkf.o PDAF-D_assimilate_lenkf.o PDAF-D_assimilate_lenkf_si.o PDAFomi_assimilate_lenkf.o PDAF-D_lenkf_update.o PDAF-D_enkf_obs_ensemble.o PDAF-D_enkf_gather_resid.o PDAF-D_lenkf_analysis_rsm.o PDAF_enkf_omega.o PDAF_enkf_Tleft.o PDAF-D_netf_init.o PDAF-D_netf_alloc.o PDAF_netf_options.o PDAF-D_netf_memtime.o PDAF-D_put_state_netf.o PDAF-D_put_state_netf_si.o PDAF-D_assimilate_netf.o PDAF-D_assimilate_netf_si.o PDAF-D_netf_update.o PDAF-D_netf_smootherT.o PDAF-D_netf_analysis.o PDAF-D_smoother_netf.o PDAF-D_lnetf_init.o PDAF-D_lnetf_alloc.o PDAF_lnetf_options.o PDAF-D_lnetf_memtime.o PDAF-D_put_state_lnetf.o PDAF-D_put_state_lnetf_si.o PDAF-D_assimilate_lnetf.o PDAF-D_assimilate_lnetf_si.o PDAF-D_lnetf_update.o PDAF-D_lnetf_analysis.o PDAF-D_lnetf_smootherT.o PDAF-D_smoother_lnetf.o PDAF-D_pf_init.o PDAF-D_pf_alloc.o PDAF_pf_options.o PDAF-D_pf_memtime.o PDAF-D_put_state_pf.o PDAF-D_put_state_pf_si.o PDAF-D_assimilate_pf.o PDAF-D_assimilate_pf_si.o PDAF-D_pf_update.o PDAF-D_pf_analysis.o PDAF-D_pf_resampling.o PDAF-D_pf_add_noise.o PDAF-D_genobs_init.o PDAF-D_genobs_alloc.o PDAF_genobs_options.o PDAF-D_put_state_generate_obs.o PDAF-D_put_state_generate_obs_si.o PDAFomi_put_state_generate_obs.o PDAF-D_generate_obs.o PDAF-D_generate_obs_si.o PDAFomi_generate_obs.o PDAF-D_gen_obs.o PDAFomi_obs_f.o PDAFomi_obs_l.o PDAFomi_obs_op.o PDAFomi.o PDAFomi_callback.o
+ar: creating ../lib/libpdaf-d.a
+ranlib  ../lib/libpdaf-d.a
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_timer.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_memcount.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_mod_filtermpi.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_mod_filter.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_interfaces_module.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_init_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_init_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_alloc_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_print_info.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_print_version.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_options_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_state.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_state_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_incremental.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_incremental_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_set_forget.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_set_forget_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_add_increment.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_generate_rndmat.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_local_weights.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_local_weight.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_ens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_memberid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_obsmemberid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_shift.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_set_smootherens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_smootherens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_set_ens_pointer.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_prepost.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_prepost_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_prepost.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_prepost_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_inflate_ens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_sampleens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_mvnormalize.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_eofcovar.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_diag_histogram.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_diag_ensstats.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_diag_effsample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_dim_obs_f.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_obs_f.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_obs_f2.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_obs_f_flex.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_obs_f2_flex.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_allreduce.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_deallocate.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_assim_flag.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_get_localfilter.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_inflate_weights.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_put_state_global.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_put_state_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_assimilate_global.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_assimilate_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_seik_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_seik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_seik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_seik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_seik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_resample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_analysis_newT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_resample_newT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_analysis_trans.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_matrixT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_uinv.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_seik_omega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_seik_TtimesA.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_lseik_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lseik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lseik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lseik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lseik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_resample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_analysis_trans.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_seek_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_seek.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_seek_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_seek.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_seek_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_rediag.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_enkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_enkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_enkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_obs_ensemble.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_gather_resid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_analysis_rlm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_analysis_rsm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_enkf_omega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_enkf_Tleft.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_etkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_etkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_etkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_etkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_etkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_analysis_T.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_Tright.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_etkf_Tleft.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_letkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_letkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_letkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_letkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_letkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_analysis_T.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_estkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_estkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_estkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_estkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_estkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_AOmega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_OmegaA.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_lestkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lestkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lestkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lestkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lestkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_lenkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lenkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_put_state_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lenkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_assimilate_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_analysis_rsm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_netf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_netf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_netf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_smootherT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_lnetf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lnetf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lnetf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_smootherT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_pf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_pf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_pf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_pf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_pf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_resampling.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_add_noise.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_genobs_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_genobs_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_genobs_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_generate_obs_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_put_state_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_generate_obs_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gen_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_obs_f.F90
+
+          IF (lhood>0.0) lhood = - LOG(lhood)
+ftn-7212 crayftn: WARNING PDAFOMI_LIKELIHOOD, File = PDAFomi_obs_f.F90, Line = 843 
+  Variable "lhood" is used before it is defined.
+
+Cray Fortran : Version 10.0.4 (20200915194113_fb520efc059185c9fadb4513171ab09002b05033)
+Cray Fortran : Fri Jun 04, 2021  21:47:52
+Cray Fortran : Compile time:  1.6134 seconds
+Cray Fortran : 1839 source lines
+Cray Fortran : 0 errors, 1 warnings, 0 other messages, 0 ansi
+Cray Fortran : "explain ftn-message number" gives more information about each message.
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_obs_l.F90
+
+          IF (lhood_l>0.0) lhood_l = - LOG(lhood_l)
+ftn-7212 crayftn: WARNING PDAFOMI_LIKELIHOOD_L, File = PDAFomi_obs_l.F90, Line = 922 
+  Variable "lhood_l" is used before it is defined.
+
+Cray Fortran : Version 10.0.4 (20200915194113_fb520efc059185c9fadb4513171ab09002b05033)
+Cray Fortran : Fri Jun 04, 2021  21:47:54
+Cray Fortran : Compile time:  1.3797 seconds
+Cray Fortran : 1520 source lines
+Cray Fortran : 0 errors, 1 warnings, 0 other messages, 0 ansi
+Cray Fortran : "explain ftn-message number" gives more information about each message.
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_obs_op.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_callback.F90
+
+     CALL PDAFomi_init_obscovar(obs_f_all(i)%ptr, dim_obs_p, covar, isdiag)
+ftn-7212 crayftn: WARNING PDAFOMI_INIT_OBSCOVAR_CB, File = PDAFomi_callback.F90, Line = 567 
+  Variable "covar" is used before it is defined.
+
+++++++ Generate Filter library ++++++
+ar -r  ../lib/libpdaf-d.a \
+PDAF_timer.o PDAF_memcount.o PDAF-D_mod_filtermpi.o PDAF-D_mod_filter.o PDAF_interfaces_module.o PDAF-D_init.o PDAF-D_init_si.o PDAF-D_init_filters.o PDAF-D_alloc_filters.o PDAF-D_print_info.o PDAF-D_print_version.o PDAF_options_filters.o PDAF-D_get_state.o PDAF-D_get_state_si.o PDAF-D_incremental.o PDAF-D_incremental_si.o PDAF-D_set_forget.o PDAF-D_set_forget_local.o PDAF-D_add_increment.o PDAF_generate_rndmat.o PDAF_local_weights.o PDAF_local_weight.o PDAF-D_gather_ens.o PDAF-D_get_memberid.o PDAF-D_get_obsmemberid.o PDAF-D_smoother_shift.o PDAF-D_smoother.o PDAF-D_smoother_local.o PDAF-D_set_smootherens.o PDAF-D_get_smootherens.o PDAF_set_ens_pointer.o PDAF-D_put_state_prepost.o PDAF-D_put_state_prepost_si.o PDAF-D_prepost.o PDAF-D_prepost_si.o PDAF_inflate_ens.o PDAF_sampleens.o PDAF_mvnormalize.o PDAF_eofcovar.o PDAF_diag_histogram.o PDAF_diag_ensstats.o PDAF_diag_effsample.o PDAF-D_gather_dim_obs_f.o PDAF-D_gather_obs_f.o PDAF-D_gather_obs_f2.o PDAF-D_gather_obs_f_flex.o PDAF-D_gather_obs_f2_flex.o PDAF-D_allreduce.o PDAF-D_deallocate.o PDAF-D_get_assim_flag.o PDAF_get_localfilter.o PDAF_inflate_weights.o PDAFomi_put_state_global.o PDAFomi_put_state_local.o PDAFomi_assimilate_global.o PDAFomi_assimilate_local.o PDAF-D_seik_init.o PDAF-D_seik_alloc.o PDAF_seik_options.o PDAF-D_seik_memtime.o PDAF-D_put_state_seik.o PDAF-D_put_state_seik_si.o PDAF-D_assimilate_seik.o PDAF-D_assimilate_seik_si.o PDAF-D_seik_update.o PDAF-D_seik_analysis.o PDAF-D_seik_resample.o PDAF-D_seik_analysis_newT.o PDAF-D_seik_resample_newT.o PDAF-D_seik_analysis_trans.o PDAF-D_seik_matrixT.o PDAF-D_seik_uinv.o PDAF_seik_omega.o PDAF_seik_TtimesA.o PDAF-D_lseik_init.o PDAF-D_lseik_alloc.o PDAF_lseik_options.o PDAF-D_lseik_memtime.o PDAF-D_put_state_lseik.o PDAF-D_put_state_lseik_si.o PDAF-D_assimilate_lseik.o PDAF-D_assimilate_lseik_si.o PDAF-D_lseik_update.o PDAF-D_lseik_analysis.o PDAF-D_lseik_resample.o PDAF-D_lseik_analysis_trans.o PDAF-D_seek_init.o PDAF-D_seek_alloc.o PDAF_seek_options.o PDAF-D_seek_memtime.o PDAF-D_put_state_seek.o PDAF-D_put_state_seek_si.o PDAF-D_assimilate_seek.o PDAF-D_assimilate_seek_si.o PDAF-D_seek_update.o PDAF-D_seek_analysis.o PDAF-D_seek_rediag.o PDAF-D_enkf_init.o PDAF-D_enkf_alloc.o PDAF_enkf_options.o PDAF-D_enkf_memtime.o PDAF-D_put_state_enkf.o PDAF-D_put_state_enkf_si.o PDAF-D_assimilate_enkf.o PDAF-D_assimilate_enkf_si.o PDAF-D_enkf_update.o PDAF-D_enkf_obs_ensemble.o PDAF-D_enkf_gather_resid.o PDAF-D_enkf_analysis_rlm.o PDAF-D_enkf_analysis_rsm.o PDAF_enkf_omega.o PDAF_enkf_Tleft.o PDAF-D_smoother_enkf.o PDAF-D_etkf_init.o PDAF-D_etkf_alloc.o PDAF_etkf_options.o PDAF-D_etkf_memtime.o PDAF-D_put_state_etkf.o PDAF-D_put_state_etkf_si.o PDAF-D_assimilate_etkf.o PDAF-D_assimilate_etkf_si.o PDAF-D_etkf_update.o PDAF-D_etkf_analysis.o PDAF-D_etkf_analysis_T.o PDAF-D_etkf_analysis_fixed.o PDAF-D_etkf_Tright.o PDAF_etkf_Tleft.o PDAF-D_letkf_init.o PDAF-D_letkf_alloc.o PDAF_letkf_options.o PDAF-D_letkf_memtime.o PDAF-D_put_state_letkf.o PDAF-D_put_state_letkf_si.o PDAF-D_assimilate_letkf.o PDAF-D_assimilate_letkf_si.o PDAF-D_letkf_update.o PDAF-D_letkf_analysis.o PDAF-D_letkf_analysis_T.o PDAF-D_letkf_analysis_fixed.o PDAF-D_estkf_init.o PDAF-D_estkf_alloc.o PDAF_estkf_options.o PDAF-D_estkf_memtime.o PDAF-D_put_state_estkf.o PDAF-D_put_state_estkf_si.o PDAF-D_assimilate_estkf.o PDAF-D_assimilate_estkf_si.o PDAF-D_estkf_update.o PDAF-D_estkf_analysis.o PDAF-D_estkf_analysis_fixed.o PDAF-D_estkf_AOmega.o PDAF-D_estkf_OmegaA.o PDAF-D_lestkf_init.o PDAF-D_lestkf_alloc.o PDAF_lestkf_options.o PDAF-D_lestkf_memtime.o PDAF-D_put_state_lestkf.o PDAF-D_put_state_lestkf_si.o PDAF-D_assimilate_lestkf.o PDAF-D_assimilate_lestkf_si.o PDAF-D_lestkf_update.o PDAF-D_lestkf_analysis.o PDAF-D_lestkf_analysis_fixed.o PDAF-D_lenkf_init.o PDAF-D_lenkf_alloc.o PDAF_lenkf_options.o PDAF-D_lenkf_memtime.o PDAF-D_put_state_lenkf.o PDAF-D_put_state_lenkf_si.o PDAFomi_put_state_lenkf.o PDAF-D_assimilate_lenkf.o PDAF-D_assimilate_lenkf_si.o PDAFomi_assimilate_lenkf.o PDAF-D_lenkf_update.o PDAF-D_enkf_obs_ensemble.o PDAF-D_enkf_gather_resid.o PDAF-D_lenkf_analysis_rsm.o PDAF_enkf_omega.o PDAF_enkf_Tleft.o PDAF-D_netf_init.o PDAF-D_netf_alloc.o PDAF_netf_options.o PDAF-D_netf_memtime.o PDAF-D_put_state_netf.o PDAF-D_put_state_netf_si.o PDAF-D_assimilate_netf.o PDAF-D_assimilate_netf_si.o PDAF-D_netf_update.o PDAF-D_netf_smootherT.o PDAF-D_netf_analysis.o PDAF-D_smoother_netf.o PDAF-D_lnetf_init.o PDAF-D_lnetf_alloc.o PDAF_lnetf_options.o PDAF-D_lnetf_memtime.o PDAF-D_put_state_lnetf.o PDAF-D_put_state_lnetf_si.o PDAF-D_assimilate_lnetf.o PDAF-D_assimilate_lnetf_si.o PDAF-D_lnetf_update.o PDAF-D_lnetf_analysis.o PDAF-D_lnetf_smootherT.o PDAF-D_smoother_lnetf.o PDAF-D_pf_init.o PDAF-D_pf_alloc.o PDAF_pf_options.o PDAF-D_pf_memtime.o PDAF-D_put_state_pf.o PDAF-D_put_state_pf_si.o PDAF-D_assimilate_pf.o PDAF-D_assimilate_pf_si.o PDAF-D_pf_update.o PDAF-D_pf_analysis.o PDAF-D_pf_resampling.o PDAF-D_pf_add_noise.o PDAF-D_genobs_init.o PDAF-D_genobs_alloc.o PDAF_genobs_options.o PDAF-D_put_state_generate_obs.o PDAF-D_put_state_generate_obs_si.o PDAFomi_put_state_generate_obs.o PDAF-D_generate_obs.o PDAF-D_generate_obs_si.o PDAFomi_generate_obs.o PDAF-D_gen_obs.o PDAFomi_obs_f.o PDAFomi_obs_l.o PDAFomi_obs_op.o PDAFomi.o PDAFomi_callback.o
+ar: creating ../lib/libpdaf-d.a
+ranlib  ../lib/libpdaf-d.a
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_timer.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_memcount.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_mod_filtermpi.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_mod_filter.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_interfaces_module.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_init_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_init_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_alloc_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_print_info.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_print_version.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_options_filters.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_state.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_state_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_incremental.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_incremental_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_set_forget.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_set_forget_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_add_increment.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_generate_rndmat.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_local_weights.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_local_weight.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_ens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_memberid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_obsmemberid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_shift.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_set_smootherens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_smootherens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_set_ens_pointer.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_prepost.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_prepost_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_prepost.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_prepost_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_inflate_ens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_sampleens.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_mvnormalize.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_eofcovar.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_diag_histogram.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_diag_ensstats.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_diag_effsample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_dim_obs_f.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_obs_f.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_obs_f2.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_obs_f_flex.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gather_obs_f2_flex.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_allreduce.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_deallocate.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_get_assim_flag.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_get_localfilter.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_inflate_weights.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_put_state_global.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_put_state_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_assimilate_global.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_assimilate_local.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_seik_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_seik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_seik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_seik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_seik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_resample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_analysis_newT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_resample_newT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_analysis_trans.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_matrixT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seik_uinv.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_seik_omega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_seik_TtimesA.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_lseik_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lseik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lseik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lseik.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lseik_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_resample.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lseik_analysis_trans.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_seek_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_seek.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_seek_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_seek.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_seek_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_seek_rediag.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_enkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_enkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_enkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_obs_ensemble.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_gather_resid.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_analysis_rlm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_enkf_analysis_rsm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_enkf_omega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_enkf_Tleft.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_enkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_etkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_etkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_etkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_etkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_etkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_analysis_T.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_etkf_Tright.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_etkf_Tleft.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_letkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_letkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_letkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_letkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_letkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_analysis_T.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_letkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_estkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_estkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_estkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_estkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_estkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_AOmega.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_estkf_OmegaA.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_lestkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lestkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lestkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lestkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lestkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lestkf_analysis_fixed.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_lenkf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lenkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_put_state_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lenkf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_assimilate_lenkf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lenkf_analysis_rsm.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_netf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_netf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_netf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_smootherT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_netf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_netf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_lnetf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_lnetf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_lnetf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_lnetf_smootherT.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_smoother_lnetf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_pf_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_memtime.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_pf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_pf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_pf.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_assimilate_pf_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_update.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_analysis.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_resampling.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_pf_add_noise.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_genobs_init.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_genobs_alloc.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF_genobs_options.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_put_state_generate_obs_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_put_state_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_generate_obs_si.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_generate_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAF-D_gen_obs.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_obs_f.F90
+
+          IF (lhood>0.0) lhood = - LOG(lhood)
+ftn-7212 crayftn: WARNING PDAFOMI_LIKELIHOOD, File = PDAFomi_obs_f.F90, Line = 843 
+  Variable "lhood" is used before it is defined.
+
+Cray Fortran : Version 10.0.4 (20200915194113_fb520efc059185c9fadb4513171ab09002b05033)
+Cray Fortran : Thu Jul 01, 2021  11:36:37
+Cray Fortran : Compile time:  1.6646 seconds
+Cray Fortran : 1839 source lines
+Cray Fortran : 0 errors, 1 warnings, 0 other messages, 0 ansi
+Cray Fortran : "explain ftn-message number" gives more information about each message.
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_obs_l.F90
+
+          IF (lhood_l>0.0) lhood_l = - LOG(lhood_l)
+ftn-7212 crayftn: WARNING PDAFOMI_LIKELIHOOD_L, File = PDAFomi_obs_l.F90, Line = 922 
+  Variable "lhood_l" is used before it is defined.
+
+Cray Fortran : Version 10.0.4 (20200915194113_fb520efc059185c9fadb4513171ab09002b05033)
+Cray Fortran : Thu Jul 01, 2021  11:36:39
+Cray Fortran : Compile time:  1.4255 seconds
+Cray Fortran : 1520 source lines
+Cray Fortran : 0 errors, 1 warnings, 0 other messages, 0 ansi
+Cray Fortran : "explain ftn-message number" gives more information about each message.
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_obs_op.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi.F90
+ftn -em -s integer32 -s real64 -hnoomp   -DUSE_PDAF -c PDAFomi_callback.F90
+
+     CALL PDAFomi_init_obscovar(obs_f_all(i)%ptr, dim_obs_p, covar, isdiag)
+ftn-7212 crayftn: WARNING PDAFOMI_INIT_OBSCOVAR_CB, File = PDAFomi_callback.F90, Line = 567 
+  Variable "covar" is used before it is defined.
+
+++++++ Generate Filter library ++++++
+ar -r  ../lib/libpdaf-d.a \
+PDAF_timer.o PDAF_memcount.o PDAF-D_mod_filtermpi.o PDAF-D_mod_filter.o PDAF_interfaces_module.o PDAF-D_init.o PDAF-D_init_si.o PDAF-D_init_filters.o PDAF-D_alloc_filters.o PDAF-D_print_info.o PDAF-D_print_version.o PDAF_options_filters.o PDAF-D_get_state.o PDAF-D_get_state_si.o PDAF-D_incremental.o PDAF-D_incremental_si.o PDAF-D_set_forget.o PDAF-D_set_forget_local.o PDAF-D_add_increment.o PDAF_generate_rndmat.o PDAF_local_weights.o PDAF_local_weight.o PDAF-D_gather_ens.o PDAF-D_get_memberid.o PDAF-D_get_obsmemberid.o PDAF-D_smoother_shift.o PDAF-D_smoother.o PDAF-D_smoother_local.o PDAF-D_set_smootherens.o PDAF-D_get_smootherens.o PDAF_set_ens_pointer.o PDAF-D_put_state_prepost.o PDAF-D_put_state_prepost_si.o PDAF-D_prepost.o PDAF-D_prepost_si.o PDAF_inflate_ens.o PDAF_sampleens.o PDAF_mvnormalize.o PDAF_eofcovar.o PDAF_diag_histogram.o PDAF_diag_ensstats.o PDAF_diag_effsample.o PDAF-D_gather_dim_obs_f.o PDAF-D_gather_obs_f.o PDAF-D_gather_obs_f2.o PDAF-D_gather_obs_f_flex.o PDAF-D_gather_obs_f2_flex.o PDAF-D_allreduce.o PDAF-D_deallocate.o PDAF-D_get_assim_flag.o PDAF_get_localfilter.o PDAF_inflate_weights.o PDAFomi_put_state_global.o PDAFomi_put_state_local.o PDAFomi_assimilate_global.o PDAFomi_assimilate_local.o PDAF-D_seik_init.o PDAF-D_seik_alloc.o PDAF_seik_options.o PDAF-D_seik_memtime.o PDAF-D_put_state_seik.o PDAF-D_put_state_seik_si.o PDAF-D_assimilate_seik.o PDAF-D_assimilate_seik_si.o PDAF-D_seik_update.o PDAF-D_seik_analysis.o PDAF-D_seik_resample.o PDAF-D_seik_analysis_newT.o PDAF-D_seik_resample_newT.o PDAF-D_seik_analysis_trans.o PDAF-D_seik_matrixT.o PDAF-D_seik_uinv.o PDAF_seik_omega.o PDAF_seik_TtimesA.o PDAF-D_lseik_init.o PDAF-D_lseik_alloc.o PDAF_lseik_options.o PDAF-D_lseik_memtime.o PDAF-D_put_state_lseik.o PDAF-D_put_state_lseik_si.o PDAF-D_assimilate_lseik.o PDAF-D_assimilate_lseik_si.o PDAF-D_lseik_update.o PDAF-D_lseik_analysis.o PDAF-D_lseik_resample.o PDAF-D_lseik_analysis_trans.o PDAF-D_seek_init.o PDAF-D_seek_alloc.o PDAF_seek_options.o PDAF-D_seek_memtime.o PDAF-D_put_state_seek.o PDAF-D_put_state_seek_si.o PDAF-D_assimilate_seek.o PDAF-D_assimilate_seek_si.o PDAF-D_seek_update.o PDAF-D_seek_analysis.o PDAF-D_seek_rediag.o PDAF-D_enkf_init.o PDAF-D_enkf_alloc.o PDAF_enkf_options.o PDAF-D_enkf_memtime.o PDAF-D_put_state_enkf.o PDAF-D_put_state_enkf_si.o PDAF-D_assimilate_enkf.o PDAF-D_assimilate_enkf_si.o PDAF-D_enkf_update.o PDAF-D_enkf_obs_ensemble.o PDAF-D_enkf_gather_resid.o PDAF-D_enkf_analysis_rlm.o PDAF-D_enkf_analysis_rsm.o PDAF_enkf_omega.o PDAF_enkf_Tleft.o PDAF-D_smoother_enkf.o PDAF-D_etkf_init.o PDAF-D_etkf_alloc.o PDAF_etkf_options.o PDAF-D_etkf_memtime.o PDAF-D_put_state_etkf.o PDAF-D_put_state_etkf_si.o PDAF-D_assimilate_etkf.o PDAF-D_assimilate_etkf_si.o PDAF-D_etkf_update.o PDAF-D_etkf_analysis.o PDAF-D_etkf_analysis_T.o PDAF-D_etkf_analysis_fixed.o PDAF-D_etkf_Tright.o PDAF_etkf_Tleft.o PDAF-D_letkf_init.o PDAF-D_letkf_alloc.o PDAF_letkf_options.o PDAF-D_letkf_memtime.o PDAF-D_put_state_letkf.o PDAF-D_put_state_letkf_si.o PDAF-D_assimilate_letkf.o PDAF-D_assimilate_letkf_si.o PDAF-D_letkf_update.o PDAF-D_letkf_analysis.o PDAF-D_letkf_analysis_T.o PDAF-D_letkf_analysis_fixed.o PDAF-D_estkf_init.o PDAF-D_estkf_alloc.o PDAF_estkf_options.o PDAF-D_estkf_memtime.o PDAF-D_put_state_estkf.o PDAF-D_put_state_estkf_si.o PDAF-D_assimilate_estkf.o PDAF-D_assimilate_estkf_si.o PDAF-D_estkf_update.o PDAF-D_estkf_analysis.o PDAF-D_estkf_analysis_fixed.o PDAF-D_estkf_AOmega.o PDAF-D_estkf_OmegaA.o PDAF-D_lestkf_init.o PDAF-D_lestkf_alloc.o PDAF_lestkf_options.o PDAF-D_lestkf_memtime.o PDAF-D_put_state_lestkf.o PDAF-D_put_state_lestkf_si.o PDAF-D_assimilate_lestkf.o PDAF-D_assimilate_lestkf_si.o PDAF-D_lestkf_update.o PDAF-D_lestkf_analysis.o PDAF-D_lestkf_analysis_fixed.o PDAF-D_lenkf_init.o PDAF-D_lenkf_alloc.o PDAF_lenkf_options.o PDAF-D_lenkf_memtime.o PDAF-D_put_state_lenkf.o PDAF-D_put_state_lenkf_si.o PDAFomi_put_state_lenkf.o PDAF-D_assimilate_lenkf.o PDAF-D_assimilate_lenkf_si.o PDAFomi_assimilate_lenkf.o PDAF-D_lenkf_update.o PDAF-D_enkf_obs_ensemble.o PDAF-D_enkf_gather_resid.o PDAF-D_lenkf_analysis_rsm.o PDAF_enkf_omega.o PDAF_enkf_Tleft.o PDAF-D_netf_init.o PDAF-D_netf_alloc.o PDAF_netf_options.o PDAF-D_netf_memtime.o PDAF-D_put_state_netf.o PDAF-D_put_state_netf_si.o PDAF-D_assimilate_netf.o PDAF-D_assimilate_netf_si.o PDAF-D_netf_update.o PDAF-D_netf_smootherT.o PDAF-D_netf_analysis.o PDAF-D_smoother_netf.o PDAF-D_lnetf_init.o PDAF-D_lnetf_alloc.o PDAF_lnetf_options.o PDAF-D_lnetf_memtime.o PDAF-D_put_state_lnetf.o PDAF-D_put_state_lnetf_si.o PDAF-D_assimilate_lnetf.o PDAF-D_assimilate_lnetf_si.o PDAF-D_lnetf_update.o PDAF-D_lnetf_analysis.o PDAF-D_lnetf_smootherT.o PDAF-D_smoother_lnetf.o PDAF-D_pf_init.o PDAF-D_pf_alloc.o PDAF_pf_options.o PDAF-D_pf_memtime.o PDAF-D_put_state_pf.o PDAF-D_put_state_pf_si.o PDAF-D_assimilate_pf.o PDAF-D_assimilate_pf_si.o PDAF-D_pf_update.o PDAF-D_pf_analysis.o PDAF-D_pf_resampling.o PDAF-D_pf_add_noise.o PDAF-D_genobs_init.o PDAF-D_genobs_alloc.o PDAF_genobs_options.o PDAF-D_put_state_generate_obs.o PDAF-D_put_state_generate_obs_si.o PDAFomi_put_state_generate_obs.o PDAF-D_generate_obs.o PDAF-D_generate_obs_si.o PDAFomi_generate_obs.o PDAF-D_gen_obs.o PDAFomi_obs_f.o PDAFomi_obs_l.o PDAFomi_obs_op.o PDAFomi.o PDAFomi_callback.o
+ar: creating ../lib/libpdaf-d.a
+ranlib  ../lib/libpdaf-d.a

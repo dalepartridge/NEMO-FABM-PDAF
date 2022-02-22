@@ -1,0 +1,17 @@
+<!--
+============================================================================================================
+= grid definition = = DO NOT CHANGE =
+============================================================================================================
+    -->
+ 
+    <grid_definition>
+        <grid id="grid_T_2D" domain_ref="grid_T"/>
+        <grid id="grid_T_3D" domain_ref="grid_T" axis_ref="deptht"/>
+        <grid id="grid_U_2D" domain_ref="grid_U"/>
+        <grid id="grid_U_3D" domain_ref="grid_U" axis_ref="depthu"/>
+        <grid id="grid_V_2D" domain_ref="grid_V"/>
+        <grid id="grid_V_3D" domain_ref="grid_V" axis_ref="depthv"/>
+        <grid id="grid_W_2D" domain_ref="grid_W"/>
+        <grid id="grid_W_3D" domain_ref="grid_W" axis_ref="depthw"/>
+        <grid id="grid_0" domain_ref="no_grid"/>
+    </grid_definition>

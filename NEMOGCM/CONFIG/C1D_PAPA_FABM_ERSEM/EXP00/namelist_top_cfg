@@ -1,0 +1,123 @@
+!!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!! NEMO/TOP1 :  Configuration namelist : used to overwrite defaults values defined in SHARED/namelist_top_ref
+!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+!-----------------------------------------------------------------------
+&namtrc_run     !   run information
+!-----------------------------------------------------------------------
+   ln_top_euler  = .false.    !  use Euler time-stepping for TOP
+   ln_rsttr      = .true.   !  start from a restart file (T) or not (F)
+   nn_rsttr      =   0       !  restart control = 0 initial time step is not compared to the restart file value
+                           !                  = 1 do not use the value in the restart file
+                           !                  = 2 calendar parameters read in the restart file
+   cn_trcrst_in  = "restart_trc"   !  suffix of pass. sn_tracer restart name (input)
+   cn_trcrst_out = "restart_trc"   !  suffix of pass. sn_tracer restart name (output)
+/
+!-----------------------------------------------------------------------
+&namtrc     !   tracers definition
+!-----------------------------------------------------------------------
+!                !    name   !           title of the field              ! initial data ! initial data ! save   !
+!                !           !                                           !  units       ! from file    ! or not !
+!                !           !                                           !              ! or not       !        !
+/
+!-----------------------------------------------------------------------
+&namtrc_dta      !    Initialisation from data input file
+!-----------------------------------------------------------------------
+!          !  file name  ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!          !             !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
+/
+!-----------------------------------------------------------------------
+&namtrc_adv    !   advection scheme for passive tracer
+!-----------------------------------------------------------------------
+   ln_trcadv_tvd     =  .false.  !  TVD scheme
+   ln_trcadv_muscl   =  .true.   !  MUSCL scheme
+/
+!-----------------------------------------------------------------------
+&namtrc_ldf    !   lateral diffusion scheme for passive tracer
+!-----------------------------------------------------------------------
+/
+!-----------------------------------------------------------------------
+&namtrc_zdf        !   vertical physics
+!-----------------------------------------------------------------------
+/
+!-----------------------------------------------------------------------
+&namtrc_rad        !  treatment of negative concentrations
+!-----------------------------------------------------------------------
+   ln_trcrad   =  .true.  !  artificially correct negative concentrations (T) or not (F)
+/
+!-----------------------------------------------------------------------
+&namtrc_trd       !   diagnostics on tracer trends        ('key_trdtrc')
+!                          or mixed-layer trends          ('key_trdmld_trc')
+!----------------------------------------------------------------------
+   nn_trd_trc  =  5475      !  time step frequency and tracers trends
+   nn_ctls_trc =   0        !  control surface type in mixed-layer trends (0,1 or n<jpk)
+   rn_ucf_trc  =   1        !  unit conversion factor (=1 -> /seconds ; =86400. -> /day)
+   ln_trdmxl_trc_restart = .false.  !  restart for ML diagnostics
+   ln_trdmxl_trc_instant = .true.  !  flag to diagnose trends of instantantaneous or mean ML T/S
+   ln_trdtrc(2)  =   .true. ! N1_p
+   ln_trdtrc(3)  =   .true. ! N3_n
+   ln_trdtrc(4)  =   .true. ! N4_n
+   ln_trdtrc(5)  =   .true. ! N5_s
+   ln_trdtrc(7)  =   .true. ! O3_c
+   ln_trdtrc(9)  =   .true. ! B1_c
+   ln_trdtrc(10)  =   .true. ! B1_n
+   ln_trdtrc(11)  =   .true. ! B1_p
+   ln_trdtrc(12)  =   .true. ! P1_c
+   ln_trdtrc(13)  =   .true. ! P1_n
+   ln_trdtrc(14)  =   .true. ! P1_p
+   ln_trdtrc(16)  =   .true. ! P1_s
+   ln_trdtrc(17)  =   .true. ! L2_c
+   ln_trdtrc(18)  =   .true. ! P2_c
+   ln_trdtrc(19)  =   .true. ! P2_n
+   ln_trdtrc(20)  =   .true. ! P2_p
+   ln_trdtrc(22)  =   .true. ! P3_c
+   ln_trdtrc(23)  =   .true. ! P3_n
+   ln_trdtrc(24)  =   .true. ! P3_p
+   ln_trdtrc(26)  =   .true. ! P4_c
+   ln_trdtrc(27)  =   .true. ! P4_n
+   ln_trdtrc(28)  =   .true. ! P4_p
+   ln_trdtrc(30)  =   .true. ! Z4_c
+   ln_trdtrc(31)  =   .true. ! Z5_c
+   ln_trdtrc(32)  =   .true. ! Z5_n
+   ln_trdtrc(33)  =   .true. ! Z5_p
+   ln_trdtrc(34)  =   .true. ! Z6_c
+   ln_trdtrc(35)  =   .true. ! Z6_n
+   ln_trdtrc(36)  =   .true. ! Z6_p
+   ln_trdtrc(37)  =   .true. ! R1_c
+   ln_trdtrc(38)  =   .true. ! R1_n
+   ln_trdtrc(39)  =   .true. ! R1_p
+   ln_trdtrc(40)  =   .true. ! R2_c
+   ln_trdtrc(41)  =   .true. ! R3_c
+   ln_trdtrc(42)  =   .true. ! R4_c
+   ln_trdtrc(43)  =   .true. ! R4_n
+   ln_trdtrc(44)  =   .true. ! R4_p
+   ln_trdtrc(45)  =   .true. ! R6_c
+   ln_trdtrc(46)  =   .true. ! R6_n
+   ln_trdtrc(47)  =   .true. ! R6_p
+   ln_trdtrc(48)  =   .true. ! R6_s
+   ln_trdtrc(49)  =   .true. ! R8_c
+   ln_trdtrc(50)  =   .true. ! R8_n
+   ln_trdtrc(51)  =   .true. ! R8_p
+   ln_trdtrc(52)  =   .true. ! R8_s
+/
+!-----------------------------------------------------------------------
+&namtrc_dia       !   parameters for passive tracer additional diagnostics
+!----------------------------------------------------------------------
+/
+!----------------------------------------------------------------------
+&namtrc_bc        !   data for boundary conditions
+!-----------------------------------------------------------------------
+   cn_dir_sbc        =  './'      !  root directory for the location of the data files
+   cn_dir_obc        =  './'      !  root directory for the location of the data files
+   cn_dir_cbc        =  './'      !  root directory for the location of the data files
+/
+!----------------------------------------------------------------------
+!namtrc_bdy       !   Setup of tracer boundary conditions
+!-----------------------------------------------------------------------
+$namtrc_bdy
+   cn_trc_dflt     =  'none','none'  !  OBC applied by default to all tracers
+   cn_trc          =  'none','none'       !  Boundary conditions appled to the active tracers (see namtrc)
+   nn_trcdmp_bdy   = 0,0     !  Use damping timescales defined in nambdy of namelist
+                           !  = 0 NO damping of tracers at open boudaries
+                           !  = 1 Only for tracers forced with external data
+                           !  = 2 Damping applied to all tracers
+/

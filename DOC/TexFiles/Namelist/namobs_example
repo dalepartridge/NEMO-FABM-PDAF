@@ -1,0 +1,63 @@
+!-----------------------------------------------------------------------
+!       namobs    observation usage switch
+!-----------------------------------------------------------------------
+!
+!  ln_t3d                  Logical switch for T profile observations         
+!  ln_s3d                  Logical switch for S profile observations          
+!  ln_ena                  Logical switch for ENACT insitu data set           
+!  ln_cor                  Logical switch for Coriolis insitu data set       
+!  ln_profb                Logical switch for feedback insitu data set     
+!  ln_sla                  Logical switch for SLA observations               
+!  ln_sladt                Logical switch for AVISO SLA data              
+!  ln_slafb                Logical switch for feedback SLA data            
+!  ln_ssh                  Logical switch for SSH observations              
+!  ln_sst                  Logical switch for SST observations              
+!  ln_reysst               Logical switch for Reynolds observations       
+!  ln_ghrsst               Logical switch for GHRSST observations          
+!  ln_sstfb                Logical switch for feedback SST data          
+!  ln_sss                  Logical switch for SSS observations              
+!  ln_seaice               Logical switch for Sea Ice observations        
+!  ln_vel3d                Logical switch for velocity observations         
+!  ln_velavcur             Logical switch for velocity daily av. cur.    
+!  ln_velhrcur             Logical switch for velocity high freq. cur.   
+!  ln_velavadcp            Logical switch for velocity daily av. ADCP  
+!  ln_velhradcp            Logical switch for velocity high freq. ADCP
+!  ln_velfb                Logical switch for feedback velocity data       
+!  ln_grid_global          Global distribtion of observations         
+!  ln_grid_search_lookup   Logical switch for obs grid search w/lookup table  
+!  grid_search_file        Grid search lookup file header 
+!  enactfiles              ENACT input observation file names 
+!  coriofiles              Coriolis input observation file name  
+!  profbfiles              Profile feedback input observation file name 
+!  ln_profb_enatim         Enact feedback input time setting switch    
+!  slafilesact             Active SLA input observation file name
+!  slafilespas             Passive SLA input observation file name 
+!  slafbfiles              Feedback SLA input observation file name 
+!  sstfiles                GHRSST input observation file name       
+!  sstfbfiles              Feedback SST input observation file name 
+!  seaicefiles             Sea Ice input observation file name 
+!  velavcurfiles           Vel. cur. daily av. input file name  
+!  velhvcurfiles           Vel. cur. high freq. input file name  
+!  velavadcpfiles          Vel. ADCP daily av. input file name    
+!  velhvadcpfiles          Vel. ADCP high freq. input file name 
+!  velfbfiles              Vel. feedback input observation file name 
+!  dobsini                 Initial date in window YYYYMMDD.HHMMSS       
+!  dobsend                 Final date in window YYYYMMDD.HHMMSS         
+!  n1dint                  Type of vertical interpolation method        
+!  n2dint                  Type of horizontal interpolation method       
+!  ln_nea                  Rejection of observations near land switch    
+!  nmsshc                  MSSH correction scheme                         
+!  mdtcorr                 MDT  correction                               
+!  mdtcutoff               MDT cutoff for computed correction          
+!  ln_altbias              Logical switch for alt bias                
+!  ln_ignmis               Logical switch for ignoring missing files   
+!  endailyavtypes          ENACT daily average types                    
+ &namobs
+   ln_t3d = .true.
+   ln_s3d = .true.
+   ln_ena = .true.
+   enactfiles = 'enact.1.nc'
+   ln_grid_global = .true.
+   ln_grid_search_lookup = .true.
+   ln_ignmis = .true.  
+/ 

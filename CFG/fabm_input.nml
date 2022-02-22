@@ -1,0 +1,6 @@
+!              !  file name   ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !              !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
+&variable
+   name='FER_flux/flux'
+   sn=         'dust.orca.nc',-12, 'dust', .true.,  .true.,   'yearly',     '',         '',        ''
+/

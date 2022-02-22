@@ -1,0 +1,69 @@
+&namtrc_run
+cn_trcrst_in='restart_trc',
+cn_trcrst_out='restart_trc',
+ln_rsttr=.true.,
+nn_dttrc=1,
+nn_rsttr=0,
+nn_writetrc=48,
+/
+&namtrc
+ln_trcdmp=.false.,
+ln_trcdmp_clo=.false.,
+ln_trcdta=.true.,
+sn_tracer(01)='CHN','Chl-a concentration in non-diatom phytoplankton ','mg Chl/m3',.false.,.true.,
+sn_tracer(02)='CHD','Chl-a concentration in     diatom phytoplankton ','mg Chl/m3',.false.,.true.,
+sn_tracer(03)='PHN','non-diatom phytoplankton','mmol-N/m3',.false.,.true.,
+sn_tracer(04)='PHD','diatom phytoplankton ','mmol-N/m3',.false.,.true.,
+sn_tracer(05)='ZMI','micro zooplankton ','mmol-N/m3',.false.,.true.,
+sn_tracer(06)='ZME','meso  zooplankton ','mmol-N/m3',.false.,.true.,
+sn_tracer(07)='DIN','dissolved inorganic nitrogen','mmol-N/m3',.true.,.true.,
+sn_tracer(08)='SIL','silicate','mmolSi/m3',.true.,.true.,
+sn_tracer(09)='FER','dissolved iron','mmolFe/m3',.true.,.true.,
+sn_tracer(10)='DET','detrital nitrogen','mmol-N/m3',.false.,.true.,
+sn_tracer(11)='PDS','biogenic silicon in diatom phytoplankton ','mmolSi/m3',.false.,.true.,
+sn_tracer(12)='DTC','detrital carbon ','mmol-C/m3',.false.,.true.,
+sn_tracer(13)='DiC','dissolved inorganic carbon','mmol-C/m3',.true.,.true.,
+sn_tracer(14)='ALK','alkalinity ','meq/m3',.true.,.true.,
+sn_tracer(15)='OXY','dissolved oxygen ','mmolO2/m3',.true.,.true.,
+/
+&namtrc_dta
+/
+&namtrc_adv
+ln_trcadv_cen2=.false.,
+ln_trcadv_muscl=.true.,
+ln_trcadv_muscl2=.false.,
+ln_trcadv_qck=.false.,
+ln_trcadv_tvd=.false.,
+ln_trcadv_ubs=.false.,
+/
+&namtrc_ldf
+ln_trcldf_bilap=.false.,
+ln_trcldf_hor=.false.,
+ln_trcldf_iso=.true.,
+ln_trcldf_lap=.true.,
+ln_trcldf_level=.false.,
+rn_ahtrb_0=0.0,
+rn_ahtrc_0=2000.0,
+/
+&namtrc_zdf
+ln_trczdf_exp=.false.,
+nn_trczdf_exp=3,
+/
+&namtrc_rad
+ln_trcrad=.false.,
+/
+&namtrc_dmp
+/
+&namtrc_ice
+nn_ice_tr=-1,
+/
+&namtrc_trd
+/
+&namtrc_dia
+ln_diabio=.false.,
+ln_diatrc=.false.,
+nn_writebio=48,
+nn_writedia=48,
+/
+&namtrc_bc
+/

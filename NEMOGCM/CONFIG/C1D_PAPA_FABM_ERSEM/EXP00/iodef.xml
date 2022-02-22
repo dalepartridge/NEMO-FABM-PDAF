@@ -1,0 +1,448 @@
+<?xml version="1.0"?>
+<simulation>
+
+ <context id="nemo" time_origin="1950-01-01 00:00:00" >
+
+    <!-- $id$ -->
+
+    <!--
+============================================================================================================
+=                                  definition of all existing variables                                    =
+=                                            DO NOT CHANGE                                                 =
+============================================================================================================
+    -->
+    <field_definition src="./field_def.xml"/>
+    <field_definition src="./field_def_fabm.xml"/>
+    <field_definition src="./field_def_custom.xml"/>
+    <!--
+============================================================================================================
+=                                           output files definition                                        =
+=                                            Define your own files                                         =
+=                                         put the variables you want...                                    =
+============================================================================================================
+    -->
+
+    <file_definition type="one_file" name="@expname@_@freq@_@startdate@_@enddate@" sync_freq="10d" min_digits="4">
+      <file_group id="1ts" output_freq="1ts"  output_level="10" enabled=".TRUE.">
+         <!-- 1 time step files -->
+      </file_group>
+
+      <file_group id="1h" output_freq="1h"  output_level="10" enabled=".TRUE."> <!-- 1h files -->
+        <!-- hourly files -->
+      </file_group>
+
+      <file_group id="2h" output_freq="2h"  output_level="10" enabled=".TRUE."/> <!-- 2h files -->
+      <file_group id="3h" output_freq="3h"  output_level="10" enabled=".TRUE."/> <!-- 3h files -->
+      <file_group id="4h" output_freq="4h"  output_level="10" enabled=".TRUE."/> <!-- 4h files -->
+      <file_group id="6h" output_freq="6h"  output_level="10" enabled=".TRUE."/> <!-- 6h files -->
+      <file_group id="1d" output_freq="1d"  output_level="10" enabled=".TRUE." > <!-- 1d files -->
+
+        <file id="file59" name_suffix="_ptrc_T" description="tracer variables"  sync_freq="1d">
+          <field field_ref="N1_p" operation="average" />
+          <field field_ref="N3_n" operation="average" />
+          <field field_ref="N4_n" operation="average" />
+          <field field_ref="N5_s" operation="average" />
+          <field field_ref="O3_c" operation="average" />
+          <field field_ref="O3_TA" operation="average" />
+          <field field_ref="O3_pH" operation="average" />
+          <field field_ref="O3_pCO2" operation="average" />
+          <field field_ref="O3_Om_arg" operation="average" />
+          <field field_ref="O2_o" operation="average" />
+          <field field_ref="P1_Chl" operation="average" />
+          <field field_ref="P2_Chl" operation="average" />
+          <field field_ref="P3_Chl" operation="average" />
+          <field field_ref="P4_Chl" operation="average" />
+          <field field_ref="P1_c" operation="average" />
+          <field field_ref="P2_c" operation="average" />
+          <field field_ref="P3_c" operation="average" />
+          <field field_ref="P4_c" operation="average" />
+          <field field_ref="B1_c" operation="average" />
+          <field field_ref="Z4_c" operation="average" />
+          <field field_ref="Z5_c" operation="average" />
+          <field field_ref="Z6_c" operation="average" />
+          <field field_ref="R4_c" operation="average" />
+          <field field_ref="R6_c" operation="average" />
+          <field field_ref="R8_c" operation="average" />
+          <field field_ref="R1_c" operation="average" />
+          <field field_ref="R2_c" operation="average" />
+          <field field_ref="R3_c" operation="average" />
+          <field field_ref="L2_c" operation="average" />
+          <field field_ref="P1_fO3PIc" operation="instant" freq_op="1d"> @P1_fO3PIc_e3t / @e3t </field>
+          <field field_ref="P2_fO3PIc" operation="instant" freq_op="1d"> @P2_fO3PIc_e3t / @e3t </field>
+          <field field_ref="P3_fO3PIc" operation="instant" freq_op="1d"> @P3_fO3PIc_e3t / @e3t </field>
+          <field field_ref="P4_fO3PIc" operation="instant" freq_op="1d"> @P4_fO3PIc_e3t / @e3t </field>
+          <field field_ref="P1_fPIO3c" operation="instant" freq_op="1d"> @P1_fPIO3c_e3t / @e3t </field>
+          <field field_ref="P2_fPIO3c" operation="instant" freq_op="1d"> @P2_fPIO3c_e3t / @e3t </field>
+          <field field_ref="P3_fPIO3c" operation="instant" freq_op="1d"> @P3_fPIO3c_e3t / @e3t </field>
+          <field field_ref="P4_fPIO3c" operation="instant" freq_op="1d"> @P4_fPIO3c_e3t / @e3t </field>
+          <field field_ref="P1_fPIRIc_result" unit="mg/m^3/d" operation="instant" freq_op="1d"> @P1_fPIRIc_result_e3t / @e3t </field>
+          <field field_ref="P2_fPIRIc_result" unit="mg/m^3/d" operation="instant" freq_op="1d"> @P2_fPIRIc_result_e3t / @e3t </field>
+          <field field_ref="P3_fPIRIc_result" unit="mg/m^3/d" operation="instant" freq_op="1d"> @P3_fPIRIc_result_e3t / @e3t </field>
+          <field field_ref="P4_fPIRIc_result" unit="mg/m^3/d" operation="instant" freq_op="1d"> @P4_fPIRIc_result_e3t / @e3t </field>
+          <field field_ref="L2_L2O3c" operation="instant" freq_op="1d"> @L2_L2O3c / @e3t </field>
+          <field field_ref="gross_calcification_rate_result" unit="mg/m^3/d" operation="instant" freq_op="1d"> @gross_calcification_rate_e3t / @e3t </field>
+          <field field_ref="bL2_c"  operation="average" />
+          <field field_ref="Q1_c" operation="average" />
+          <field field_ref="Q6_c" operation="average" />
+          <field field_ref="Q7_c" operation="average" />
+          <field field_ref="Q17_c"  operation="average" />
+          <field field_ref="H1_c" operation="average" />
+          <field field_ref="H2_c" operation="average" />
+          <field field_ref="Y2_c" operation="average" />
+          <field field_ref="Y3_c" operation="average" />
+          <field field_ref="Y4_c" operation="average" />
+          <field field_ref="ben_col_D1m" operation="average" />
+          <field field_ref="ben_col_D2m" operation="average" />
+          <field field_ref="Q6_pen_depth_c" operation="average" />
+          <!-- <field field_ref="Q6_pen_depth_n" operation="average" />
+          <field field_ref="Q6_pen_depth_p" operation="average" />
+          <field field_ref="Q6_pen_depth_s" operation="average" /> -->
+          <field field_ref="Q7_pen_depth_c" operation="average" />
+          <!-- <field field_ref="Q7_pen_depth_n" operation="average" />
+          <field field_ref="Q7_pen_depth_p" operation="average" /> -->
+          <field field_ref="K1_p" operation="average" />
+          <field field_ref="K3_n" operation="average" />
+          <field field_ref="K4_n" operation="average" />
+          <field field_ref="K5_s" operation="average" />
+          <field field_ref="G2_o" operation="average" />
+          <!-- <field field_ref="G2_o_deep" operation="average" /> -->
+          <field field_ref="G3_c" operation="average" />
+          <!-- <field field_ref="ben_nit_G4n" operation="average" /> -->
+          <field field_ref="G3_c_pb_flux" operation="average" />
+          <field field_ref="K1_p_pb_flux" operation="average" />
+          <field field_ref="K3_n_pb_flux" operation="average" />
+          <field field_ref="K4_n_pb_flux" operation="average" />
+          <field field_ref="K5_s_pb_flux" operation="average" />
+          <field field_ref="G2_o_pb_flux" operation="average" />
+          <field field_ref="bL2_bremin" operation="average" />
+          <field field_ref="net_PelBen_POC_result" unit="mg/m^3/d" operation="average" />
+          <field field_ref="e3t"      operation="average" />
+          <!-- <field field_ref="total_chlorophyll_calculator_result"      name="Chl"     long_name="Chlorophyll-a" operation="average" /> -->
+          <!-- <field field_ref="light_ADY" operation="average" />
+          <field field_ref="light_EIR" operation="average" /> -->
+          <field field_ref="light_xEPS" operation="average" />
+          <field field_ref="O3_wind" operation="average" />
+          <field field_ref="O3_fair" operation="average" />
+        </file>
+
+        <file id="file60" name_suffix="_grid_T" description="tracer variables"  sync_freq="1d">
+          <field field_ref="toce" name="votemper"        operation="average"      long_name="sea_water_potential_temperature"                     />
+          <field field_ref="soce" name="vosaline"        operation="average"      long_name="sea_water_salinity"                                  />
+          <field field_ref="empmr"        operation="average"      long_name="water_flux_into_sea_water"                />
+          <field field_ref="mldr10_1"     operation="average"/>
+          <field field_ref="qsr"    operation="average"      long_name="surface_net_downward_shortwave_flux"           />
+      	  <field field_ref="qt"     operation="average"      long_name="surface_net_downward_total_heat_flux"          />
+          <field field_ref="XAD_O3_c" operation="instant" freq_op="1d" > @XAD_O3_c_e3t / @e3t </field>
+          <field field_ref="XAD_N3_n" operation="instant" freq_op="1d" > @XAD_N3_n_e3t / @e3t </field>
+          <field field_ref="XAD_N4_n" operation="instant" freq_op="1d" > @XAD_N4_n_e3t / @e3t </field>
+          <field field_ref="XAD_N1_p" operation="instant" freq_op="1d" > @XAD_N1_p_e3t / @e3t </field>
+          <field field_ref="XAD_N5_s" operation="instant" freq_op="1d" > @XAD_N5_s_e3t / @e3t </field>
+          <field field_ref="XAD_Phyto_c" operation="instant" freq_op="1d" > @XAD_Phyto_c_e3t / @e3t </field>
+          <field field_ref="XAD_Phyto_n" operation="instant" freq_op="1d" > @XAD_Phyto_n_e3t / @e3t </field>
+          <field field_ref="XAD_Phyto_p" operation="instant" freq_op="1d" > @XAD_Phyto_p_e3t / @e3t </field>
+          <field field_ref="XAD_P1_s" operation="instant" freq_op="1d" > @XAD_P1_s_e3t / @e3t </field>
+          <field field_ref="XAD_Heterotrophs_c" operation="instant" freq_op="1d" > @XAD_Heterotrophs_c_e3t / @e3t </field>
+          <field field_ref="XAD_Heterotrophs_n" operation="instant" freq_op="1d" > @XAD_Heterotrophs_n_e3t / @e3t </field>
+          <field field_ref="XAD_Heterotrophs_p" operation="instant" freq_op="1d" > @XAD_Heterotrophs_p_e3t / @e3t </field>
+          <field field_ref="XAD_DO_c" operation="instant" freq_op="1d" > @XAD_DO_c_e3t / @e3t </field>
+          <field field_ref="XAD_R1_n" operation="instant" freq_op="1d" > @XAD_R1_n_e3t / @e3t </field>
+          <field field_ref="XAD_R1_p" operation="instant" freq_op="1d" > @XAD_R1_p_e3t / @e3t </field>
+          <field field_ref="XAD_PO_c" operation="instant" freq_op="1d" > @XAD_PO_c_e3t / @e3t </field>
+          <field field_ref="XAD_PO_n" operation="instant" freq_op="1d" > @XAD_PO_n_e3t / @e3t </field>
+          <field field_ref="XAD_PO_p" operation="instant" freq_op="1d" > @XAD_PO_p_e3t / @e3t </field>
+          <field field_ref="XAD_PO_s" operation="instant" freq_op="1d" > @XAD_PO_s_e3t / @e3t </field>
+          <field field_ref="YAD_O3_c" operation="instant" freq_op="1d" > @YAD_O3_c_e3t / @e3t </field>
+          <field field_ref="YAD_N3_n" operation="instant" freq_op="1d" > @YAD_N3_n_e3t / @e3t </field>
+          <field field_ref="YAD_N4_n" operation="instant" freq_op="1d" > @YAD_N4_n_e3t / @e3t </field>
+          <field field_ref="YAD_N1_p" operation="instant" freq_op="1d" > @YAD_N1_p_e3t / @e3t </field>
+          <field field_ref="YAD_N5_s" operation="instant" freq_op="1d" > @YAD_N5_s_e3t / @e3t </field>
+          <field field_ref="YAD_Phyto_c" operation="instant" freq_op="1d" > @YAD_Phyto_c_e3t / @e3t </field>
+          <field field_ref="YAD_Phyto_n" operation="instant" freq_op="1d" > @YAD_Phyto_n_e3t / @e3t </field>
+          <field field_ref="YAD_Phyto_p" operation="instant" freq_op="1d" > @YAD_Phyto_p_e3t / @e3t </field>
+          <field field_ref="YAD_P1_s" operation="instant" freq_op="1d" > @YAD_P1_s_e3t / @e3t </field>
+          <field field_ref="YAD_Heterotrophs_c" operation="instant" freq_op="1d" > @YAD_Heterotrophs_c_e3t / @e3t </field>
+          <field field_ref="YAD_Heterotrophs_n" operation="instant" freq_op="1d" > @YAD_Heterotrophs_n_e3t / @e3t </field>
+          <field field_ref="YAD_Heterotrophs_p" operation="instant" freq_op="1d" > @YAD_Heterotrophs_p_e3t / @e3t </field>
+          <field field_ref="YAD_DO_c" operation="instant" freq_op="1d" > @YAD_DO_c_e3t / @e3t </field>
+          <field field_ref="YAD_R1_n" operation="instant" freq_op="1d" > @YAD_R1_n_e3t / @e3t </field>
+          <field field_ref="YAD_R1_p" operation="instant" freq_op="1d" > @YAD_R1_p_e3t / @e3t </field>
+          <field field_ref="YAD_PO_c" operation="instant" freq_op="1d" > @YAD_PO_c_e3t / @e3t </field>
+          <field field_ref="YAD_PO_n" operation="instant" freq_op="1d" > @YAD_PO_n_e3t / @e3t </field>
+          <field field_ref="YAD_PO_p" operation="instant" freq_op="1d" > @YAD_PO_p_e3t / @e3t </field>
+          <field field_ref="YAD_PO_s" operation="instant" freq_op="1d" > @YAD_PO_s_e3t / @e3t </field>
+          <field field_ref="VMV_PO_c" operation="instant" freq_op="1d" > @VMV_PO_c_e3t / @e3t </field>
+          <field field_ref="VMV_L2_c" operation="instant" freq_op="1d" > @VMV_L2_c_e3t / @e3t </field>
+          <field field_ref="e3t"      operation="average" />
+        </file>
+
+        <file id="file61" name_suffix="_grid_U" description="tracer variables"  sync_freq="1d">
+          <field field_ref="uoce"         operation="average"      long_name="sea_water_x_velocity" />
+          <field field_ref="utau"         name="tauuo"   long_name="surface_downward_x_stress" />
+        </file>
+
+        <file id="file62" name_suffix="_grid_V" description="tracer variables"  sync_freq="1d">
+          <field field_ref="voce"         operation="average"      long_name="sea_water_y_velocity" />
+          <field field_ref="vtau"         name="tauvo"   long_name="surface_downward_y_stress" />
+        </file>
+
+        <file id="file63" name_suffix="_grid_W" description="tracer variables"  sync_freq="1d">
+          <field field_ref="woce" operation="average" />
+        </file>
+
+      </file_group>
+
+      <file_group id="3d" output_freq="3d"  output_level="10" enabled=".TRUE."/> <!-- 3d files -->
+
+      <file_group id="5d" output_freq="5d"  output_level="10" enabled=".TRUE." />  <!-- 5d files -->
+
+      <file_group id="1m" output_freq="1mo" output_level="10" enabled=".TRUE." > <!-- real monthly files -->
+
+        <file id="file21" name_suffix="_grid_T" description="ocean T grid variables" >
+          <field field_ref="taubot" name="avtaubot" operation="average" />
+          <field field_ref="taubot" name="maxtaubot" operation="maximum" />
+        </file>
+
+        <file id="file25" name_suffix="_grid_W" description="ocean W grid variables" >
+          <field field_ref="e3w"  />
+          <field field_ref="avt"          name="difvho"  operation="maximum" long_name="ocean_vertical_heat_diffusivity" />
+        </file>
+
+        <file id="file26" name_suffix="_ptrc_T" description="ocean tracers" >
+          <field field_ref="R1_n" operation="average" />
+          <field field_ref="R1_p" operation="average" />
+          <field field_ref="PON_result" unit="mmol N/m^3" operation="average" />
+          <field field_ref="POP_result" unit="mmol P/m^3" operation="average" />
+          <field field_ref="POSi_result" unit="mmol Si/m^3" operation="average" />
+          <field field_ref="O3_Om_cal" operation="average" />
+          <field field_ref="Q1_n" operation="average" />
+          <field field_ref="Q1_p" operation="average" />
+          <field field_ref="Q6_s" operation="average" />
+          <field field_ref="Q17_n" operation="average" />
+          <field field_ref="Q17_p" operation="average" />
+          <field field_ref="ben_PON_result" unit="mmol N/m^2" operation="average" />
+          <field field_ref="ben_POP_result" unit="mmol P/m^2" operation="average" />
+          <field field_ref="erosion_v_er" operation="average" />
+          <field field_ref="erosion_v_er" name="max_erosion_v_er" operation="maximum" />
+          <field field_ref="phytoplankton_uptake_oxN_result" unit="mmol N/m^3/d" operation="instant" freq_op="1mo"> @phytoplankton_uptake_oxN_result_e3t / @e3t </field>
+          <field field_ref="phytoplankton_uptake_redN_result" unit="mmol N/m^3/d" operation="instant" freq_op="1mo"> @phytoplankton_uptake_redN_result_e3t / @e3t </field>
+          <field field_ref="phytoplankton_uptake_DIP_result" unit="mmol P/m^3/d" operation="instant" freq_op="1mo"> @phytoplankton_uptake_DIP_result_e3t / @e3t </field>
+          <field field_ref="P1_fN5PIs" name="phytoplankton_uptake_DIS_result" operation="instant" freq_op="1mo"> @P1_fN5PIs_e3t / @e3t </field>
+          <field field_ref="phytoplankton_loss_to_labile_DOC_result" unit="mg C/m^3/d" operation="instant" freq_op="1mo"> @phytoplankton_loss_to_labile_DOC_result_e3t / @e3t </field>
+          <field field_ref="phytoplankton_loss_to_labile_DON_result" unit="mmol N/m^3/d" operation="instant" freq_op="1mo"> @phytoplankton_loss_to_labile_DON_result_e3t / @e3t </field>
+          <field field_ref="phytoplankton_loss_to_labile_DOP_result" unit="mmol P/m^3/d" operation="instant" freq_op="1mo"> @phytoplankton_loss_to_labile_DOP_result_e3t / @e3t </field>
+          <field field_ref="phytoplankton_loss_to_non_labile_DOC_result" unit="mg C/m^3/d" operation="instant" freq_op="1mo"> @phytoplankton_loss_to_non_labile_DOC_result_e3t / @e3t </field>
+          <field field_ref="phytoplankton_loss_to_POC_result" unit="mg C/m^3/d" operation="instant" freq_op="1mo"> @phytoplankton_loss_to_POC_result_e3t / @e3t </field>
+          <field field_ref="phytoplankton_loss_to_PON_result" unit="mmol N/m^3/d" operation="instant" freq_op="1mo"> @phytoplankton_loss_to_PON_result_e3t / @e3t </field>
+          <field field_ref="phytoplankton_loss_to_POP_result" unit="mmol P/m^3/d" operation="instant" freq_op="1mo"> @phytoplankton_loss_to_POP_result_e3t / @e3t </field>
+          <field field_ref="P1_fPIRPs" name="diatom_loss_to_POSi_result" unit="mmol Si/m^3/d" operation="instant" freq_op="1mo"> @P1_fPIRPs_e3t / @e3t </field>
+          <field field_ref="B1_fB1O3c" operation="instant" freq_op="1mo"> @B1_fB1O3c_e3t / @e3t </field>
+          <field field_ref="B1_fR1B1c" operation="instant" freq_op="1mo"> @B1_fR1B1c_e3t / @e3t </field>
+          <field field_ref="B1_fR1B1n" operation="instant" freq_op="1mo"> @B1_fR1B1n_e3t / @e3t </field>
+          <field field_ref="B1_fR1B1p" operation="instant" freq_op="1mo"> @B1_fR1B1p_e3t / @e3t </field>
+          <field field_ref="B1_fR2B1c" operation="instant" freq_op="1mo"> @B1_fR2B1c_e3t / @e3t </field>
+          <field field_ref="B1_fR3B1c" operation="instant" freq_op="1mo"> @B1_fR3B1c_e3t / @e3t </field>
+          <field field_ref="B1_fB1R1c" operation="instant" freq_op="1mo"> @B1_fB1R1c_e3t / @e3t </field>
+          <field field_ref="B1_fB1R1n" operation="instant" freq_op="1mo"> @B1_fB1R1n_e3t / @e3t </field>
+          <field field_ref="B1_fB1R1p" operation="instant" freq_op="1mo"> @B1_fB1R1p_e3t / @e3t </field>
+          <field field_ref="B1_fB1R2c" operation="instant" freq_op="1mo"> @B1_fB1R2c_e3t / @e3t </field>
+          <field field_ref="B1_fB1R3c" operation="instant" freq_op="1mo"> @B1_fB1R3c_e3t / @e3t </field>
+          <field field_ref="B1_fB1NIn" operation="instant" freq_op="1mo"> @B1_fB1NIn_e3t / @e3t </field>
+          <field field_ref="B1_fB1N1p" operation="instant" freq_op="1mo"> @B1_fB1N1p_e3t / @e3t </field>
+          <field field_ref="Z4_fZIO3c" operation="instant" freq_op="1mo"> @Z4_fZIO3c_e3t / @e3t </field>
+          <field field_ref="Z4_fZIRPc" operation="instant" freq_op="1mo"> @Z4_fZIRPc_e3t / @e3t </field>
+          <field field_ref="Z4_fZIRPn" operation="instant" freq_op="1mo"> @Z4_fZIRPn_e3t / @e3t </field>
+          <field field_ref="Z4_fZIRPp" operation="instant" freq_op="1mo"> @Z4_fZIRPp_e3t / @e3t </field>
+          <field field_ref="Z4_fZIRDc" operation="instant" freq_op="1mo"> @Z4_fZIRDc_e3t / @e3t </field>
+          <field field_ref="Z4_fZIRDn" operation="instant" freq_op="1mo"> @Z4_fZIRDn_e3t / @e3t </field>
+          <field field_ref="Z4_fZIRDp" operation="instant" freq_op="1mo"> @Z4_fZIRDp_e3t / @e3t </field>
+          <field field_ref="Z4_fZINIn" operation="instant" freq_op="1mo"> @Z4_fZINIn_e3t / @e3t </field>
+          <field field_ref="Z4_fZINIp" operation="instant" freq_op="1mo"> @Z4_fZINIp_e3t / @e3t </field>
+          <field field_ref="Z4_fphytoc_result" operation="instant" unit="mg C/m^3/d" freq_op="1mo"> @Z4_fphytoc_result_e3t / @e3t </field>
+          <field field_ref="Z4_fphyton_result" operation="instant" unit="mmol N/m^3/d" freq_op="1mo"> @Z4_fphyton_result_e3t / @e3t </field>
+          <field field_ref="Z4_fphytop_result" operation="instant" unit="mmol P/m^3/d" freq_op="1mo"> @Z4_fphytop_result_e3t / @e3t </field>
+          <field field_ref="Z4_fprey1s" name="Z4_fphytos_result" long_name="mesozooplankton grazing of diatom silicon" operation="instant" freq_op="1mo"> @Z4_fprey1s_e3t / @e3t </field>
+          <field field_ref="Z4_fzooc_result" operation="instant" unit="mg C/m^3/d" freq_op="1mo"> @Z4_fzooc_result_e3t / @e3t </field>
+          <field field_ref="Z4_fzoon_result" operation="instant" unit="mmol N/m^3/d" freq_op="1mo"> @Z4_fzoon_result_e3t / @e3t </field>
+          <field field_ref="Z4_fzoop_result" operation="instant" unit="mmol P/m^3/d" freq_op="1mo"> @Z4_fzoop_result_e3t / @e3t </field>
+          <field field_ref="Z4_fprey9c" name="Z4_fdetrc_result" long_name="mesozooplankton scavenging of particulate organic carbon" operation="instant" freq_op="1mo"> @Z4_fprey9c_e3t / @e3t </field>
+          <field field_ref="Z4_fprey9n" name="Z4_fdetrn_result" long_name="mesozooplankton scavenging of particulate organic nitrogen" operation="instant" freq_op="1mo"> @Z4_fprey9n_e3t / @e3t </field>
+          <field field_ref="Z4_fprey9p" name="Z4_fdetrp_result" long_name="mesozooplankton scavenging of particulate organic phosphorus" operation="instant" freq_op="1mo"> @Z4_fprey9p_e3t / @e3t </field>
+          <field field_ref="Z4_fprey9s" name="Z4_fdetrs_result" long_name="mesozooplankton scavenging of particulate organic silicon" operation="instant" freq_op="1mo"> @Z4_fprey9s_e3t / @e3t </field>
+          <field field_ref="total_microzooplankton_respiration_result" unit="mg C/m^3/d" operation="instant" freq_op="1mo"> @total_microzooplankton_respiration_result_e3t / @e3t </field>
+          <field field_ref="total_microzooplankton_loss_to_POC_result" unit="mg C/m^3/d" operation="instant" freq_op="1mo"> @total_microzooplankton_loss_to_POC_result_e3t / @e3t </field>
+          <field field_ref="total_microzooplankton_loss_to_PON_result" unit="mmol N/m^3/d" operation="instant" freq_op="1mo"> @total_microzooplankton_loss_to_PON_result_e3t / @e3t </field>
+          <field field_ref="total_microzooplankton_loss_to_POP_result" unit="mmol P/m^3/d" operation="instant" freq_op="1mo"> @total_microzooplankton_loss_to_POP_result_e3t / @e3t </field>
+          <field field_ref="total_microzooplankton_loss_to_DOC_result" unit="mg C/m^3/d" operation="instant" freq_op="1mo"> @total_microzooplankton_loss_to_DOC_result_e3t / @e3t </field>
+          <field field_ref="total_microzooplankton_loss_to_DON_result" unit="mmol N/m^3/d" operation="instant" freq_op="1mo"> @total_microzooplankton_loss_to_DON_result_e3t / @e3t </field>
+          <field field_ref="total_microzooplankton_loss_to_DOP_result" unit="mmol P/m^3/d" operation="instant" freq_op="1mo"> @total_microzooplankton_loss_to_DOP_result_e3t / @e3t </field>
+          <field field_ref="total_microzooplankton_loss_to_DIN_result" unit="mmol N/m^3/d" operation="instant" freq_op="1mo"> @total_microzooplankton_loss_to_DIN_result_e3t / @e3t </field>
+          <field field_ref="total_microzooplankton_loss_to_DIP_result" unit="mmol P/m^3/d" operation="instant" freq_op="1mo"> @total_microzooplankton_loss_to_DIP_result_e3t / @e3t </field>
+          <field field_ref="Z5_fphytoc_result" unit="mg C/m^3/d" operation="instant" freq_op="1mo"> @Z5_fphytoc_result_e3t / @e3t </field>
+          <field field_ref="Z5_fphyton_result" unit="mmol N/m^3/d" operation="instant" freq_op="1mo"> @Z5_fphyton_result_e3t / @e3t </field>
+          <field field_ref="Z5_fphytop_result" unit="mmol P/m^3/d" operation="instant" freq_op="1mo"> @Z5_fphytop_result_e3t / @e3t </field>
+          <field field_ref="Z5_fprey2s" name="Z5_fphytos_result" long_name="mesozooplankton grazing of diatom silicon" operation="instant" freq_op="1mo"> @Z5_fprey2s_e3t / @e3t </field>
+          <field field_ref="Z5_fprey1c" name="Z5_fbacc_result" long_name="mesozooplankton predation of bacteria carbon" operation="instant" freq_op="1mo"> @Z5_fprey1c_e3t / @e3t </field>
+          <field field_ref="Z5_fprey1n" name="Z5_fbacn_result" long_name="mesozooplankton predation of bacteria nitrogen" operation="instant" freq_op="1mo"> @Z5_fprey1n_e3t / @e3t </field>
+          <field field_ref="Z5_fprey1p" name="Z5_fbacp_result" long_name="mesozooplankton predation of bacteria phosphorus" operation="instant" freq_op="1mo"> @Z5_fprey1p_e3t / @e3t </field>
+          <field field_ref="Z5_fzooc_result" unit="mg C/m^3/d" operation="instant" freq_op="1mo"> @Z5_fzooc_result_e3t / @e3t </field>
+          <field field_ref="Z5_fzoon_result" unit="mmol N/m^3/d" operation="instant" freq_op="1mo"> @Z5_fzoon_result_e3t / @e3t </field>
+          <field field_ref="Z5_fzoop_result" unit="mmol P/m^3/d" operation="instant" freq_op="1mo"> @Z5_fzoop_result_e3t / @e3t </field>
+          <field field_ref="Z6_fphytoc_result" unit="mg C/m^3/d" operation="instant" freq_op="1mo"> @Z6_fphytoc_result_e3t / @e3t </field>
+          <field field_ref="Z6_fphyton_result" unit="mmol N/m^3/d" operation="instant" freq_op="1mo"> @Z6_fphyton_result_e3t / @e3t </field>
+          <field field_ref="Z6_fphytop_result" unit="mmol P/m^3/d" operation="instant" freq_op="1mo"> @Z6_fphytop_result_e3t / @e3t </field>
+          <field field_ref="Z6_fprey1c" name="Z6_fbacc_result" long_name="heterotrophic flagellate predation of bacteria carbon" operation="instant" freq_op="1mo"> @Z6_fprey1c_e3t / @e3t </field>
+          <field field_ref="Z6_fprey1n" name="Z6_fbacn_result" long_name="heterotrophic flagellate predation of bacteria nitrogen"  operation="instant" freq_op="1mo"> @Z6_fprey1n_e3t / @e3t </field>
+          <field field_ref="Z6_fprey1p" name="Z6_fbacp_result" long_name="heterotrophic flagellate predation of bacteria phosphorus" operation="instant" freq_op="1mo"> @Z6_fprey1p_e3t / @e3t </field>
+          <field field_ref="Z6_fprey4c" name="Z6_fzooc_result" long_name="heterotrophic flagellate predation of zooplankton carbon" operation="instant" freq_op="1mo"> @Z6_fprey4c_e3t / @e3t </field>
+          <field field_ref="Z6_fprey4n" name="Z6_fzoon_result" long_name="heterotrophic flagellate predation of zooplankton nitrogen" operation="instant" freq_op="1mo"> @Z6_fprey4n_e3t / @e3t </field>
+          <field field_ref="Z6_fprey4p" name="Z6_fzoop_result" long_name="heterotrophic flagellate predation of zooplankton phosphorus" operation="instant" freq_op="1mo"> @Z6_fprey4p_e3t / @e3t </field>
+          <field field_ref="pel_nit_rate" operation="instant" freq_op="1mo"> @pel_nit_rate_e3t / @e3t </field>
+          <field field_ref="O2_fair" operation="average" />
+          <field field_ref="ben_nit_nrate" operation="average" />
+          <field field_ref="benthic_denitrification_ammonification_result" unit="mmol N/m^2/d" operation="average" />
+          <field field_ref="Y2_fprey1c" name="Y2_faerbacc_result" long_name="benthic deposit feeders predation of aerobic bacteria carbon" operation="average" />
+          <field field_ref="Y2_fprey1n" name="Y2_faerbacn_result" long_name="benthic deposit feeders predation of aerobic bacteria nitrogen" operation="average" />
+          <field field_ref="Y2_fprey1p" name="Y2_faerbacp_result" long_name="benthic deposit feeders predation of aerobic bacteria phosphorus" operation="average" />
+          <field field_ref="Y2_fprey2c" name="Y2_fanaerbacc_result" long_name="benthic deposit feeders predation of anaerobic bacteria carbon" operation="average" />
+          <field field_ref="Y2_fprey2n" name="Y2_fanaerbacn_result" long_name="benthic deposit feeders predation of anaerobic bacteria nitrogen" operation="average" />
+          <field field_ref="Y2_fprey2p" name="Y2_fanaerbacp_result" long_name="benthic deposit feeders predation of anaerobic bacteria phosphorus" operation="average" />
+          <field field_ref="Y2_fprey3c" name="Y2_fdetrc_result" long_name="benthic deposit feeders scavenging of detrital carbon" operation="average" />
+          <field field_ref="Y2_fprey3n" name="Y2_fdetrn_result" long_name="benthic deposit feeders scavenging of detrital nitrogen" operation="average" />
+          <field field_ref="Y2_fprey3p" name="Y2_fdetrp_result" long_name="benthic deposit feeders scavenging of detrital phosphorus" operation="average" />
+          <field field_ref="Y2_fprey4c" name="Y2_fmeioc_result" long_name="benthic deposit feeders predation of meiofauna carbon" operation="average" />
+          <field field_ref="Y2_fprey4n" name="Y2_fmeion_result" long_name="benthic deposit feeders predation of meiofauna nitrogen" operation="average" />
+          <field field_ref="Y2_fprey4p" name="Y2_fmeiop_result" long_name="benthic deposit feeders predation of meiofauna phosphorus" operation="average" />
+          <field field_ref="Y3_fphytoc_result" unit="mg C/m^2/d" long_name="benthic suspension feeders grazing of phytoplankton carbon" operation="average" />
+          <field field_ref="Y3_fphyton_result" unit="mmol N/m^2/d" long_name="benthic suspension feeders grazing of phytoplankton nitrogen" operation="average" />
+          <field field_ref="Y3_fphytop_result" unit="mmol P/m^2/d" long_name="benthic suspension feeders grazing of phytoplankton phosphate" operation="average" />
+          <field field_ref="Y3_fprey1s" name="Y3_fphytos_result" long_name="benthic suspension feeders grazing of diatom silicon" operation="average" />
+          <field field_ref="Y3_fprey4c" name="Y3_fpeldetrc_result" long_name="benthic suspension feeders scavenging of pelagic detrital carbon" operation="average" />
+          <field field_ref="Y3_fprey4n" name="Y3_fpeldetrn_result" long_name="benthic suspension feeders scavenging of pelagic detrital nitrogen" operation="average" />
+          <field field_ref="Y3_fprey4p" name="Y3_fpeldetrp_result" long_name="benthic suspension feeders scavenging of pelagic detrital phosphorus" operation="average" />
+          <field field_ref="Y3_fprey4s" name="Y3_fpeldetrs_result" long_name="benthic suspension feeders scavenging of pelagic detrital silicon" operation="average" />
+          <field field_ref="Y3_fprey5c" name="Y3_faerbacc_result" long_name="benthic suspension feeders predation of aerobic bacteria carbon" operation="average" />
+          <field field_ref="Y3_fprey5n" name="Y3_faerbacn_result" long_name="benthic suspension feeders predation of aerobic bacteria nitrogen" operation="average" />
+          <field field_ref="Y3_fprey5p" name="Y3_faerbacp_result" long_name="benthic suspension feeders predation of aerobic bacteria phosphorus" operation="average" />
+          <field field_ref="Y3_fprey6c" name="Y3_fbendetrc_result" long_name="benthic suspension feeders scavenging of benthic detrital carbon" operation="average" />
+          <field field_ref="Y3_fprey6n" name="Y3_fbendetrn_result" long_name="benthic suspension feeders scavenging of benthic detrital nitrogen" operation="average" />
+          <field field_ref="Y3_fprey6p" name="Y3_fbendetrp_result" long_name="benthic suspension feeders scavenging of benthic detrital phosphorus" operation="average" />
+          <field field_ref="Ymacro_fYG3c_result" unit="mg C/m^2/d" operation="average" />
+          <field field_ref="Ymacro_fYQPc_result" unit="mg C/m^2/d" operation="average" />
+          <field field_ref="Ymacro_fYQPn_result" unit="mmol N/m^2/d" operation="average" />
+          <field field_ref="Ymacro_fYQPp_result" unit="mmol P/m^2/d" operation="average" />
+          <field field_ref="Ymacro_fYKIn_result" unit="mmol N/m^2/d" operation="average" />
+          <field field_ref="Ymacro_fYK1p_result" unit="mmol P/m^2/d" operation="average" />
+          <field field_ref="Y4_fprey1c" name="Y4_faerbacc_result" long_name="benthic meiofauna predation of aerobic bacteria carbon" operation="average" />
+          <field field_ref="Y4_fprey1n" name="Y4_faerbacn_result" long_name="benthic meiofauna predation of aerobic bacteria nitrogen" operation="average" />
+          <field field_ref="Y4_fprey1p" name="Y4_faerbacp_result" long_name="benthic meiofauna predation of aerobic bacteria phosphorus" operation="average" />
+          <field field_ref="Y4_fprey2c" name="Y4_fanaerbacc_result" long_name="benthic meiofauna predation of anaerobic bacteria carbon" operation="average" />
+          <field field_ref="Y4_fprey2n" name="Y4_fanaerbacn_result" long_name="benthic meiofauna predation of anaerobic bacteria nitrogen" operation="average" />
+          <field field_ref="Y4_fprey2p" name="Y4_fanaerbacp_result" long_name="benthic meiofauna predation of aerobic bacteria phosphorus" operation="average" />
+          <field field_ref="Y4_fprey3c" name="Y4_fmeioc_result" long_name="benthic meiofauna predation of meiofauna carbon" operation="average" />
+          <field field_ref="Y4_fprey3n" name="Y4_fmeion_result" long_name="benthic meiofauna predation of meiofauna nitrogen" operation="average" />
+          <field field_ref="Y4_fprey3p" name="Y4_fmeiop_result" long_name="benthic meiofauna predation of meiofauna phosphorus" operation="average" />
+          <field field_ref="Y4_fprey4c" name="Y4_fdetrc_result" long_name="benthic meiofauna scavenging of detrital carbon" operation="average" />
+          <field field_ref="Y4_fprey4n" name="Y4_fdetrn_result" long_name="benthic meiofauna scavenging of detrital nitrogen" operation="average" />
+          <field field_ref="Y4_fprey4p" name="Y4_fdetrp_result" long_name="benthic meiofauna scavenging of detrital phosphorus" operation="average" />
+          <field field_ref="Y4_fYG3c" operation="average" />
+          <field field_ref="Y4_fYQPc" operation="average" />
+          <field field_ref="Y4_fYQPn" operation="average" />
+          <field field_ref="Y4_fYQPp" operation="average" />
+          <field field_ref="Y4_fYKIn" operation="average" />
+          <field field_ref="Y4_fYK1p" operation="average" />
+          <field field_ref="H1_fQ1Hc" operation="average" />
+          <field field_ref="H1_fQ1Hn" operation="average" />
+          <field field_ref="H1_fQ1Hp" operation="average" />
+          <field field_ref="H1_fHG3c" operation="average" />
+          <field field_ref="H1_fHQ1c" operation="average" />
+          <field field_ref="H1_fHQ1n" operation="average" />
+          <field field_ref="H1_fHQ1p" operation="average" />
+          <field field_ref="H1_fHQPc" operation="average" />
+          <field field_ref="H1_fHQPn" operation="average" />
+          <field field_ref="H1_fHQPp" operation="average" />
+          <field field_ref="H1_fHKIn" operation="average" />
+          <field field_ref="H1_fHK1p" operation="average" />
+          <field field_ref="H2_fQPHc" operation="average" />
+          <field field_ref="H2_fQ1Hn" operation="average" />
+          <field field_ref="H2_fQ1Hp" operation="average" />
+          <field field_ref="H2_fHG3c" operation="average" />
+          <field field_ref="H2_fHQ1c" operation="average" />
+          <field field_ref="H2_fHQ1n" operation="average" />
+          <field field_ref="H2_fHQ1p" operation="average" />
+          <field field_ref="H2_fHQPc" operation="average" />
+          <field field_ref="H2_fHQPn" operation="average" />
+          <field field_ref="H2_fHQPp" operation="average" />
+          <field field_ref="H2_fHKIn" operation="average" />
+          <field field_ref="H2_fHK1p" operation="average" />
+          <field field_ref="Q6_remins_result" unit="mmol Si/m^2/d" operation="average" />
+          <field field_ref="net_PelBen_PON_result" unit="mmol N/m^2/d" operation="average" />
+          <field field_ref="net_PelBen_POP_result" unit="mmol P/m^2/d" operation="average" />
+          <field field_ref="net_PelBen_POSi_result" unit="mmol Si/m^2/d" operation="average" />
+          <field field_ref="e3t"      operation="average" />
+        </file>
+
+      </file_group>
+
+
+      <file_group id="2m" output_freq="2mo" output_level="10" enabled=".TRUE."/> <!-- real 2m files -->
+      <file_group id="3m" output_freq="3mo" output_level="10" enabled=".TRUE."/> <!-- real 3m files -->
+      <file_group id="4m" output_freq="4mo" output_level="10" enabled=".TRUE."/> <!-- real 4m files -->
+      <file_group id="6m" output_freq="6mo" output_level="10" enabled=".TRUE."/> <!-- real 6m files -->
+
+      <file_group id="1y"  output_freq="1y" output_level="10" enabled=".TRUE."/> <!-- real yearly files -->
+      <file_group id="2y"  output_freq="2y" output_level="10" enabled=".TRUE."/> <!-- real 2y files -->
+      <file_group id="5y"  output_freq="5y" output_level="10" enabled=".TRUE."/> <!-- real 5y files -->
+      <file_group id="10y" output_freq="10y" output_level="10" enabled=".TRUE."/> <!-- real 10y files -->
+
+   </file_definition>
+
+    <!--
+============================================================================================================
+= grid definition = = DO NOT CHANGE =
+============================================================================================================
+    -->
+
+   <axis_definition>
+      <axis id="deptht" long_name="Vertical T levels" unit="m" positive="down" />
+      <axis id="depthu" long_name="Vertical U levels" unit="m" positive="down" />
+      <axis id="depthv" long_name="Vertical V levels" unit="m" positive="down" />
+      <axis id="depthw" long_name="Vertical W levels" unit="m" positive="down" />
+      <axis id="nfloat" long_name="Float number"      unit="-"  />
+      <axis id="icbcla" long_name="Iceberg class"     unit="-"  />
+   </axis_definition>
+
+   <domain_definition src="./domain_def.xml"/>
+
+   <grid_definition>
+     <grid id="grid_T_2D" domain_ref="grid_T"/>
+     <grid id="grid_T_3D" domain_ref="grid_T" axis_ref="deptht"/>
+     <grid id="grid_U_2D" domain_ref="grid_U"/>
+     <grid id="grid_U_3D" domain_ref="grid_U" axis_ref="depthu"/>
+     <grid id="grid_V_2D" domain_ref="grid_V"/>
+     <grid id="grid_V_3D" domain_ref="grid_V" axis_ref="depthv"/>
+     <grid id="grid_W_2D" domain_ref="grid_W"/>
+     <grid id="grid_W_3D" domain_ref="grid_W" axis_ref="depthw"/>
+     <grid id="grid_0" domain_ref="no_grid"/>
+    </grid_definition>
+  </context>
+
+
+  <context id="xios">
+
+      <variable_definition>
+
+     <!--
+        We must have buffer_size > jpi*jpj*jpk*8 (with jpi and jpj the subdomain size)
+-->
+	  <variable id="buffer_size"               type="integer">5000000</variable>
+	  <variable id="buffer_server_factor_size" type="integer">2</variable>
+	  <variable id="info_level"                type="integer">0</variable>
+	  <variable id="using_server"              type="boolean">true</variable>
+	  <variable id="using_oasis"               type="boolean">false</variable>
+	  <variable id="oasis_codes_id"            type="string" >oceanx</variable>
+
+      </variable_definition>
+
+  </context>
+
+</simulation>

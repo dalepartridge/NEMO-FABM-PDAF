@@ -1,0 +1,10 @@
+!-----------------------------------------------------------------------
+&nambdy_dta      !  open boundaries - external data           ("key_bdy")
+!-----------------------------------------------------------------------
+!              !   file name    ! frequency (hours) !  variable  ! time interpol. !  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !                !  (if <0  months)  !    name    !    (logical)   !  (T/F)  ! 'monthly' ! filename ! pairing  ! filename      !
+   bn_tem  =    'amm12_bdyT_clim' ,         -1        , 'votemper' ,     .true.     , .true. ,  'daily'  ,    ''    ,   ''    , ''
+   bn_sal  =    'amm12_bdyT_clim' ,         -1        , 'vosaline' ,     .true.     , .true. ,  'daily'  ,    ''    ,   ''    , ''
+   cn_dir  =    'bdydta/'
+   ln_full_vel = .false.
+/

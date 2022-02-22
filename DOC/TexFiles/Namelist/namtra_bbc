@@ -1,0 +1,9 @@
+!-----------------------------------------------------------------------
+&nambbc        !   bottom temperature boundary condition
+!-----------------------------------------------------------------------
+   ln_trabbc   = .true.    !  Apply a geothermal heating at the ocean bottom
+   nn_geoflx   =    2      !  geothermal heat flux: = 0 no flux
+                           !     = 1 constant flux
+                           !     = 2 variable flux (read in geothermal_heating.nc in mW/m2)
+   rn_geoflx_cst = 86.4e-3 !  Constant value of geothermal heat flux [W/m2]
+/

@@ -1,0 +1,676 @@
+check_conservation: false
+instances:
+  light:
+    model: medusa/light
+    coupling:
+      CHN: pelagic/CHN
+      CHD: pelagic/CHD
+  gas_transfer:
+    model: medusa/gas_transfer
+    parameters:
+      eqn: 7                    #choice of gas transfer coefficients, default = 7
+                                # 1 Liss & Merlivat (1986)    [approximated]
+                                # 2 Wanninkhof (1992)         [sans enhancement]
+                                # 3 Nightingale et al. (2000) [good]
+                                # 4 Nightingale et al. (2000) [better]
+                                # 5 Nightingale et al. (2000) [best]
+                                # 6 OCMIP-2                   [sans variability]
+                                # 7 Wanninkhof (2014)         [assumes 6h avg winds]
+  carbonate:
+    model: medusa/carbonate
+    schedule:
+      interior:
+        pattern: monthly
+    coupling:
+      DiC: pelagic/DiC
+      ALK: pelagic/ALK
+      KW660: gas_transfer/KW660
+  oxygen:
+    model: medusa/oxygen
+    coupling:
+      OXY: pelagic/OXY
+      KW660: gas_transfer/KW660
+  pelagic:
+    model: medusa/pelagic
+    parameters:
+      xxi: 0.01257              # C:N conversion factor (mol N g C-1), default=0.01257
+      xaln: 15.0                # chl-specific initial slope of P-I curve (non-diatoms) (g C(g chl)-1 (W m-2)-1 d-1), default=15.0
+      xald: 11.25               # chl-specific initial slope of P-I curve (diatoms) (g C(g chl)-1 (W m-2)-1 d-1), default=11.25
+      jliebig: false            # Liebig''s minimum law for nutrient limitation, 'jliebig'), default= false
+      xnln: 0.5                 # N nutrient uptake half-saturation constant (non-diatoms) (mmol N m-3), default=0.5	
+      xfln: 0.00033             # Fe nutrient uptake half-saturation constant (non-diatoms) (mmol Fe m-3), default=0.00033
+      xnld: 0.75                # N nutrient uptake half-saturation constant (non-diatoms) (mmol N m-3), default=0.75
+      xsld: 3.0                 # Si nutrient uptake half-saturation constant (diatoms) (mmol Si m-3), default=3.0	
+      xfld: 0.00067             # Fe nutrient uptake half-saturation constant (diatoms) (mmol Fe m-3), default=0.00067
+      xvpn: 0.640               # Maximum phytoplankton growth rate (non-diatoms) (d-1), default=0.640
+      xvpd: 0.6                 # Maximum phytoplankton growth rate (diatoms) (d-1), default=0.6
+      jphy: 1                   # Temperature regulation (phyto growth), 1-Eppley,2-q10,default=1
+      jq10: 1.5                 # q10 factor for temperature regulation option 2, default=1.5
+      xsin0: 0.2                # minimum diatom Si:N ratio (mol Si mol N-1), default=0.2
+      xnsi0: 0.2                # minimum diatom N:Si ratio (mol N mol Si-1), default=0.2
+      xuif: 1.5                 # hypothetical growth ratio at Inf Si:N ratio, default=1.5
+      xthetam: 0.05             # maximum Chl:C ratio (non-diatoms) (g chl g C-1), default=0.05
+      xthetamd: 0.05            # maximum Chl:C ratio (diatoms) (g chl g C-1), default=0.05
+      xkmi: 0.8                 # microzooplankton grazing half-saturation constant (mmol N m-3), default=0.8
+      xpmipn: 0.75              # microzooplankton grazing preference on non-diatoms, default=0.75
+      xpmid: 0.25               # microzooplankton grazing preference on detritus, default=0.25
+      xkme: 0.3                 # mesozooplankton grazing half-saturation constant (mmol N m-3), default=0.3
+      xpmepn: 0.15              # mesozooplankton grazing preference on non-diatoms, default=0.15
+      xpmepd: 0.35              # mesozooplankton grazing preference on diatoms, default=0.35
+      xpmezmi: 0.35             # mesozooplankton grazing preference on microzooplankton, default=0.35
+      xpmed: 0.15               # mesozooplankton grazing preference on detritus, default=0.15
+      xgmi: 2.0                 # maximum microzooplankton grazing rate (d-1), default=2.0
+      xgme: 0.5                 # maximum mesozooplankton grazing rate (d-1), default=0.5	
+      xthetad: 6.625            # detritus C:N ratio (mol C mol N-1), default=6.625
+      xphi: 0.20                # zooplankton grazing inefficiency, default=0.20
+      xthetapn: 6.625           # phytoplankton C:N ratio (non-diatoms) (mol C mol N-1), default=6.625
+      xthetapd: 6.625           # phytoplankton C:N ratio (diatoms) (mol C mol N-1), default=6.625
+      xbetan: 0.77              # zooplankton N assimilation efficiency, default=0.77
+      xthetazmi: 5.625          # microzooplankton C:N ratio (mol C mol N-1), default=5.625
+      xbetac: 0.64              # zooplankton C assimilation efficiency, default=0.64
+      xkc: 0.8                  # zooplankton net C growth efficiency, default=0.8
+      xthetazme: 5.625          # mesozooplankton C:N ratio (mol C mol N-1), default=5.625
+      xmetapn: 0.02             # phytoplankton loss rate (non-diatoms) (d-1), default=0.02
+      xmetapd: 0.02             # phytoplankton loss rate (diatoms) (d-1), default=0.02
+      xmetazmi: 0.02            # microzooplankton loss rate (d-1), default=0.02
+      xmetazme: 0.02            # mesozooplankton loss rate (d-1), default=0.02
+      xmpn: 0.1                 # phytoplankton maximum loss rate (non-diatoms) (d-1), default=0.1
+      xmpd: 0.1                 # phytoplankton maximum loss rate (diatoms) (d-1), default=0.1
+      xmzmi: 0.1                # microzooplankton maximum loss rate (d-1), default=0.1
+      xmzme: 0.2                # mesozooplankton maximum loss rate (d-1), default=0.2
+      xkphn: 0.5                # phytoplankton loss half-saturation constant (non-diatoms) (mmol N m-3), default=0.5
+      xkphd: 0.5                # phytoplankton loss half-saturation constant (diatoms) (mmol N m-3), default=0.5
+      xkzmi: 0.5                # microzooplankton loss half-saturation constant (mmol N m-3), default=0.5
+      xkzme: 0.75               # mesozooplankton loss half-saturation constant (mmol N m-3), default=0.75
+      jmpn: 3                   # mortality formulation (non-diatoms), 1-linear, 2-quadratic, 3-hyperbolic, 4-sigmoid', default=3
+      jmpd: 3                   # mortality formulation (diatoms), 1-linear, 2-quadratic, 3-hyperbolic, 4-sigmoid', default=3
+      jmzmi: 3                  # mortality formulation (non-diatoms), 1-linear, 2-quadratic, 3-hyperbolic, 4-sigmoid', default=3
+      jmzme: 3                  # mortality formulation (non-diatoms), 1-linear, 2-quadratic, 3-hyperbolic, 4-sigmoid', default=3
+      jmd: 2                    # Temperature regulation (detritus remin), 1-Eppley,2-q10',default=2
+      xmd: 0.0190               # detrital N remineralisation rate (d-1), default=0.0190
+      xmdc: 0.0152              # detrital C remineralisation rate (d-1), default=0.0152
+      xsdiss: 0.006             # diatom frustule dissolution rate (d-1), default=0.006
+      xfdfrac1: 0.333           # fast detritus fraction of diatom losses, default=0.333
+      xfdfrac2: 1.              # fast detritus fraction of mesozooplankton losses, default=1.
+      xfdfrac3: 0.8             # fast detritus fraction of mesozooplankton grazing, default=0.8
+      xrfn: 30.0e-6             # phytoplankton Fe:N uptake ratio (mmol Fe mol N-1 m), default=30.0e-6
+      xridg_r0: 0.026           # CaCO3:POC export rain ratio scalar, Ridgwell et al (2007), default=0.026
+      xthetanit: 2.0            # O2 consumption by N remineralisation (mol O_2 mol N-1), default=2.0
+      xthetarem: 1.1226         # O2 consumption by C remineralisation (mol O_2 mol C-1), default=1.1226
+      xo2min: 4.0               # minimum O2 concentration (mmol O_2 m-3), default=4.0
+      wg: -2.999808             # detritus sinking rate (m d-1), default = -2.999808
+      wdep: 2.999808            # detritus deposition rate (m d-1), default = -wg
+    initialization:
+      CHN: 0.01
+      CHD: 0.01
+      PHN: 0.01
+      PHD: 0.01
+      PDS: 0.01
+      DIN: 30.0
+      FER: 1.0e-4
+      SIL: 90.0
+      DET: 0.01
+      DTC: 0.06625
+      ZMI: 0.01
+      ZME: 0.01
+      ALK: 2450.
+      DiC: 2330.
+      OXY: 175.
+    coupling:
+      tempn: fast_detritus/tempn
+      tempc: fast_detritus/tempc
+      tempsi: fast_detritus/tempsi
+      tempfe: fast_detritus/tempfe
+      tempca: fast_detritus/tempca
+      OM_CAL3: carbonate/OM_CAL3
+      BEN: benthic
+      BEN_FE: benthic/BEN_FE
+  iron_scavenging:
+    model: medusa/iron_scav
+    parameters:
+      xk_FeL: 100.              # dissociation constant for (Fe+ligand) (mmol m-3)-1, default=100.
+      xLgT: 1.                  # total ligand concentration (mmol m-3), default=1.
+      xk_sc_Fe: 1.e-3           # scavenging rate of "free" Fe (d-1), default=1.e-3
+      jiron: 1                  # iron scavenging scheme, 1-Dutkiewicz et al(2005),2-Moore et al(2004),3-Moore et al(2008),4-Galbraith et al. (2010)',default=1
+    coupling:
+      FER: pelagic/FER
+      ffastc_loc: fast_detritus/ffastc_loc
+      ffastsi_loc: fast_detritus/ffastsi_loc
+      ffastca_loc: fast_detritus/ffastca_loc
+      fscal_part: pelagic/fscal_part
+  FER_flux:
+    model: external_surface_flux
+    parameters :
+      #scale_factor: 630.8  # Fe_dust_mratio / xfe_mass * 1.e6, Fe:dust mass ratio = 0.035; xfe_mass  = 55.485. ; zirondep(:,:) = dust(:,:) * Fe_dust_mratio / xfe_mass * 1.e6 * 86400. !! mmol-Fe/m2/d in M
+      #scale_factor: 31.54  # Fe_dust_mratio / xfe_mass * 1.e6, Fe:dust mass ratio = 0.00175; xfe_mass  = 55.485. ; zirondep(:,:) = dust(:,:) * Fe_dust_mratio / xfe_mass * 1.e6 * 86400. !! mmol-Fe/m2/d in M
+      scale_factor: 6.308  # Fe_dust_mratio / xfe_mass * 1.e6, Fe:dust mass ratio = 0.00175; xfe_mass  = 55.485. ; zirondep(:,:) = dust(:,:) * Fe_dust_mratio / xfe_mass * 1.e6 * 86400. !! mmol-Fe/m2/d in M
+    coupling:
+      target: pelagic/FER
+
+  fast_detritus:
+    model: medusa/fast_detritus
+    parameters:
+      seafloor: 3               # seafloor parameterisation (1-inorganic returns, 2-organic returns, 3-couple benthos (nothing to do in this model), default = 3
+      xrfn: 30.0e-6             # phytoplankton Fe:N uptake ratio (mmol Fe mol N-1 m), default=30.0e-6
+    coupling:
+      OXY: pelagic/OXY
+      DIN: pelagic/DIN
+      SIL: pelagic/SIL
+      FER: pelagic/FER
+      DiC: pelagic/DiC
+      DET: pelagic/DET
+      DTC: pelagic/DTC
+      ALK: pelagic/ALK
+      BEN: benthic
+      BEN_CA: benthic/BEN_CA
+      BEN_FE: benthic/BEN_FE
+      OM_CAL3: carbonate/OM_CAL3
+      CAL_CCD: ccd_cal/CCD
+  ccd_cal:
+    model: medusa/ccd
+    coupling:
+      OMEGA: carbonate/OM_CAL3
+  ccd_arg:
+    model: medusa/ccd
+    coupling:
+      OMEGA: carbonate/OM_ARG3
+  benthic:
+    model: medusa/benthic
+    use: true
+    parameters:
+      xsedc: 0.05              # benthic C remineralisation rate (d-1), default=0.05_rk
+      xsedn: 0.05              # benthic N remineralisation rate (d-1), default=0.05_rk
+      xsedfe: 0.05             # benthic Fe remineralisation rate (d-1), default=0.05_rk
+      xsedsi: 0.01             # benthic Si remineralisation rate (d-1) default=0.01_rk
+      xsedca: 0.01             # benthic CaCO3 remineralisation rate (d-1) default=0.01_rk
+      xrfn: 30.0e-6            # phytoplankton Fe:N uptake ratio (mmol Fe mol N-1 m),default=30.0e-6_rk
+    initialization:
+      BEN_C: 0.
+      BEN_N: 0.
+      BEN_FE: 0.
+      BEN_SI: 0.
+      BEN_CA: 0.
+      BEN_FE: 0.
+    coupling:
+      DIN: pelagic/DIN
+      SIL: pelagic/SIL
+      FER: pelagic/FER
+      DiC: pelagic/DiC
+      DET: pelagic/DET
+      DTC: pelagic/DTC
+      OXY: pelagic/OXY
+      ALK: pelagic/ALK
+      CAL_CCD: ccd_cal/CCD
+  pco2a:
+    model: horizontal_constant
+    parameters:
+      value: __XCO2ATM__ 
+      standard_name: mole_fraction_of_carbon_dioxide_in_air
+# DIAGNOSTIC OUTPUT
+  TPP3:
+    model: weighted_sum
+    long_name: Total primary production 3D
+    parameters:
+      n: 2
+    coupling:
+      term1: pelagic/PRN
+      term2: pelagic/PRD
+  REMIN3N:
+    model: weighted_sum
+    long_name: Total remin flux N 3D
+    parameters:
+      n: 2
+    coupling:
+      term1: pelagic/regen2d
+      term2: fast_detritus/freminn2d
+  DETFLUX3:
+    model: weighted_sum
+    long_name: Total detrital flux 3D
+    parameters:
+      n: 2
+      weight2: 86400.
+    coupling:
+      term1: pelagic/fslownflux
+      term2: fast_detritus/ffastn_loc
+  IBEN_C:
+    model: horizontal_weighted_sum
+    long_name: Benthic input carbon
+    parameters:
+      n: 2
+      weight2: 86400.
+    coupling:
+      term1: pelagic/sbenin_c
+      term2: fast_detritus/ffastc
+  IBEN_N:
+    model: horizontal_weighted_sum
+    long_name: Benthic input nitrogen
+    parameters:
+      n: 2
+      weight2: 86400.
+    coupling:
+      term1: pelagic/sbenin_n
+      term2: fast_detritus/ffastn
+  IBEN_FE:
+    model: horizontal_weighted_sum
+    long_name: Benthic input iron
+    parameters:
+      n: 2
+      weight2: 86400.
+    coupling:
+      term1: pelagic/sbenin_fe
+      term2: fast_detritus/ffastfe
+  IBEN_SI:
+    model: horizontal_weighted_sum
+    long_name: Benthic input silicon
+    parameters:
+      n: 1
+      weight1: 86400.
+    coupling:
+      term1: fast_detritus/ffastsi
+  IBEN_CA:
+    model: horizontal_weighted_sum
+    long_name: Benthic input CaCO3
+    parameters:
+      n: 1
+      weight1: 86400.
+    coupling:
+      term1: fast_detritus/ffastca
+  MED_XPAR:
+    model: surface_layer
+    long_name: Top level radiation
+    coupling:
+      source: light/MED_XPAR
+  PRN:
+    model: vertical_integral
+    long_name: Non-diatom primary production
+    coupling:
+      source: pelagic/PRN
+  PRD:
+    model: vertical_integral
+    long_name: Diatom primary production
+    coupling:
+      source: pelagic/PRD
+  MPN:
+    model: vertical_integral
+    long_name: Non-diatom non-grazing losses
+    coupling:
+      source: pelagic/MPN
+  MPD:
+    model: vertical_integral
+    long_name: Diatom non-grazing losses
+    coupling:
+      source: pelagic/MPD
+  OPAL:
+    model: vertical_integral
+    long_name: Diatom biogenic opal production
+    coupling:
+      source: pelagic/OPAL
+  OPALDISS:
+    model: vertical_integral
+    long_name: Diatom biogenic opal dissolution
+    coupling:
+      source: pelagic/OPALDISS
+  GMIPn:
+    model: vertical_integral
+    long_name: Microzoo grazing on non-diatoms
+    coupling:
+      source: pelagic/GMIPn
+  GMID:
+    model: vertical_integral
+    long_name: Microzoo grazing on detritus
+    coupling:
+      source: pelagic/GMID
+  GMEPN:
+    model: vertical_integral
+    long_name: Mesozoo grazing on non-diatoms
+    coupling:
+      source: pelagic/GMEPN
+  GMEPD:
+    model: vertical_integral
+    long_name: Mesozoo grazing on non-diatoms
+    coupling:
+      source: pelagic/GMEPD
+  GMEZMI:
+    model: vertical_integral
+    long_name: Mesozoo grazing on microzoo
+    coupling:
+      source: pelagic/GMEZMI
+  GMED:
+    model: vertical_integral
+    long_name: Mesozoo grazing on detritus
+    coupling:
+      source: pelagic/GMED
+  MZMI:
+    model: vertical_integral
+    long_name: Microzoo non-grazing losses
+    coupling:
+      source: pelagic/MZMI
+  MZME:
+    model: vertical_integral
+    long_name: Mesozoo non-grazing losses
+    coupling:
+      source: pelagic/MZME
+  DETN:
+    model: vertical_integral
+    long_name: Slow detritus creation
+    coupling:
+      source: pelagic/DETN
+  DETC:
+    model: vertical_integral
+    long_name: Slow detritus C creation
+    coupling:
+      source: pelagic/DETC
+  MDET:
+    model: vertical_integral
+    long_name: Detritus non-grazing losses
+    coupling:
+      source: pelagic/MDET
+  MDETC:
+    model: vertical_integral
+    long_name: Detritus non-grazing losses, carbon
+    coupling:
+      source: pelagic/MDETC
+  GMIDC:
+    model: vertical_integral
+    long_name: Microzoo grazing on detritus, carbon
+    coupling:
+      source: pelagic/GMIDC
+  GMEDC:
+    model: vertical_integral
+    long_name: Mesozoo  grazing on detritus, carbon
+    coupling:
+      source: pelagic/GMEDC
+  PD_JLIM:
+    model: vertical_integral
+    long_name: Diatom light limitation
+    coupling:
+      source: pelagic/PD_JLIM
+  PD_NLIM:
+    model: vertical_integral
+    long_name: Diatom N limitation
+    coupling:
+      source: pelagic/PD_NLIM
+  PD_FELIM:
+    model: vertical_integral
+    long_name: Diatom Fe limitation
+    coupling:
+      source: pelagic/PD_FELIM
+  PD_SILIM:
+    model: vertical_integral
+    long_name: Diatom Si limitation
+    coupling:
+      source: pelagic/PD_SILIM
+  PDSILIM2:
+    model: vertical_integral
+    long_name: Diatom Si uptake limitation
+    coupling:
+      source: pelagic/PD_SILIM2
+  PN_JLIM:
+    model: vertical_integral
+    long_name: Non-diatom light limitation
+    coupling:
+      source: pelagic/PN_JLIM
+  PN_NLIM:
+    model: vertical_integral
+    long_name: Non-diatom N limitation
+    coupling:
+      source: pelagic/PN_NLIM
+  PN_FELIM:
+    model: vertical_integral
+    long_name: Diatom light limitation
+    coupling:
+      source: pelagic/PN_FELIM
+  PN_LLOSS:
+    model: vertical_integral
+    long_name: Non-diatom linear losses
+    coupling:
+      source: pelagic/PN_LLOSS
+  PD_LLOSS:
+    model: vertical_integral
+    long_name: Diatom linear losses
+    coupling:
+      source: pelagic/PD_LLOSS
+  ZI_LLOSS:
+    model: vertical_integral
+    long_name: Microzooplankton linear losses
+    coupling:
+      source: pelagic/ZI_LLOSS
+  ZE_LLOSS:
+    model: vertical_integral
+    long_name: Mesozooplankton linear losses
+    coupling:
+      source: pelagic/ZE_LLOSS
+  ZI_MES_N:
+    model: vertical_integral
+    long_name: Microzoo messy feeding loss to N
+    coupling:
+      source: pelagic/ZI_MES_N
+  ZI_MES_D:
+    model: vertical_integral
+    long_name: Microzoo messy feeding loss to D
+    coupling:
+      source: pelagic/ZI_MES_D
+  ZI_MES_C:
+    model: vertical_integral
+    long_name: Microzoo messy feeding loss to C
+    coupling:
+      source: pelagic/ZI_MES_C
+  ZI_MESDC:
+    model: vertical_integral
+    long_name: Microzoo messy feeding loss to Dc
+    coupling:
+      source: pelagic/ZI_MESDC
+  ZE_MES_N:
+    model: vertical_integral
+    long_name: Mesozoo messy feeding loss to N
+    coupling:
+      source: pelagic/ZE_MES_N
+  ZE_MES_D:
+    model: vertical_integral
+    long_name: Mesozoo messy feeding loss to D
+    coupling:
+      source: pelagic/ZE_MES_D
+  ZE_MES_C:
+    model: vertical_integral
+    long_name: Mesozoo messy feeding loss to C
+    coupling:
+      source: pelagic/ZE_MES_C
+  ZE_MESDC:
+    model: vertical_integral
+    long_name:  Mesozoo messy feeding loss to Dc
+    coupling:
+      source: pelagic/ZE_MESDC
+  ZI_EXCR:
+    model: vertical_integral
+    long_name: Microzoo excretion
+    coupling:
+      source: pelagic/ZI_EXCR
+  ZI_RESP:
+    model: vertical_integral
+    long_name: Microzoo respiration
+    coupling:
+      source: pelagic/ZI_RESP
+  ZI_GROW:
+    model: vertical_integral
+    long_name: Microzoo growth
+    coupling:
+      source: pelagic/ZI_GROW
+  ZE_EXCR:
+    model: vertical_integral
+    long_name: Mesozoo excretion
+    coupling:
+      source: pelagic/ZE_EXCR
+  ZE_RESP:
+    model: vertical_integral
+    long_name: Mesozoo respiration
+    coupling:
+      source: pelagic/ZE_RESP
+  ZE_GROW:
+    model: vertical_integral
+    long_name: Mesozoo growth
+    coupling:
+      source: pelagic/ZE_GROW
+  COM_RESP:
+    model: vertical_integral
+    long_name: Community respiration (pelagic)
+    coupling:
+      source: pelagic/fcomm_resp
+  N_PROD:
+    model: vertical_integral
+    long_name: Nitrogen production (pelagic)
+    coupling:
+      source: pelagic/N_PROD
+  N_CONS:
+    model: vertical_integral
+    long_name: Nitrogen consumption
+    coupling:
+      source: pelagic/N_CONS
+  C_PROD1:
+    model: weighted_sum
+    long_name: Carbon production pelagic with CaCO3 remin
+    parameters:
+      n: 2
+      weight2: 86400.
+    coupling:
+      term1: pelagic/C_PROD
+      term2: fast_detritus/freminca
+  C_PROD:
+    model: vertical_integral
+    long_name: Carbon production (pelagic)
+    coupling:
+      source: C_PROD1/result
+  C_CONS:
+    model: vertical_integral
+    long_name: Carbon consumption
+    coupling:
+      source: pelagic/C_CONS
+  O2_PROD:
+    model: vertical_integral
+    long_name: Oxygen production
+    coupling:
+      source: pelagic/O2_PROD
+  O2_CONS:
+    model: vertical_integral
+    long_name: Oxygen consumption (pelagic)
+    coupling:
+      source: pelagic/O2_CONS
+  O2_ANOX:
+    model: vertical_integral
+    long_name: Unrealised oxygen consumption
+    coupling:
+      source: pelagic/O2_ANOX
+  INT_PD:
+    model: vertical_integral
+    long_name: Vertically integrated Pd
+    coupling:
+      source: pelagic/PHD
+  INT_PN:
+    model: vertical_integral
+    long_name: Vertically integrated Pn
+    coupling:
+      source: pelagic/PHN
+  INT_ZMI:
+    model: vertical_integral
+    long_name: Vertically integrated Zmi
+    coupling:
+      source: pelagic/ZMI
+  INT_ZME:
+    model: vertical_integral
+    long_name: Vertically integrated Zme
+    coupling:
+      source: pelagic/ZME
+  INT_DET:
+    model: vertical_integral
+    long_name: Vertically integrated Det
+    coupling:
+      source: pelagic/DET
+  INT_DTC:
+    model: vertical_integral
+    long_name: Vertically integrated Dtc
+    coupling:
+      source: pelagic/DTC
+  SCAVENGE:
+    model: vertical_integral
+    long_name: Scavenged iron
+    coupling:
+      source: iron_scavenging/SCAVENGE
+  TOTREG_N:
+    model: vertical_integral
+    long_name: Full column regenerated N
+    coupling:
+      source: pelagic/regen_slow
+  TOTRG_SI:
+    model: vertical_integral
+    long_name: Full column regenerated Si
+    coupling:
+      source: pelagic/regenSi_slow
+  FASTN:
+    model: vertical_integral
+    long_name: Fast-sinking flux N
+    coupling:
+      source: pelagic/FASTN
+  FASTC:
+    model: vertical_integral
+    long_name: Fast-sinking flux C
+    coupling:
+      source: pelagic/FASTC
+  FASTFE:
+    model: vertical_integral
+    long_name: Fast-sinking flux Fe
+    coupling:
+      source: pelagic/FASTFE
+  FASTCA:
+    model: vertical_integral
+    long_name: Fast-sinking flux CaCO3
+    coupling:
+      source: pelagic/FASTCA
+  FASTSI:
+    model: vertical_integral
+    long_name: Fast-sinking flux Si
+    coupling:
+      source: pelagic/FASTSI
+  REMINN:
+    model: vertical_integral
+    long_name: Fast-sinking remin flux N
+    coupling:
+      source: fast_detritus/freminn
+  REMINSI:
+    model: vertical_integral
+    long_name: Fast-sinking remin flux Si
+    coupling:
+      source: fast_detritus/freminsi
+  REMINFE:
+    model: vertical_integral
+    long_name: Fast-sinking remin flux Fe
+    coupling:
+      source: fast_detritus/freminfe
+  SFR_OCAL:
+    model: bottom_layer
+    long_name: Seafloor omega calcite
+    coupling: 
+      source: carbonate/OM_CAL3
+  SFR_OARG:
+    model: bottom_layer
+    long_name: Seafloor omega aragonite
+    coupling: 
+       source: carbonate/OM_ARG3
+  OCN_PH:
+    model: surface_layer
+    long_name: Surface ocean pH
+    coupling: 
+       source: carbonate/PH3
+  OCNH2CO3:
+    model: surface_layer
+    long_name: Surface ocean H2CO3 conc
+    coupling: 
+       source: carbonate/CarbA
+  OCN_HCO3:
+    model: surface_layer
+    long_name: Surface ocean HCO3 conc
+    coupling: 
+       source: carbonate/BiCarb
+  OCN_CO3:
+    model: surface_layer
+    long_name: Surface ocean CO3 conc
+    coupling: 
+       source: carbonate/Carb
